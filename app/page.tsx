@@ -9,7 +9,7 @@ import { siteData } from '@/lib/data';
 export default function Home() {
   return (
     <>
-      <Navbar initials={siteData.initials} />
+<Navbar />
       <main id="main">
         <Hero
           name={siteData.name}

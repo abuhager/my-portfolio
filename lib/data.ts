@@ -53,9 +53,9 @@ export const siteData: SiteData = {
       problem:   'A platform connecting donors with verified charitable causes in Jordan, with tiered access for students, admins, and the public.',
       role:      'Led full-stack development — designed the database schema, built all REST API endpoints with Express + Mongoose, implemented JWT-based role authorization, and built the Next.js frontend with real-time donation tracking.',
       badges:    ['Node.js', 'Express', 'TypeScript', 'MongoDB', 'Next.js', 'JWT', 'Docker'],
-      githubUrl: 'https://github.com/adham/aoun-backend',   // ← رابط الباك
-      githubFrontendUrl: 'https://github.com/adham/aoun-frontend', // ← رابط الفرونت
-      demoUrl:   'https://aoun-demo.vercel.app',            // ← رابط الديمو الحقيقي
+      githubUrl: 'https://github.com/abuhager/Aoun-Project_BackEnd',   // ← رابط الباك
+      githubFrontendUrl: 'https://github.com/abuhager/Aoun-Project_FrontEnd', // ← رابط الفرونت
+      demoUrl:   'https://aoun-project-front-end-ngxm.vercel.app/',            // ← رابط الديمو الحقيقي
       archNodes: [
         [{ label: 'Next.js Frontend', accent: true }],
         [{ label: 'Node.js + Express API', accent: true }],
@@ -70,7 +70,7 @@ export const siteData: SiteData = {
       problem:   'A university event management system with role-based access for students, organizers, and admins — enabling event creation, booking, and notifications.',
       role:      'Built the complete backend API with pagination, filtering, and search. Implemented RBAC with JWT, integrated Swagger/OpenAPI docs, and connected a responsive React booking interface.',
       badges:    ['ASP.NET Core', 'SQL Server', 'React', 'TypeScript', 'REST API', 'Swagger'],
-      githubUrl: 'https://github.com/adham/uniEvents',      // ← repo واحد
+      githubUrl: 'https://github.com/abuhager/privateevent/tree/main',      // ← repo واحد
       githubFrontendUrl: null,                               // ← ما في فرونت repo منفصل
       demoUrl:   null,                                       // ← ما في ديمو
       archNodes: [
