@@ -33,7 +33,6 @@ export const siteData: SiteData = {
       'HTML5/CSS3',
     ],
     devops: [
-      'Docker',
       'Git/GitHub',
       'Vite',
       'Vercel',
@@ -52,14 +51,14 @@ export const siteData: SiteData = {
       tag:       'Capstone Project · Full-Stack',
       problem:   'A platform connecting donors with verified charitable causes in Jordan, with tiered access for students, admins, and the public.',
       role:      'Led full-stack development — designed the database schema, built all REST API endpoints with Express + Mongoose, implemented JWT-based role authorization, and built the Next.js frontend with real-time donation tracking.',
-      badges:    ['Node.js', 'Express', 'TypeScript', 'MongoDB', 'Next.js', 'JWT', 'Docker'],
+      badges:    ['Node.js', 'Express', 'TypeScript', 'MongoDB', 'Next.js', 'JWT', 'Cloudinary'],
       githubUrl: 'https://github.com/abuhager/Aoun-Project_BackEnd',   // ← رابط الباك
       githubFrontendUrl: 'https://github.com/abuhager/Aoun-Project_FrontEnd', // ← رابط الفرونت
       demoUrl:   'https://aoun-project-front-end-ngxm.vercel.app/',            // ← رابط الديمو الحقيقي
       archNodes: [
         [{ label: 'Next.js Frontend', accent: true }],
         [{ label: 'Node.js + Express API', accent: true }],
-        [{ label: 'JWT Auth' }, { label: 'Mongoose' }, { label: 'Docker' }],
+        [{ label: 'JWT Auth' }, { label: 'Mongoose' }, ],
         [{ label: 'MongoDB' }],
       ],
     },
