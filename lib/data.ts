@@ -64,21 +64,22 @@ export const siteData: SiteData = {
     },
     {
       id:        'uniEvents',
-      title:     'UniEvents — University Booking System',
+      title:     'UniEvents — University Event Management System',
       tag:       'Training Project · Full-Stack',
-      problem:   'A university event management system with role-based access for students, organizers, and admins — enabling event creation, booking, and notifications.',
-      role:      'Built the complete backend API with pagination, filtering, and search. Implemented RBAC with JWT, integrated Swagger/OpenAPI docs, and connected a responsive React booking interface.',
-      badges:    ['ASP.NET Core', 'SQL Server', 'React', 'TypeScript', 'REST API', 'Swagger'],
+      problem:   'A comprehensive university event management system designed with role-based access control (RBAC) for students, organizers, and administrators — enabling streamlined event creation, booking, and notifications.',
+      role:      'Developed a complete full-stack web application utilizing the MVC architecture. Designed and implemented server-side rendered views for a responsive user interface, integrated secure authentication for user roles, and built a robust database infrastructure featuring pagination, filtering, and search functionalities.',
+      badges:    ['ASP.NET Core MVC', 'SQL Server', 'Entity Framework', 'Razor Views'],
       githubUrl: 'https://github.com/abuhager/privateevent/tree/main',      // ← repo واحد
-      githubFrontendUrl: null,                               // ← ما في فرونت repo منفصل
-      demoUrl:   null,                                       // ← ما في ديمو
+      githubFrontendUrl: null,                                               // ← ما في فرونت repo منفصل
+      demoUrl:   null,                                                       // ← ما في ديمو
       archNodes: [
-        [{ label: 'React Frontend', accent: true }],
-        [{ label: 'ASP.NET Core API', accent: true }],
-        [{ label: 'RBAC' }, { label: 'Pagination' }, { label: 'Swagger' }],
+        [{ label: 'Razor Views (UI)', accent: true }],
+        [{ label: 'ASP.NET Core MVC', accent: true }],
+        [{ label: 'Cookie Auth / Identity' }, { label: 'RBAC' }, { label: 'EF Core' }],
         [{ label: 'SQL Server' }],
       ],
-    },
+}
+
   ],
   // === Experience Timeline (يطابق TimelineItem) ===
   timeline: [
