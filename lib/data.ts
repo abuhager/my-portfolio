@@ -54,7 +54,7 @@ export const siteData: SiteData = {
       badges:    ['Node.js', 'Express', 'TypeScript', 'MongoDB', 'Next.js', 'JWT', 'Cloudinary'],
       githubUrl: 'https://github.com/abuhager/Aoun-Project_BackEnd',   // ← رابط الباك
       githubFrontendUrl: 'https://github.com/abuhager/Aoun-Project_FrontEnd', // ← رابط الفرونت
-      demoUrl:   'https://aoun-project-front-end-ngxm.vercel.app/',            // ← رابط الديمو الحقيقي
+      demoUrl:   'https://aoun-project-theta.vercel.app/',            // ← رابط الديمو الحقيقي
       archNodes: [
         [{ label: 'Next.js Frontend', accent: true }],
         [{ label: 'Node.js + Express API', accent: true }],
