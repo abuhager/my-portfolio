@@ -39,7 +39,7 @@ export default function Hero({ name, eyebrow, heroValue }: HeroProps) {
 
         <div className="flex flex-wrap gap-3 pt-2">
           <Button label="View My Projects" href="#projects" variant="primary" />
-          <Button label="Download Resume"  href="href="/resume.pdf" variant="outline" external />
+          <Button label="Download Resume"  href="/resume.pdf" variant="outline" external />
         </div>
       </section>
     </FadeIn>
