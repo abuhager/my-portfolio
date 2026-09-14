@@ -5,9 +5,10 @@ export const siteData: SiteData = {
   initials: 'AH',
   role: 'Full Stack Developer',
   location: 'Amman, Jordan',
-  headline: 'Full-stack delivery, with backend depth.',
+  headline:
+    'I build role-based web products—from clear interfaces to reliable backend systems.',
   introduction:
-    'Computer Science graduate building full-stack web applications with TypeScript, Node.js, React, Next.js, and ASP.NET Core. I focus on reliable APIs, clear workflows, and interfaces that make complex systems easier to use.',
+    'Computer Science graduate building with TypeScript, Node.js, Next.js, and ASP.NET Core—designing APIs, authentication, transaction-sensitive workflows, real-time features, and the interfaces that make them usable.',
   about:
     'I work across the full product path: understanding the workflow, shaping the data model, building the API, connecting the interface, and validating the result. My work leans toward backend engineering—business rules, authorization, data consistency, architecture, security, and performance—while still delivering modern, responsive frontends.',
   principles: [

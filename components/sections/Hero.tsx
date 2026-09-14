@@ -24,7 +24,8 @@ export default function Hero({
     <section id="top" aria-labelledby="hero-title" className="hero">
       <div className="page-shell hero__grid">
         <div className="hero__copy">
-          <div className="hero__eyebrow">
+          <div className="hero__identity">
+            <strong>{name}</strong>
             <span>{role}</span>
             <span className="hero__location">
               <Icon name="location" size={15} />
@@ -32,8 +33,7 @@ export default function Hero({
             </span>
           </div>
 
-          <h1 id="hero-title">{name}</h1>
-          <p className="hero__headline">{headline}</p>
+          <h1 id="hero-title">{headline}</h1>
           <p className="hero__intro">{introduction}</p>
 
           <div className="hero__actions" aria-label="Primary actions">

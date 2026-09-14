@@ -40,7 +40,7 @@ export default function OpenGraphImage() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   borderRadius: 16,
-                  background: '#78c99b',
+                  background: '#9fe870',
                   color: '#07110c',
                   fontSize: 20,
                   fontWeight: 700,
@@ -54,7 +54,7 @@ export default function OpenGraphImage() {
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            <div style={{ color: '#78c99b', fontSize: 22, fontWeight: 700 }}>
+            <div style={{ color: '#9fe870', fontSize: 22, fontWeight: 700 }}>
               TYPESCRIPT · NODE.JS · NEXT.JS · ASP.NET CORE
             </div>
             <div
@@ -69,12 +69,12 @@ export default function OpenGraphImage() {
               Adham Abu Hager
             </div>
             <div style={{ maxWidth: 920, color: '#aab5ae', fontSize: 31, lineHeight: 1.25 }}>
-              Full-stack delivery, with backend depth.
+              Role-based products, from interface to backend.
             </div>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 14, fontSize: 21 }}>
-            <div style={{ width: 10, height: 10, borderRadius: 999, background: '#91d5ad' }} />
+            <div style={{ width: 10, height: 10, borderRadius: 999, background: '#9fe870' }} />
             Aoun · Featured deployed full-stack project
           </div>
         </div>

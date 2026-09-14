@@ -30,7 +30,7 @@ export default function Navbar() {
     <header className="site-header">
       <nav aria-label="Primary navigation" className="page-shell site-nav">
         <a href="#top" className="brand" aria-label="Adham Abu Hager, home">
-          <span className="brand__mark" aria-hidden="true">AH</span>
+          <span className="brand__mark" aria-hidden="true" />
           <span className="brand__copy">
             <strong>Adham Abu Hager</strong>
             <span>Full Stack Developer</span>
