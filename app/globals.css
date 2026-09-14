@@ -1650,6 +1650,10 @@ ul, ol { margin: 0; padding: 0; }
     width: min(100% - 2rem, 720px);
   }
 
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero {
     padding: 4.5rem 0 5.5rem;
   }
