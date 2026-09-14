@@ -1,5 +1,6 @@
 export interface SkillGroup {
   title: string;
+  description: string;
   items: string[];
 }
 
@@ -9,27 +10,42 @@ export interface ProjectLink {
   primary?: boolean;
 }
 
+export interface ProjectHighlight {
+  title: string;
+  detail: string;
+}
+
+export interface ProjectMedia {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  caption: string;
+}
+
 export interface Project {
   id: string;
   number: string;
   title: string;
   subtitle: string;
+  status: string;
+  problem: string;
   summary: string;
   contribution: string;
-  highlights: string[];
+  features: string[];
+  highlights: ProjectHighlight[];
   technologies: string[];
   links: ProjectLink[];
-  image?: string;
-  imageAlt?: string;
-  status: string;
+  media?: ProjectMedia[];
+  flow?: string[];
 }
 
-export interface TimelineItem {
+export interface BackgroundItem {
   id: string;
+  category: 'Experience' | 'Training' | 'Education';
   period: string;
   title: string;
   organization: string;
-  kind: 'Experience' | 'Training' | 'Education';
   detail: string;
 }
 
@@ -37,6 +53,7 @@ export interface SocialLink {
   label: string;
   href: string;
   icon: 'mail' | 'github' | 'linkedin' | 'phone';
+  external?: boolean;
 }
 
 export interface SiteData {
@@ -46,15 +63,14 @@ export interface SiteData {
   location: string;
   headline: string;
   introduction: string;
-  availability: string;
   about: string;
-  focus: Array<{ title: string; detail: string }>;
+  principles: Array<{ title: string; detail: string }>;
   skillGroups: SkillGroup[];
   projects: Project[];
-  timeline: TimelineItem[];
+  background: BackgroundItem[];
   contact: {
     headline: string;
-    tagline: string;
+    description: string;
     links: SocialLink[];
   };
 }

@@ -1,63 +1,94 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import Icon from '@/components/ui/Icon';
 
 const links = [
+  { label: 'Work', href: '#projects' },
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Work', href: '#projects' },
-  { label: 'Background', href: '#experience' },
+  { label: 'Background', href: '#background' },
   { label: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setOpen(false);
+      if (event.key !== 'Escape') return;
+      setOpen(false);
+      menuButtonRef.current?.focus();
     };
+
     window.addEventListener('keydown', closeOnEscape);
     return () => window.removeEventListener('keydown', closeOnEscape);
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[#07110f]/85 backdrop-blur-xl">
-      <nav aria-label="Primary navigation" className="page-shell flex h-[72px] items-center justify-between">
-        <a href="#hero" aria-label="Adham Abu Hager, home" className="group inline-flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]">
-          <span className="grid h-9 w-9 place-items-center rounded-full border border-[var(--line-strong)] font-mono text-[11px] font-bold text-[var(--accent)] transition-colors group-hover:border-[var(--accent)]">AH</span>
-          <span className="hidden text-[12px] font-semibold text-[var(--text)] sm:block">Adham Abu Hager</span>
+    <header className="site-header">
+      <nav aria-label="Primary navigation" className="page-shell site-nav">
+        <a href="#top" className="brand" aria-label="Adham Abu Hager, home">
+          <span className="brand__mark" aria-hidden="true">AH</span>
+          <span className="brand__copy">
+            <strong>Adham Abu Hager</strong>
+            <span>Full Stack Developer</span>
+          </span>
         </a>
 
-        <ul className="hidden items-center gap-7 md:flex">
+        <ul className="desktop-nav">
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--muted)] transition-colors hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]">
-                {link.label}
-              </a>
+              <a href={link.href}>{link.label}</a>
             </li>
           ))}
         </ul>
 
-        <a href="mailto:abuhager360@gmail.com" className="hidden rounded-full border border-[var(--line-strong)] px-4 py-2 text-[11px] font-semibold text-[var(--text)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] md:block">
-          Let&apos;s talk
+        <a className="nav-cv" href="/resume.pdf" download="Adham_Abu_Hager_Full_Stack_Developer_CV.pdf">
+          CV
+          <Icon name="arrow-down" size={15} />
         </a>
 
-        <button type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? 'Close navigation' : 'Open navigation'} className="grid h-11 w-11 place-items-center rounded-full border border-[var(--line-strong)] text-[var(--text)] md:hidden">
-          <span className="sr-only">Menu</span>
-          <span aria-hidden="true" className="font-mono text-base">{open ? '×' : '≡'}</span>
+        <button
+          ref={menuButtonRef}
+          type="button"
+          className={open ? 'menu-button menu-button--open' : 'menu-button'}
+          onClick={() => setOpen((value) => !value)}
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
+          aria-label={open ? 'Close navigation' : 'Open navigation'}
+        >
+          <span />
+          <span />
         </button>
       </nav>
 
-      <div id="mobile-navigation" className={`overflow-hidden border-t border-[var(--line)] bg-[#07110f] transition-[max-height,opacity] duration-300 md:hidden ${open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-        <ul className="page-shell flex flex-col py-4">
-          {links.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} onClick={() => setOpen(false)} className="block border-b border-[var(--line)] py-4 text-sm font-medium text-[var(--muted)] hover:text-[var(--accent)]">{link.label}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {open ? (
+        <div id="mobile-navigation" className="mobile-nav">
+          <div className="page-shell">
+            <ul>
+              {links.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} onClick={() => setOpen(false)}>
+                    {link.label}
+                    <Icon name="arrow-up-right" size={18} />
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <a
+              className="mobile-nav__cv"
+              href="/resume.pdf"
+              download="Adham_Abu_Hager_Full_Stack_Developer_CV.pdf"
+              onClick={() => setOpen(false)}
+            >
+              Download CV
+              <Icon name="arrow-down" size={18} />
+            </a>
+          </div>
+        </div>
+      ) : null}
     </header>
   );
 }

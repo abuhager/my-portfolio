@@ -1,36 +1,58 @@
-import { SiteData, SocialLink } from '@/types';
+import Button from '@/components/ui/Button';
+import Icon from '@/components/ui/Icon';
+import type { SiteData } from '@/types';
 
-const icons: Record<SocialLink['icon'], string> = {
-  mail: '↗',
-  github: 'GH',
-  linkedin: 'in',
-  phone: '↗',
-};
+type FooterProps = Pick<SiteData, 'name' | 'role' | 'location'> & SiteData['contact'];
 
-type FooterProps = Pick<SiteData, 'name'> & SiteData['contact'];
-
-export default function Footer({ name, headline, tagline, links }: FooterProps) {
+export default function Footer({
+  name,
+  role,
+  location,
+  headline,
+  description,
+  links,
+}: FooterProps) {
   return (
-    <footer id="contact" className="relative overflow-hidden bg-[var(--surface)]">
-      <div className="footer-glow" aria-hidden="true" />
-      <div className="page-shell relative py-24 sm:py-32">
-        <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">05 — Contact</p>
-        <h2 className="mt-7 max-w-4xl text-balance text-[clamp(2.6rem,6vw,5.5rem)] font-semibold leading-[1.02] tracking-[-0.055em] text-[var(--text)]">{headline}</h2>
-        <p className="mt-7 max-w-2xl text-base leading-7 text-[var(--muted)]">{tagline}</p>
+    <footer id="contact" aria-labelledby="contact-title" className="site-footer">
+      <div className="page-shell">
+        <div className="contact-panel">
+          <div className="contact-panel__copy">
+            <p className="contact-panel__eyebrow">Contact</p>
+            <h2 id="contact-title">{headline}</h2>
+            <p>{description}</p>
+            <div className="contact-panel__actions">
+              <Button
+                label="Email me"
+                href="mailto:abuhager360@gmail.com"
+                variant="inverse"
+              />
+              <Button label="Download CV" href="/resume.pdf" variant="secondary" download />
+            </div>
+          </div>
 
-        <div className="mt-10 flex flex-wrap gap-3">
-          {links.map((link) => (
-            <a key={link.href} href={link.href} target={link.icon === 'github' || link.icon === 'linkedin' ? '_blank' : undefined} rel={link.icon === 'github' || link.icon === 'linkedin' ? 'noopener noreferrer' : undefined} className="group inline-flex min-h-12 items-center gap-3 rounded-full border border-[var(--line-strong)] bg-black/10 px-5 text-[13px] font-medium text-[var(--text-soft)] transition-all hover:border-[var(--accent)] hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]">
-              <span className="grid min-w-5 place-items-center font-mono text-[10px] font-bold" aria-hidden="true">{icons[link.icon]}</span>
-              {link.label}
-            </a>
-          ))}
+          <address className="contact-links">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
+                <span className="contact-links__icon">
+                  <Icon name={link.icon} size={18} />
+                </span>
+                <span>{link.label}</span>
+                <Icon name="arrow-up-right" size={16} />
+              </a>
+            ))}
+          </address>
         </div>
-      </div>
-      <div className="border-t border-[var(--line)]">
-        <div className="page-shell flex flex-col gap-3 py-6 text-[10px] uppercase tracking-[0.14em] text-[var(--faint)] sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 {name}</p>
-          <p>Designed & built with Next.js and TypeScript</p>
+
+        <div className="footer-bottom">
+          <div>
+            <strong>{name}</strong>
+            <span>{role} · {location}</span>
+          </div>
+          <p>Designed and built with Next.js and TypeScript · © 2026</p>
         </div>
       </div>
     </footer>

@@ -1,104 +1,234 @@
 import Image from 'next/image';
 import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
-import FadeIn from '@/components/ui/FadeIn';
-import SectionLabel from '@/components/ui/SectionLabel';
-import { Project } from '@/types';
+import Icon from '@/components/ui/Icon';
+import SectionHeading from '@/components/ui/SectionHeading';
+import type { Project } from '@/types';
 
-function ProjectVisual({ project }: { project: Project }) {
-  if (project.image) {
-    return (
-      <div className="project-visual relative min-h-[360px] overflow-hidden rounded-[26px] border border-[var(--line)] sm:min-h-[470px]">
-        <div className="absolute inset-x-0 top-0 z-10 flex h-12 items-center gap-1.5 border-b border-white/10 bg-[#0b1714]/90 px-5 backdrop-blur">
-          <span className="h-2 w-2 rounded-full bg-[#ff6b6b]" />
-          <span className="h-2 w-2 rounded-full bg-[#ffd166]" />
-          <span className="h-2 w-2 rounded-full bg-[var(--accent)]" />
-          <span className="ml-3 font-mono text-[9px] uppercase tracking-widest text-white/40">Live product</span>
-        </div>
-        <div className="absolute inset-0 pt-12">
-          <Image src={project.image} alt={project.imageAlt ?? ''} fill sizes="(max-width: 1024px) 100vw, 48vw" className="object-cover object-top" priority />
-        </div>
-        <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-[#07110f] via-[#07110f]/85 to-transparent px-6 pb-6 pt-24">
-          <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--accent)]">Product scope</p>
-          <p className="mt-2 max-w-md text-sm leading-6 text-white/75">Listings · requests · bookings · chat · handover · moderation</p>
-        </div>
-      </div>
-    );
-  }
-
+function ProjectMeta({ project, inverse = false }: { project: Project; inverse?: boolean }) {
   return (
-    <div className="architecture-grid flex min-h-[360px] items-center justify-center rounded-[26px] border border-[var(--line)] p-6 sm:min-h-[470px]">
-      <div className="w-full max-w-sm space-y-3 font-mono text-[11px] uppercase tracking-[0.12em]">
-        {['Razor Views', 'ASP.NET Core MVC', 'EF Core + Business Logic', 'SQL Server'].map((label, index) => (
-          <div key={label}>
-            <div className={`rounded-2xl border p-4 text-center ${index === 1 ? 'border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--accent)]' : 'border-[var(--line-strong)] bg-[var(--surface)] text-[var(--muted)]'}`}>
-              {label}
-            </div>
-            {index < 3 && <div className="mx-auto h-5 w-px bg-[var(--line-strong)]" aria-hidden="true" />}
-          </div>
-        ))}
-      </div>
+    <div className={inverse ? 'project-meta project-meta--inverse' : 'project-meta'}>
+      <span>Project {project.number}</span>
+      <span>{project.status}</span>
     </div>
   );
 }
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+function ProjectLinks({ project, inverse = false }: { project: Project; inverse?: boolean }) {
   return (
-    <FadeIn delay={index * 90}>
-      <article className="grid gap-10 rounded-[34px] border border-[var(--line)] bg-[var(--surface)] p-5 sm:p-8 lg:grid-cols-2 lg:gap-14 lg:p-10">
-        <ProjectVisual project={project} />
-        <div className="flex flex-col justify-center py-2 lg:py-5">
-          <div className="mb-6 flex items-center justify-between gap-5">
-            <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">Project {project.number}</span>
-            <span className="rounded-full border border-[var(--line)] px-3 py-1 font-mono text-[9px] uppercase tracking-[0.14em] text-[var(--faint)]">{project.status}</span>
-          </div>
-          <h3 className="text-[clamp(2.3rem,5vw,4rem)] font-semibold leading-none tracking-[-0.05em] text-[var(--text)]">{project.title}</h3>
-          <p className="mt-3 text-sm font-medium text-[var(--accent)]">{project.subtitle}</p>
-          <p className="mt-6 text-base leading-7 text-[var(--muted)]">{project.summary}</p>
+    <div className="project-links" aria-label={`${project.title} links`}>
+      {project.links.map((link) => (
+        <Button
+          key={link.href}
+          label={link.label}
+          href={link.href}
+          external
+          variant={link.primary ? (inverse ? 'inverse' : 'primary') : inverse ? 'secondary' : 'text'}
+        />
+      ))}
+    </div>
+  );
+}
 
-          <div className="mt-7 border-l border-[var(--accent)]/50 pl-5">
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--faint)]">My contribution</p>
-            <p className="text-sm leading-6 text-[var(--text-soft)]">{project.contribution}</p>
+function AounGallery({ project }: { project: Project }) {
+  const [home, chat, requests] = project.media ?? [];
+
+  if (!home) return null;
+
+  return (
+    <figure className="aoun-gallery">
+      <div className="aoun-gallery__main">
+        <div className="browser-bar browser-bar--dark" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+          <b>Live product · Home</b>
+        </div>
+        <Image
+          src={home.src}
+          alt={home.alt}
+          width={home.width}
+          height={home.height}
+          sizes="(max-width: 900px) 100vw, 65vw"
+        />
+      </div>
+      <div className="aoun-gallery__secondary">
+        {[chat, requests].filter(Boolean).map((item) => (
+          <div className="aoun-gallery__shot" key={item.src}>
+            <Image
+              src={item.src}
+              alt={item.alt}
+              width={item.width}
+              height={item.height}
+              sizes="(max-width: 900px) 50vw, 22vw"
+            />
+            <span>{item.caption}</span>
+          </div>
+        ))}
+      </div>
+      <figcaption>
+        Screens from the deployed Arabic interface and documented project flows.
+      </figcaption>
+    </figure>
+  );
+}
+
+function FeaturedProject({ project }: { project: Project }) {
+  return (
+    <article className="featured-project">
+      <ProjectMeta project={project} inverse />
+
+      <div className="featured-project__intro">
+        <div>
+          <p className="project-kicker">Featured full-stack build</p>
+          <h3>{project.title}</h3>
+          <p className="project-subtitle">{project.subtitle}</p>
+        </div>
+        <p className="featured-project__summary">{project.summary}</p>
+      </div>
+
+      <AounGallery project={project} />
+
+      <div className="featured-project__context">
+        <div>
+          <p className="detail-label">The problem</p>
+          <p>{project.problem}</p>
+        </div>
+        <div>
+          <p className="detail-label">My role</p>
+          <p>{project.contribution}</p>
+        </div>
+      </div>
+
+      <div className="featured-project__details">
+        <div className="feature-list">
+          <p className="detail-label">Product capabilities</p>
+          <ul>
+            {project.features.map((feature) => (
+              <li key={feature}>
+                <span aria-hidden="true">
+                  <Icon name="check" size={15} />
+                </span>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="technical-grid">
+          {project.highlights.map((highlight, index) => (
+            <div key={highlight.title}>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <h4>{highlight.title}</h4>
+              <p>{highlight.detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="featured-project__footer">
+        <div className="badge-list" aria-label={`${project.title} technologies`}>
+          {project.technologies.map((technology) => (
+            <Badge key={technology} label={technology} inverse />
+          ))}
+        </div>
+        <ProjectLinks project={project} inverse />
+      </div>
+    </article>
+  );
+}
+
+function ProjectFlow({ steps = [] }: { steps?: string[] }) {
+  return (
+    <div className="project-flow" aria-label="Verified UniEvents booking workflow">
+      <div className="project-flow__heading">
+        <Icon name="layers" size={21} />
+        <span>Verified booking flow</span>
+      </div>
+      <ol>
+        {steps.map((step, index) => (
+          <li key={step}>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <strong>{step}</strong>
+          </li>
+        ))}
+      </ol>
+      <p>Implemented in the ASP.NET Core MVC controllers on the main branch.</p>
+    </div>
+  );
+}
+
+function SecondaryProject({ project }: { project: Project }) {
+  return (
+    <article className="secondary-project">
+      <ProjectMeta project={project} />
+
+      <div className="secondary-project__grid">
+        <div className="secondary-project__content">
+          <p className="project-kicker">Backend-focused build</p>
+          <h3>{project.title}</h3>
+          <p className="project-subtitle">{project.subtitle}</p>
+          <p className="secondary-project__summary">{project.summary}</p>
+
+          <div className="secondary-project__context">
+            <div>
+              <p className="detail-label">The problem</p>
+              <p>{project.problem}</p>
+            </div>
+            <div>
+              <p className="detail-label">My role</p>
+              <p>{project.contribution}</p>
+            </div>
           </div>
 
-          <ul className="mt-7 space-y-3">
-            {project.highlights.map((highlight) => (
-              <li key={highlight} className="flex gap-3 text-[13px] leading-6 text-[var(--muted)]">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent)]" aria-hidden="true" />
-                <span>{highlight}</span>
+          <ul className="secondary-project__features">
+            {project.features.map((feature) => (
+              <li key={feature}>
+                <Icon name="check" size={15} />
+                {feature}
               </li>
             ))}
           </ul>
 
-          <div className="mt-8 flex flex-wrap gap-2">
-            {project.technologies.map((technology) => <Badge key={technology} label={technology} />)}
-          </div>
-          <div className="mt-8 flex flex-wrap gap-3">
-            {project.links.map((link) => (
-              <Button key={link.href} label={link.label} href={link.href} variant={link.primary ? 'primary' : 'secondary'} external />
+          <div className="secondary-project__highlights">
+            {project.highlights.map((highlight) => (
+              <div key={highlight.title}>
+                <h4>{highlight.title}</h4>
+                <p>{highlight.detail}</p>
+              </div>
             ))}
           </div>
+
+          <div className="badge-list" aria-label={`${project.title} technologies`}>
+            {project.technologies.map((technology) => (
+              <Badge key={technology} label={technology} />
+            ))}
+          </div>
+          <ProjectLinks project={project} />
         </div>
-      </article>
-    </FadeIn>
+
+        <ProjectFlow steps={project.flow} />
+      </div>
+    </article>
   );
 }
 
 export default function Projects({ projects }: { projects: Project[] }) {
+  const [featured, secondary] = projects;
+
   return (
-    <section id="projects" aria-labelledby="projects-title" className="section-border">
-      <div className="page-shell py-24 sm:py-32">
-        <FadeIn>
-          <SectionLabel number="03" text="Selected work" />
-          <div className="mb-12 grid gap-5 lg:grid-cols-2 lg:items-end">
-            <h2 id="projects-title" className="section-title">Products that show how I think and build.</h2>
-            <p className="max-w-xl text-base leading-7 text-[var(--muted)] lg:justify-self-end">
-              Two different ecosystems, both focused on real workflows—not isolated CRUD screens.
-            </p>
-          </div>
-        </FadeIn>
-        <div className="space-y-6">
-          {projects.map((project, index) => <ProjectCard key={project.id} project={project} index={index} />)}
+    <section id="projects" aria-labelledby="projects-title" className="section projects-section">
+      <div className="page-shell">
+        <SectionHeading
+          eyebrow="Selected work"
+          title="Real systems, explained through the decisions behind them."
+          description="Two projects were selected because they show complete workflows and verified implementation depth across two different backend ecosystems."
+          titleId="projects-title"
+        />
+
+        <div className="projects-stack">
+          {featured ? <FeaturedProject project={featured} /> : null}
+          {secondary ? <SecondaryProject project={secondary} /> : null}
         </div>
       </div>
     </section>
