@@ -69,7 +69,7 @@ export default function OpenGraphImage() {
               Adham Abu Hager
             </div>
             <div style={{ maxWidth: 920, color: '#aab5ae', fontSize: 31, lineHeight: 1.25 }}>
-              Role-based products, from interface to backend.
+              Complete web products, from interface to backend.
             </div>
           </div>
 
