@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   display: 'swap',
 });
 
-const siteUrl = 'https://my-portfolio-five-azure-69.vercel.app';
+const siteUrl = 'https://adhamabuhagerdev.site';
 const title = 'Adham Abu Hager | Full-Stack Developer';
 const description =
   'Full-Stack Developer in Amman building web applications with TypeScript, Next.js, Node.js, MongoDB, and ASP.NET Core.';
@@ -52,37 +52,18 @@ export const metadata: Metadata = {
     firstName: 'Adham',
     lastName: 'Abu Hager',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title,
-    description,
-  },
+  twitter: { card: 'summary_large_image', title, description },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-      'max-video-preview': -1,
-    },
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
   },
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+  formatDetection: { email: false, address: false, telephone: false },
 };
 
-export const viewport: Viewport = {
-  colorScheme: 'dark',
-  themeColor: '#0b100e',
-};
+export const viewport: Viewport = { colorScheme: 'dark', themeColor: '#0b100e' };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable} ${geistMono.variable}`}>
       <body>{children}</body>
