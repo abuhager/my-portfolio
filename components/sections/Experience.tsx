@@ -1,81 +1,42 @@
-import SectionLabel from '@/components/ui/SectionLabel';
 import FadeIn from '@/components/ui/FadeIn';
+import SectionLabel from '@/components/ui/SectionLabel';
 import { TimelineItem } from '@/types';
 
-interface ExperienceProps {
-  timeline: TimelineItem[];
-}
-
-function TimelineEntry({ item, index, isLast }: {
-  item: TimelineItem;
-  index: number;
-  isLast: boolean;
-}) {
+export default function Experience({ timeline }: { timeline: TimelineItem[] }) {
   return (
-    <FadeIn delay={index * 100}>
-      <div className="relative flex gap-6">
-        {/* ── Left: Line + Dot ── */}
-        <div className="flex flex-col items-center">
-          <div className="
-            w-2 h-2 rounded-full mt-1.5 shrink-0
-            bg-[var(--cyan)]
-            shadow-[0_0_8px_rgba(0,229,255,0.4)]
-          " />
-          {!isLast && (
-            <div className="
-              w-px flex-1 mt-2
-              bg-gradient-to-b from-[rgba(0,229,255,0.3)] to-transparent
-            " />
-          )}
-        </div>
-
-        {/* ── Right: Content ── */}
-        <div className={`flex flex-col gap-1.5 ${!isLast ? 'pb-10' : ''}`}>
-          <span className="
-            text-[11px] uppercase tracking-[0.1em] font-medium
-            text-[var(--cyan)]
-          ">
-            {item.year}
-          </span>
-          <h3 className="text-[1rem] font-semibold text-white leading-snug">
-            {item.title}
-          </h3>
-          <p className="text-[14px] leading-relaxed text-[var(--text-muted)] max-w-[560px]">
-            {item.detail}
-          </p>
-        </div>
-      </div>
-    </FadeIn>
-  );
-}
-
-export default function Experience({ timeline }: ExperienceProps) {
-  return (
-    <section
-      id="experience"
-      aria-label="Experience and Education"
-      className="
-        max-w-[1200px] mx-auto px-6
-        py-20 border-b border-[var(--border)]
-      "
-    >
-      <SectionLabel text="Background" />
-      <h2 className="
-        text-[clamp(1.6rem,3vw,2rem)]
-        font-bold tracking-tight text-white mb-12
-      ">
-        Experience
-      </h2>
-
-      <div className="flex flex-col">
-        {timeline.map((item, index) => (
-          <TimelineEntry
-            key={item.id}
-            item={item}
-            index={index}
-            isLast={index === timeline.length - 1}
-          />
-        ))}
+    <section id="experience" aria-labelledby="experience-title" className="section-border">
+      <div className="page-shell py-24 sm:py-32">
+        <FadeIn>
+          <SectionLabel number="04" text="Background" />
+          <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
+            <div>
+              <h2 id="experience-title" className="section-title lg:sticky lg:top-28">
+                Experience, training, and foundations.
+              </h2>
+            </div>
+            <ol className="border-t border-[var(--line)]">
+              {timeline.map((item, index) => (
+                <li key={item.id}>
+                  <FadeIn delay={index * 70}>
+                    <article className="grid gap-4 border-b border-[var(--line)] py-8 sm:grid-cols-[145px_1fr] sm:gap-7">
+                      <div>
+                        <span className="inline-flex rounded-full border border-[var(--line)] px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.14em] text-[var(--accent)]">
+                          {item.kind}
+                        </span>
+                        <p className="mt-3 font-mono text-[10px] uppercase leading-5 tracking-[0.08em] text-[var(--faint)]">{item.period}</p>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold tracking-[-0.02em] text-[var(--text)]">{item.title}</h3>
+                        <p className="mt-1 text-sm font-medium text-[var(--accent)]">{item.organization}</p>
+                        <p className="mt-4 max-w-2xl text-sm leading-6 text-[var(--muted)]">{item.detail}</p>
+                      </div>
+                    </article>
+                  </FadeIn>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

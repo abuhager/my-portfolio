@@ -1,47 +1,59 @@
-export interface ArchNode {
+export interface SkillGroup {
+  title: string;
+  items: string[];
+}
+
+export interface ProjectLink {
   label: string;
-  accent?: boolean;
+  href: string;
+  primary?: boolean;
 }
 
 export interface Project {
   id: string;
+  number: string;
   title: string;
-  tag: string;
-  problem: string;
-  role: string;
-  badges: string[];
-    githubFrontendUrl: string | null;
-  githubUrl: string;
-  demoUrl: string | null;
-    archNodes: ArchNode[][];
+  subtitle: string;
+  summary: string;
+  contribution: string;
+  highlights: string[];
+  technologies: string[];
+  links: ProjectLink[];
+  image?: string;
+  imageAlt?: string;
+  status: string;
 }
 
 export interface TimelineItem {
   id: string;
-  year: string;
+  period: string;
   title: string;
+  organization: string;
+  kind: 'Experience' | 'Training' | 'Education';
   detail: string;
 }
 
 export interface SocialLink {
   label: string;
   href: string;
-  icon: 'mail' | 'github' | 'linkedin';
+  icon: 'mail' | 'github' | 'linkedin' | 'phone';
 }
 
 export interface SiteData {
   name: string;
   initials: string;
-  eyebrow: string;
-  heroValue: string;
-  techStack: {
-    backend: string[];
-    frontend: string[];
-    devops: string[];
-  };
+  role: string;
+  location: string;
+  headline: string;
+  introduction: string;
+  availability: string;
+  about: string;
+  focus: Array<{ title: string; detail: string }>;
+  skillGroups: SkillGroup[];
   projects: Project[];
   timeline: TimelineItem[];
   contact: {
+    headline: string;
     tagline: string;
     links: SocialLink[];
   };

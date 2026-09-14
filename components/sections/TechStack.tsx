@@ -1,56 +1,43 @@
-import Badge from '@/components/ui/Badge';
-import SectionLabel from '@/components/ui/SectionLabel';
 import FadeIn from '@/components/ui/FadeIn';
-import { SiteData } from '@/types';
+import SectionLabel from '@/components/ui/SectionLabel';
+import { SkillGroup } from '@/types';
 
-type TechStackProps = Pick<SiteData, 'techStack'>;
-
-const COLUMNS = [
-  { key: 'backend',  label: 'Backend'         },
-  { key: 'frontend', label: 'Frontend'         },
-  { key: 'devops',   label: 'DevOps & Testing' },
-] as const;
-
-export default function TechStack({ techStack }: TechStackProps) {
+export default function TechStack({ skillGroups }: { skillGroups: SkillGroup[] }) {
   return (
-    <FadeIn delay={100}>
-      <section
-        id="stack"
-        aria-label="Tech Stack"
-        className="max-w-300 mx-auto px-6 py-20 border-b border-[var(--border)]"
-      >
-        <SectionLabel text="What I Build With" />
-        <h2 className="text-[clamp(1.6rem,3vw,2rem)] font-bold tracking-tight text-white mb-10">
-          Tech Stack
-        </h2>
+    <section id="skills" aria-labelledby="skills-title" className="section-border">
+      <div className="page-shell py-24 sm:py-32">
+        <FadeIn>
+          <SectionLabel number="02" text="Capabilities" />
+          <div className="mb-12 grid gap-5 lg:grid-cols-2 lg:items-end">
+            <h2 id="skills-title" className="section-title">Tools I use to move from idea to production.</h2>
+            <p className="max-w-xl text-base leading-7 text-[var(--muted)] lg:justify-self-end">
+              A practical stack across interfaces, APIs, data, testing, and deployment—grounded in projects I have actually built.
+            </p>
+          </div>
+        </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {COLUMNS.map(({ key, label }) => (
-            <div
-              key={key}
-              className="
-                bg-[var(--surface)] border border-[var(--border)]
-                rounded-sm p-5 flex flex-col gap-4
-                hover:border-[var(--border-hover)]
-                transition-colors duration-300
-              "
-            >
-              <div className="flex items-center gap-2 pb-3 border-b border-[var(--border)]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[var(--cyan)]" aria-hidden="true" />
-                <h3 className="text-[11px] uppercase tracking-[0.12em] font-semibold text-[var(--text-muted)]">
-                  {label}
-                </h3>
-              </div>
-
-              <div className="flex flex-wrap gap-2">
-                {techStack[key].map((item) => (
-                  <Badge key={item} label={item} variant="chip" />
-                ))}
-              </div>
-            </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {skillGroups.map((group, index) => (
+            <FadeIn key={group.title} delay={index * 70}>
+              <article className="skill-card h-full rounded-3xl border border-[var(--line)] p-6 sm:p-7">
+                <div className="mb-7 flex items-center justify-between gap-4">
+                  <h3 className="text-[15px] font-semibold text-[var(--text)]">{group.title}</h3>
+                  <span className="font-mono text-[10px] tracking-[0.14em] text-[var(--faint)]">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                </div>
+                <ul className="flex flex-wrap gap-2" aria-label={`${group.title} skills`}>
+                  {group.items.map((item) => (
+                    <li key={item} className="rounded-full border border-[var(--line)] bg-black/15 px-3 py-1.5 text-[12px] font-medium text-[var(--muted)]">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </FadeIn>
           ))}
         </div>
-      </section>
-    </FadeIn>
+      </div>
+    </section>
   );
 }

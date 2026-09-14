@@ -1,32 +1,140 @@
 @import "tailwindcss";
 
 :root {
-  --cyan: #00e5ff;
-  --cyan-dim: rgba(0, 229, 255, 0.12);
-  --border: rgba(255, 255, 255, 0.07);
-  --border-hover: rgba(0, 229, 255, 0.4);
-  --surface: #131315;
-  --surface-2: #1a1a1c;
-  --text-muted: #8a8a8f;
-  --text-faint: #46464c;
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --background: #07110f;
+  --surface: #0b1714;
+  --surface-raised: #10201b;
+  --accent: #9cff57;
+  --accent-soft: rgba(156, 255, 87, 0.09);
+  --text: #f2f6ef;
+  --text-soft: #d5ddd2;
+  --muted: #98a49d;
+  --faint: #65716a;
+  --line: rgba(222, 242, 228, 0.09);
+  --line-strong: rgba(222, 242, 228, 0.17);
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 3.5rem; }
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  background: var(--background);
+}
 
 body {
-  background-color: #0d0d0f;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 28px 28px;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 85% 5%, rgba(83, 180, 128, 0.12), transparent 32rem),
+    var(--background);
+  color: var(--text);
+  font-family: var(--font-geist), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+::selection { background: var(--accent); color: var(--background); }
+
+.page-shell {
+  width: min(1180px, calc(100% - 3rem));
+  margin-inline: auto;
 }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+.section-border { border-top: 1px solid var(--line); }
+
+.section-title {
+  max-width: 700px;
+  color: var(--text);
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-weight: 600;
+  letter-spacing: -0.052em;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+
+.hero-glow {
+  position: absolute;
+  right: -14rem;
+  top: 1rem;
+  width: 42rem;
+  height: 42rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(156, 255, 87, 0.13), transparent 68%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.code-card {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.035), transparent 55%),
+    #0b1714;
+}
+
+.code-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+  pointer-events: none;
+}
+
+.skill-card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.025), transparent 72%), var(--surface);
+  transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+.skill-card:hover {
+  border-color: rgba(156, 255, 87, 0.28);
+  background: linear-gradient(145deg, rgba(156,255,87,0.035), transparent 72%), var(--surface);
+  transform: translateY(-2px);
+}
+
+.project-visual {
+  background: linear-gradient(135deg, rgba(156,255,87,0.12), transparent), #10201b;
+}
+
+.architecture-grid {
+  background-color: #091310;
+  background-image: radial-gradient(rgba(156,255,87,0.16) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.footer-glow {
+  position: absolute;
+  left: 50%;
+  bottom: -28rem;
+  width: 70rem;
+  height: 50rem;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(156,255,87,0.1), transparent 66%);
+  pointer-events: none;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -5rem;
+  z-index: 100;
+  border-radius: 999px;
+  background: var(--accent);
+  padding: 0.75rem 1rem;
+  color: var(--background);
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: top 150ms ease;
+}
+
+.skip-link:focus { top: 1rem; }
+
+@media (max-width: 640px) {
+  .page-shell { width: min(100% - 2rem, 1180px); }
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .fade-in { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
