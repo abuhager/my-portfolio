@@ -8,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
       'Portfolio of Adham Abu Hager, a Full Stack Developer based in Amman, Jordan.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#f3f1ea',
-    theme_color: '#f3f1ea',
+    background_color: '#0b100e',
+    theme_color: '#0b100e',
     icons: [
       {
         src: '/icon.svg',

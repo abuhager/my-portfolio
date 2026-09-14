@@ -12,8 +12,8 @@ export default function OpenGraphImage() {
           width: '100%',
           height: '100%',
           display: 'flex',
-          background: '#f3f1ea',
-          color: '#172033',
+          background: '#0b100e',
+          color: '#f1f3ed',
           padding: '56px',
           fontFamily: 'sans-serif',
         }}
@@ -24,10 +24,10 @@ export default function OpenGraphImage() {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            border: '2px solid #d8d4ca',
+            border: '2px solid #35463d',
             borderRadius: '30px',
             padding: '48px',
-            background: '#fffdf8',
+            background: '#101713',
           }}
         >
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -40,8 +40,8 @@ export default function OpenGraphImage() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   borderRadius: 16,
-                  background: '#2457d6',
-                  color: '#ffffff',
+                  background: '#78c99b',
+                  color: '#07110c',
                   fontSize: 20,
                   fontWeight: 700,
                 }}
@@ -50,11 +50,11 @@ export default function OpenGraphImage() {
               </div>
               <span style={{ fontSize: 24, fontWeight: 700 }}>Full Stack Developer</span>
             </div>
-            <span style={{ fontSize: 20, color: '#657083' }}>Amman, Jordan</span>
+            <span style={{ fontSize: 20, color: '#aab5ae' }}>Amman, Jordan</span>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            <div style={{ color: '#2457d6', fontSize: 22, fontWeight: 700 }}>
+            <div style={{ color: '#78c99b', fontSize: 22, fontWeight: 700 }}>
               TYPESCRIPT · NODE.JS · NEXT.JS · ASP.NET CORE
             </div>
             <div
@@ -68,13 +68,13 @@ export default function OpenGraphImage() {
             >
               Adham Abu Hager
             </div>
-            <div style={{ maxWidth: 920, color: '#5c6678', fontSize: 31, lineHeight: 1.25 }}>
+            <div style={{ maxWidth: 920, color: '#aab5ae', fontSize: 31, lineHeight: 1.25 }}>
               Full-stack delivery, with backend depth.
             </div>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 14, fontSize: 21 }}>
-            <div style={{ width: 10, height: 10, borderRadius: 999, background: '#0b7c6b' }} />
+            <div style={{ width: 10, height: 10, borderRadius: 999, background: '#91d5ad' }} />
             Aoun · Featured deployed full-stack project
           </div>
         </div>
