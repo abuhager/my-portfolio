@@ -238,10 +238,10 @@ ul, ol { margin: 0; padding: 0; }
 
 .section-heading h2 {
   max-width: 18ch;
-  font-size: clamp(2rem, 3.65vw, 3.25rem);
+  font-size: clamp(2rem, 3.1vw, 2.8rem);
   font-weight: 580;
-  letter-spacing: -0.055em;
-  line-height: 0.98;
+  letter-spacing: -0.05em;
+  line-height: 1;
   text-wrap: balance;
 }
 
@@ -754,10 +754,10 @@ ul, ol { margin: 0; padding: 0; }
 }
 
 .about-copy > p {
-  font-size: clamp(1.25rem, 2.3vw, 1.8rem);
+  font-size: clamp(1.15rem, 1.65vw, 1.375rem);
   font-weight: 500;
-  letter-spacing: -0.035em;
-  line-height: 1.32;
+  letter-spacing: -0.025em;
+  line-height: 1.45;
 }
 
 .about-focus {
@@ -898,10 +898,10 @@ ul, ol { margin: 0; padding: 0; }
 
 .contact-panel h2 {
   max-width: 12ch;
-  font-size: clamp(2.6rem, 5.25vw, 4.7rem);
+  font-size: clamp(2.6rem, 4.2vw, 3.75rem);
   font-weight: 570;
-  letter-spacing: -0.07em;
-  line-height: 0.92;
+  letter-spacing: -0.06em;
+  line-height: 0.94;
   text-wrap: balance;
 }
 
@@ -1077,7 +1077,7 @@ ul, ol { margin: 0; padding: 0; }
   .hero__proof-strip span { min-height: 3.75rem; padding-inline: 0.5rem; font-size: 0.62rem; }
 
   .section-heading__row { grid-template-columns: 1fr; align-items: start; }
-  .section-heading h2 { font-size: clamp(2.1rem, 10.5vw, 3.25rem); }
+  .section-heading h2 { font-size: clamp(1.9rem, 8vw, 2.6rem); }
   .featured-project, .secondary-project { margin-inline: -0.2rem; padding: 1rem; border-radius: 1rem; }
   .featured-project__intro { grid-template-columns: 1fr; padding: 2rem 0; gap: 1.25rem; }
   .featured-project h3, .secondary-project h3 { font-size: clamp(2.9rem, 14vw, 4.35rem); }
@@ -1099,7 +1099,7 @@ ul, ol { margin: 0; padding: 0; }
   .background-grid { grid-template-columns: 1fr; }
   .background-group:last-child { grid-column: auto; }
   .contact-panel { padding: 1.25rem; border-radius: 1rem; gap: 2.5rem; }
-  .contact-panel h2 { font-size: clamp(2.6rem, 12vw, 3.75rem); }
+  .contact-panel h2 { font-size: clamp(2.35rem, 10vw, 3.25rem); }
   .contact-panel__actions { align-items: stretch; flex-direction: column; }
   .contact-panel__actions .button { width: 100%; }
   .contact-links a { min-width: 0; }
@@ -1119,15 +1119,15 @@ ul, ol { margin: 0; padding: 0; }
 }
 
 .section {
-  padding: clamp(5.5rem, 9vw, 7.5rem) 0;
+  padding: clamp(4.75rem, 7vw, 6rem) 0;
 }
 
 .section-heading {
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: clamp(2.25rem, 4vw, 3rem);
 }
 
 .hero {
-  padding: clamp(5rem, 9vw, 7.5rem) 0 clamp(5.75rem, 10vw, 8rem);
+  padding: clamp(4rem, 6vw, 5rem) 0 clamp(4.25rem, 6.5vw, 5.5rem);
 }
 
 .hero::before {
@@ -1141,7 +1141,7 @@ ul, ol { margin: 0; padding: 0; }
 .hero__grid {
   grid-template-columns: minmax(0, 1.2fr) minmax(19rem, 0.68fr);
   align-items: center;
-  gap: clamp(3.5rem, 8vw, 7.5rem);
+  gap: clamp(3rem, 6vw, 5rem);
 }
 
 .hero__copy {
@@ -1149,26 +1149,26 @@ ul, ol { margin: 0; padding: 0; }
 }
 
 .hero__identity {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .hero h1 {
-  max-width: 12.5ch;
-  font-size: clamp(3.75rem, 6.1vw, 5.85rem);
+  max-width: 14ch;
+  font-size: clamp(3.5rem, 5.15vw, 4.5rem);
   font-weight: 590;
-  letter-spacing: -0.072em;
-  line-height: 0.92;
+  letter-spacing: -0.062em;
+  line-height: 0.94;
 }
 
 .hero__intro {
   max-width: 40rem;
-  margin-top: 1.6rem;
-  font-size: 1rem;
-  line-height: 1.75;
+  margin-top: 1.4rem;
+  font-size: 0.97rem;
+  line-height: 1.7;
 }
 
 .hero__actions {
-  margin-top: 2.15rem;
+  margin-top: 1.8rem;
 }
 
 .hero__socials {
@@ -1178,8 +1178,8 @@ ul, ol { margin: 0; padding: 0; }
 .hero__signals {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2.15rem;
-  padding-top: 1.25rem;
+  margin-top: 1.7rem;
+  padding-top: 1.05rem;
   color: #7f8e86;
   border-top: 1px solid var(--line);
   gap: 0.55rem 1.25rem;
@@ -1380,7 +1380,7 @@ ul, ol { margin: 0; padding: 0; }
 
 .project-card {
   min-width: 0;
-  padding: clamp(1.15rem, 3vw, 2rem);
+  padding: clamp(1.1rem, 2.5vw, 1.75rem);
   overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -1402,8 +1402,8 @@ ul, ol { margin: 0; padding: 0; }
   display: grid;
   grid-template-columns: minmax(0, 0.97fr) minmax(0, 1.03fr);
   align-items: center;
-  padding: clamp(1.65rem, 4vw, 3rem) 0;
-  gap: clamp(2rem, 6vw, 4.5rem);
+  padding: clamp(1.4rem, 3vw, 2.25rem) 0;
+  gap: clamp(2rem, 5vw, 3.75rem);
 }
 
 .project-card__visual {
@@ -1455,10 +1455,10 @@ ul, ol { margin: 0; padding: 0; }
 }
 
 .project-card__content h3 {
-  font-size: clamp(3.15rem, 6vw, 4.8rem);
+  font-size: clamp(2.75rem, 4.5vw, 3.75rem);
   font-weight: 570;
-  letter-spacing: -0.072em;
-  line-height: 0.9;
+  letter-spacing: -0.065em;
+  line-height: 0.92;
 }
 
 .project-card .project-subtitle {
@@ -1470,7 +1470,7 @@ ul, ol { margin: 0; padding: 0; }
 
 .project-card__summary {
   max-width: 39rem;
-  margin-top: 1.35rem;
+  margin-top: 1.1rem;
   color: var(--ink-soft);
   font-size: 0.94rem;
   line-height: 1.7;
@@ -1478,7 +1478,7 @@ ul, ol { margin: 0; padding: 0; }
 
 .project-card__signals {
   display: grid;
-  margin-top: 1.45rem;
+  margin-top: 1.2rem;
   padding: 1rem 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -1501,18 +1501,18 @@ ul, ol { margin: 0; padding: 0; }
 }
 
 .project-card__content .badge-list {
-  margin-top: 1.35rem;
+  margin-top: 1.1rem;
 }
 
 .project-card__content .project-links {
-  margin-top: 1.35rem;
+  margin-top: 1.1rem;
 }
 
 .project-flow--visual {
   grid-area: auto;
   align-self: stretch;
   display: flex;
-  min-height: 22rem;
+  min-height: 20rem;
   flex-direction: column;
   justify-content: center;
   padding: clamp(1.25rem, 3vw, 2rem);
@@ -1539,7 +1539,7 @@ ul, ol { margin: 0; padding: 0; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 4.8rem;
+  min-height: 4.25rem;
   padding: 1rem 0;
   cursor: pointer;
   gap: 1.5rem;
@@ -1637,7 +1637,7 @@ ul, ol { margin: 0; padding: 0; }
   }
 
   .hero h1 {
-    font-size: clamp(3.5rem, 7.8vw, 5.25rem);
+    font-size: clamp(3.35rem, 6.7vw, 4.35rem);
   }
 
   .project-card__main {
@@ -1655,7 +1655,7 @@ ul, ol { margin: 0; padding: 0; }
   }
 
   .hero {
-    padding: 4.5rem 0 5.5rem;
+    padding: 4rem 0 4.5rem;
   }
 
   .hero__grid,
@@ -1668,8 +1668,8 @@ ul, ol { margin: 0; padding: 0; }
   }
 
   .hero h1 {
-    max-width: 13ch;
-    font-size: clamp(3.6rem, 10.5vw, 5.5rem);
+    max-width: 14ch;
+    font-size: clamp(3.25rem, 8.5vw, 4.5rem);
   }
 
   .profile-card {
@@ -1696,11 +1696,11 @@ ul, ol { margin: 0; padding: 0; }
   }
 
   .section {
-    padding: 4.5rem 0;
+    padding: 3.75rem 0;
   }
 
   .hero {
-    padding: 3.4rem 0 4.75rem;
+    padding: 3rem 0 4rem;
   }
 
   .hero__identity {
@@ -1708,9 +1708,9 @@ ul, ol { margin: 0; padding: 0; }
   }
 
   .hero h1 {
-    max-width: 12ch;
-    font-size: clamp(3rem, 14vw, 4.4rem);
-    line-height: 0.94;
+    max-width: 13ch;
+    font-size: clamp(2.75rem, 11.5vw, 3.7rem);
+    line-height: 0.96;
   }
 
   .hero__intro {
@@ -1742,11 +1742,11 @@ ul, ol { margin: 0; padding: 0; }
   }
 
   .project-card__main {
-    padding: 1.6rem 0;
+    padding: 1.4rem 0;
   }
 
   .project-card__content h3 {
-    font-size: clamp(3rem, 15vw, 4rem);
+    font-size: clamp(2.5rem, 12vw, 3.35rem);
   }
 
   .project-card__image img {
