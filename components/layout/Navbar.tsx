@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import Icon from '@/components/ui/Icon';
 
 const links = [
-  { label: 'Work', href: '#projects' },
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Work', href: '#projects' },
   { label: 'Background', href: '#background' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -33,7 +33,7 @@ export default function Navbar() {
           <span className="brand__mark" aria-hidden="true" />
           <span className="brand__copy">
             <strong>Adham Abu Hager</strong>
-            <span>Full Stack Developer</span>
+            <span>Full-Stack Developer</span>
           </span>
         </a>
 

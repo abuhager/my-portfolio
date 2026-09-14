@@ -67,9 +67,9 @@ export default function Home() {
           introduction={siteData.introduction}
           featuredProject={featuredProject}
         />
-        <Projects projects={siteData.projects} />
         <About about={siteData.about} principles={siteData.principles} />
         <TechStack skillGroups={siteData.skillGroups} />
+        <Projects projects={siteData.projects} />
         <Experience background={siteData.background} />
       </main>
       <Footer

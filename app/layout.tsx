@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 const siteUrl = 'https://my-portfolio-five-azure-69.vercel.app';
-const title = 'Adham Abu Hager | Full Stack Developer';
+const title = 'Adham Abu Hager | Full-Stack Developer';
 const description =
-  'Full Stack Developer in Amman building web applications with TypeScript, Next.js, Node.js, MongoDB, and ASP.NET Core.';
+  'Full-Stack Developer in Amman building web applications with TypeScript, Next.js, Node.js, MongoDB, and ASP.NET Core.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
