@@ -2,7 +2,7 @@
 
 Professional portfolio for **Adham Abu Hager**, a Full Stack Developer based in Amman, Jordan.
 
-**Live:** [my-portfolio-five-azure-69.vercel.app](https://my-portfolio-five-azure-69.vercel.app)
+**Live:** [adhamabuhagerdev.site](https://adhamabuhagerdev.site)
 
 ## What this site prioritizes
 
@@ -17,7 +17,7 @@ Professional portfolio for **Adham Abu Hager**, a Full Stack Developer based in 
 
 A deployed Arabic in-kind donation coordination platform. The case study is based on the current frontend and backend repositories and covers the verified booking, waitlist, matching, handover, chat, notification, moderation, security, testing, and operational workflows.
 
-- [Live product](https://aoun-project-theta.vercel.app/)
+- [Live product](https://www.aoun.website/)
 - [Frontend repository](https://github.com/abuhager/Aoun-Project_FrontEnd)
 - [Backend repository](https://github.com/abuhager/Aoun-Project_BackEnd)
 
