@@ -3,14 +3,14 @@ import type { SiteData } from '@/types';
 export const siteData: SiteData = {
   name: 'Adham Abu Hager',
   initials: 'AH',
-  role: 'Full Stack Developer',
+  role: 'Full-Stack Developer',
   location: 'Amman, Jordan',
   headline:
-    'I build role-based web products—from clear interfaces to reliable backend systems.',
+    'I build complete web products—from clear interfaces to reliable backend systems.',
   introduction:
-    'Computer Science graduate building with TypeScript, Node.js, Next.js, and ASP.NET Core—designing APIs, authentication, transaction-sensitive workflows, real-time features, and the interfaces that make them usable.',
+    'Computer Science graduate with a backend-leaning full-stack focus. I build with TypeScript, Next.js, Node.js, and ASP.NET Core—turning business rules into usable, production-minded web products.',
   about:
-    'I work across the full product path: understanding the workflow, shaping the data model, building the API, connecting the interface, and validating the result. My work leans toward backend engineering—business rules, authorization, data consistency, architecture, security, and performance—while still delivering modern, responsive frontends.',
+    'I work across the full product path: understanding the workflow, shaping the data model, building the API, connecting the interface, and validating the result. My strongest area is backend engineering, while my full-stack range helps me make practical decisions across the whole system.',
   principles: [
     {
       title: 'Model the workflow',
@@ -31,33 +31,23 @@ export const siteData: SiteData = {
   skillGroups: [
     {
       title: 'Frontend',
-      description: 'Modern, responsive web interfaces',
-      items: ['React', 'Next.js', 'Tailwind CSS', 'HTML', 'CSS', 'Bootstrap'],
+      description: 'Responsive interfaces and modern rendering',
+      items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Tailwind CSS', 'HTML & CSS', 'Bootstrap'],
     },
     {
       title: 'Backend',
-      description: 'APIs, workflows, and real-time systems',
-      items: ['Node.js', 'Express.js', 'ASP.NET Core MVC', 'REST APIs', 'Socket.IO', 'Native ESM'],
+      description: 'APIs, business workflows, and real-time systems',
+      items: ['Node.js', 'Express.js', 'C#', 'ASP.NET Core MVC', 'REST APIs', 'Socket.IO', 'Native ESM'],
     },
     {
-      title: 'Databases',
-      description: 'Document and relational data layers',
-      items: ['MongoDB', 'Mongoose', 'SQL Server', 'Entity Framework Core', 'Prisma', 'Redis'],
+      title: 'Data',
+      description: 'Document, relational, and caching layers',
+      items: ['MongoDB', 'Mongoose', 'SQL Server', 'Entity Framework Core', 'Redis'],
     },
     {
-      title: 'Languages',
-      description: 'Languages used across projects and training',
-      items: ['TypeScript', 'JavaScript', 'C#', 'SQL', 'C++'],
-    },
-    {
-      title: 'Testing',
-      description: 'Automated checks and API verification',
-      items: ['Playwright', 'Node.js Test Runner', 'API Testing', 'Postman'],
-    },
-    {
-      title: 'Tools & DevOps',
-      description: 'Source control, CI, and deployment',
-      items: ['Git', 'GitHub', 'GitHub Actions', 'Vercel', 'Render'],
+      title: 'Quality & Delivery',
+      description: 'Testing, source control, CI, and deployment',
+      items: ['Playwright', 'Node.js Test Runner', 'API Testing', 'Postman', 'Git', 'GitHub Actions', 'Vercel', 'Render'],
     },
   ],
   projects: [
