@@ -87,10 +87,12 @@ function ProjectDisclosure({ project }: { project: Project }) {
     <details className="project-disclosure">
       <summary>
         <span>
-          <small>Technical case study</small>
+          <small>View technical details</small>
           <strong>Problem, contribution, and engineering decisions</strong>
         </span>
-        <span className="project-disclosure__toggle" aria-hidden="true">+</span>
+        <span className="project-disclosure__toggle" aria-hidden="true">
+          <Icon name="chevron-down" size={20} />
+        </span>
       </summary>
 
       <div className="project-disclosure__body">

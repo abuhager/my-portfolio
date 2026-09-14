@@ -1586,7 +1586,7 @@ ul, ol { margin: 0; padding: 0; }
 }
 
 .project-disclosure[open] .project-disclosure__toggle {
-  transform: rotate(45deg);
+  transform: rotate(180deg);
 }
 
 .project-disclosure__body {

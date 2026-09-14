@@ -1,6 +1,7 @@
 type IconName =
   | 'arrow-up-right'
   | 'arrow-down'
+  | 'chevron-down'
   | 'github'
   | 'linkedin'
   | 'mail'
@@ -54,6 +55,14 @@ export default function Icon({ name, size = 18, className }: IconProps) {
     return (
       <svg {...common} fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M12 4v15m-5-5 5 5 5-5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  if (name === 'chevron-down') {
+    return (
+      <svg {...common} fill="none" stroke="currentColor" strokeWidth="1.9">
+        <path d="m6 9 6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     );
   }
