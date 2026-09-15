@@ -50,17 +50,20 @@ export const siteData: SiteData = {
     {
       id: 'unievents', number: '02', title: 'UniEvents', subtitle: 'University event management and booking system', status: 'Source on GitHub',
       problem: 'Manual university event registration makes capacity, cancellations, attendance, and waiting lists difficult to coordinate consistently.',
-      summary: 'A server-rendered event platform that manages the booking lifecycle for students and gives administrators tools for events, attendance, reporting, and exports.',
-      contribution: 'Built the ASP.NET Core MVC application using C# controllers, Razor views, Entity Framework Core, and SQL Server, including the student and admin workflows from booking through check-in.',
+      summary: 'A server-rendered event platform that manages booking and waitlist states for students, with admin dashboards, attendance verification, reporting, and exports.',
+      contribution: 'Implemented the student and admin workflows in ASP.NET Core MVC using C# controllers, Razor views, Entity Framework Core, and SQL Server—from capacity-aware booking through ticket verification and check-in.',
       features: ['Session-based authentication and Student/Admin role separation','Capacity-aware booking with duplicate booking prevention','FIFO waitlist promotion after cancellation or capacity expansion','PDF ticket generation, verification, and attendance check-in','Admin analytics and Excel booking exports'],
       highlights: [
-        { title: 'Booking state machine', detail: 'Bookings move between active, waiting, cancelled, and checked-in states based on capacity and user actions.' },
+        { title: 'Booking lifecycle', detail: 'Bookings use active, waiting, cancelled, and checked-in states based on capacity and user actions.' },
         { title: 'Automatic waitlist', detail: 'The earliest waiting booking is promoted when a confirmed attendee cancels, and additional places are filled when capacity increases.' },
         { title: 'Operational tooling', detail: 'Administrators can verify tickets, record attendance, view booking summaries, and export event registrations to Excel.' },
       ],
       technologies: ['C#','ASP.NET Core MVC','.NET 8','Razor Views','Entity Framework Core','SQL Server','BCrypt','QuestPDF','ClosedXML'],
       links: [{ label: 'View main branch', href: 'https://github.com/abuhager/privateevent/tree/main', primary: true }],
-      flow: ['Browse events','Capacity check','Confirmed or waitlisted','Ticket & check-in'],
+      media: [
+        { src: '/projects/unievents-dashboard.png', alt: 'UniEvents Arabic admin dashboard showing student, event, booking, attendance, and capacity metrics with charts', width: 1440, height: 1080, caption: 'Admin analytics dashboard' },
+        { src: '/projects/unievents-events.png', alt: 'UniEvents Arabic student event list showing event dates, locations, capacities, and booking states', width: 1440, height: 1080, caption: 'Student event browser' },
+      ],
     },
   ],
   background: [
