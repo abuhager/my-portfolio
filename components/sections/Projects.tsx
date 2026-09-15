@@ -52,7 +52,6 @@ function ProjectFlow({ steps = [] }: { steps?: string[] }) {
 
 function ProjectVisual({ project }: { project: Project }) {
   const cover = project.media?.[0];
-  const secondary = project.media?.[1];
 
   if (!cover) {
     return <ProjectFlow steps={project.flow} />;
@@ -66,7 +65,7 @@ function ProjectVisual({ project }: { project: Project }) {
         <span />
         <b>{project.title} · product interface</b>
       </div>
-      <div className={secondary ? 'project-card__image project-card__image--gallery' : 'project-card__image'}>
+      <div className={`project-card__image project-card__image--${project.id}`}>
         <Image
           className="project-card__image-primary"
           src={cover.src}
@@ -75,18 +74,6 @@ function ProjectVisual({ project }: { project: Project }) {
           height={cover.height}
           sizes="(max-width: 900px) 100vw, 52vw"
         />
-        {secondary ? (
-          <div className="project-card__image-secondary">
-            <Image
-              src={secondary.src}
-              alt={secondary.alt}
-              width={secondary.width}
-              height={secondary.height}
-              sizes="(max-width: 600px) 44vw, 22vw"
-            />
-            <span>{secondary.caption}</span>
-          </div>
-        ) : null}
       </div>
       <figcaption>
         <span>{cover.caption}</span>

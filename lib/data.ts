@@ -43,8 +43,6 @@ export const siteData: SiteData = {
       ],
       media: [
         { src: '/projects/aoun-home.jpg', alt: 'Aoun Arabic donation platform home page showing the main donation journey', width: 1348, height: 926, caption: 'Public home page' },
-        { src: '/projects/aoun-chat.webp', alt: 'Aoun real-time conversation interface for coordinating a donation handover', width: 900, height: 869, caption: 'Transaction chat' },
-        { src: '/projects/aoun-requests.webp', alt: 'Aoun donation needs request listing interface in Arabic', width: 900, height: 493, caption: 'Need requests' },
       ],
     },
     {
@@ -61,8 +59,7 @@ export const siteData: SiteData = {
       technologies: ['C#','ASP.NET Core MVC','.NET 8','Razor Views','Entity Framework Core','SQL Server','BCrypt','QuestPDF','ClosedXML'],
       links: [{ label: 'View main branch', href: 'https://github.com/abuhager/privateevent/tree/main', primary: true }],
       media: [
-        { src: '/projects/unievents-dashboard.png', alt: 'UniEvents Arabic admin dashboard showing student, event, booking, attendance, and capacity metrics with charts', width: 1440, height: 1080, caption: 'Admin analytics dashboard' },
-        { src: '/projects/unievents-events.png', alt: 'UniEvents Arabic student event list showing event dates, locations, capacities, and booking states', width: 1440, height: 1080, caption: 'Student event browser' },
+        { src: '/projects/unievents-events.png', alt: 'UniEvents Arabic student event browser showing event dates, locations, capacities, booking states, and detail actions', width: 1440, height: 1080, caption: 'Student event browser' },
       ],
     },
   ],
