@@ -2,19 +2,21 @@
 
 import type { CSSProperties } from 'react';
 
-type SectionId = 'projects' | 'about' | 'skills' | 'background' | 'contact';
+type SectionId = 'top' | 'projects' | 'about' | 'skills' | 'background' | 'contact';
 
 const destinations: { id: SectionId; number: string; title: string; description: string }[] = [
-  { id: 'projects', number: '01', title: 'Projects', description: 'Aoun & UniEvents' },
-  { id: 'about', number: '02', title: 'About', description: 'The person behind the code' },
-  { id: 'skills', number: '03', title: 'Skills', description: 'Frontend to backend' },
-  { id: 'background', number: '04', title: 'Journey', description: 'Experience & education' },
-  { id: 'contact', number: '05', title: 'Contact', description: 'Start a conversation' },
+  { id: 'top', number: '01', title: 'Overview', description: 'Start here' },
+  { id: 'projects', number: '02', title: 'Projects', description: 'Aoun & UniEvents' },
+  { id: 'about', number: '03', title: 'About', description: 'The person behind the code' },
+  { id: 'skills', number: '04', title: 'Skills', description: 'Frontend to backend' },
+  { id: 'background', number: '05', title: 'Journey', description: 'Experience & education' },
+  { id: 'contact', number: '06', title: 'Contact', description: 'Start a conversation' },
 ];
 
 function TileIcon({ id }: { id: SectionId }) {
   const common = { width: 20, height: 20, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.6, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const, 'aria-hidden': true as const };
   switch (id) {
+    case 'top': return <svg {...common}><rect x="3" y="3" width="18" height="18" rx="3" /><path d="M3 9h18M9 9v12" /></svg>;
     case 'projects': return <svg {...common}><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18m-11 0v2h4v-2" /></svg>;
     case 'about': return <svg {...common}><circle cx="12" cy="7.5" r="3.5" /><path d="M4.5 20c0-4 3-6.5 7.5-6.5s7.5 2.5 7.5 6.5" /></svg>;
     case 'skills': return <svg {...common}><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-2-14-4 18" /></svg>;
@@ -23,7 +25,7 @@ function TileIcon({ id }: { id: SectionId }) {
   }
 }
 
-export default function ExploreCards({ active }: { active: SectionId | 'top' }) {
+export default function ExploreCards({ active }: { active: SectionId }) {
   return (
     <div className="explore-cards">
       {destinations.map((item, index) => (
@@ -38,7 +40,7 @@ export default function ExploreCards({ active }: { active: SectionId | 'top' }) 
             if (active === item.id) window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
-          <span className="explore-tile__top"><span className="explore-tile__number">{item.number} / 05</span><TileIcon id={item.id} /></span>
+          <span className="explore-tile__top"><span className="explore-tile__number">{item.number} / 06</span><TileIcon id={item.id} /></span>
           <span className="explore-tile__bottom"><strong>{item.title}</strong><span>{item.description}</span></span>
         </a>
       ))}
