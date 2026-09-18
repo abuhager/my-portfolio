@@ -33,6 +33,7 @@ function readView(previous: View): View {
 
 export default function PortfolioViews({ home, about, skills, projects, background, contact }: PortfolioViewsProps) {
   const [active, setActive] = useState<View>('top');
+  const [compact, setCompact] = useState(false);
   const activeRef = useRef<View>('top');
 
   useEffect(() => {
@@ -52,10 +53,19 @@ export default function PortfolioViews({ home, about, skills, projects, backgrou
       }
     }
 
+    function onScroll() {
+      // Separate thresholds avoid flickering when the deck itself changes height.
+      setCompact((previous) => previous ? window.scrollY > 65 : window.scrollY > 155);
+    }
     onNavigation(false);
+    onScroll();
     const onHashChange = () => onNavigation(true);
     window.addEventListener('hashchange', onHashChange);
-    return () => window.removeEventListener('hashchange', onHashChange);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('hashchange', onHashChange);
+      window.removeEventListener('scroll', onScroll);
+    };
   }, []);
 
   const views: { id: View; content: ReactNode }[] = [
@@ -69,10 +79,10 @@ export default function PortfolioViews({ home, about, skills, projects, backgrou
 
   return (
     <main id="main" tabIndex={-1} className="portfolio-stage" aria-label="Portfolio content">
-      <div className="portfolio-deck">
+      <div className={compact ? 'portfolio-deck portfolio-deck--compact' : 'portfolio-deck'}>
         <nav className="page-shell" aria-label="Explore the portfolio">
           <div className="portfolio-deck__heading">
-            <span>EXPLORE THE PORTFOLIO</span>
+            <span>EXPLORE / 01—05</span>
             <a href="#top" aria-current={active === 'top' ? 'page' : undefined}>Overview <span aria-hidden="true">↗</span></a>
           </div>
           <ExploreCards active={active} />
