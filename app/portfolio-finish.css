@@ -3,12 +3,7 @@
 .portfolio-content .section-heading { margin-bottom: clamp(1.45rem, 3vw, 2.3rem); }
 .portfolio-content .section-heading__row > p { max-width: 35rem; }
 
-/* Prioritise real work without six competing accent colours. */
-.explore-tile--projects:not(.explore-tile--active) {
-  border-color: #537257;
-  background: linear-gradient(145deg, #203c2a, #14251b 82%);
-}
-.explore-tile--projects .explore-tile__top svg { color: #b7e7ae; }
+/* Projects uses the same neutral styling as other cards until it is selected. */
 .explore-tile--skills .explore-tile__top svg { color: #c5dbca; }
 .explore-tile--active .explore-tile__bottom strong { color: #fbfff8; }
 
@@ -38,13 +33,9 @@
 }
 
 @media (max-width: 600px) {
-  /* All six cards remain readable; compact on section selection or scrolling. */
+  /* The six cards retain the same compact size in every section. */
   .portfolio-deck { padding-block: .44rem .5rem; }
   .portfolio-deck__heading { margin-bottom: .32rem; }
-  .portfolio-deck:not(.portfolio-deck--compact) .explore-tile {
-    min-height: 63px;
-    padding-block: .36rem;
-  }
   .portfolio-deck--compact { padding-block: .3rem .38rem; }
   .portfolio-deck--compact .explore-tile { min-height: 44px; padding-block: .32rem; }
   .portfolio-deck--compact .explore-tile__top { display: none; }
