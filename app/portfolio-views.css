@@ -7,6 +7,10 @@
   min-height: min(78svh, 860px);
 }
 
+.portfolio-stage--contact {
+  min-height: 0;
+}
+
 .portfolio-view > .section {
   min-height: min(78svh, 860px);
 }
