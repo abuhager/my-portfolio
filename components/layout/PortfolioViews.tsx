@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
+import ExploreCards from '@/components/layout/ExploreCards';
 
 type View = 'top' | 'about' | 'skills' | 'projects' | 'background' | 'contact';
 
@@ -14,28 +15,47 @@ type PortfolioViewsProps = {
 };
 
 const viewNames: View[] = ['top', 'about', 'skills', 'projects', 'background', 'contact'];
+const viewTitles: Record<View, string> = {
+  top: 'hero-title',
+  about: 'about-title',
+  skills: 'skills-title',
+  projects: 'projects-title',
+  background: 'background-title',
+  contact: 'contact-title',
+};
 
 function readView(previous: View): View {
   const hash = window.location.hash.slice(1).toLowerCase();
-  // The accessibility skip link targets #main; it should not switch views.
-  if (hash === 'main') return previous;
+  if (hash === 'main') return previous; // Preserve the keyboard skip link.
   if (!hash) return 'top';
   return viewNames.includes(hash as View) ? (hash as View) : 'top';
 }
 
 export default function PortfolioViews({ home, about, skills, projects, background, contact }: PortfolioViewsProps) {
   const [active, setActive] = useState<View>('top');
+  const activeRef = useRef<View>('top');
 
   useEffect(() => {
-    function onNavigation() {
-      setActive((previous) => readView(previous));
-      // A hidden section can have a hash target; start the newly selected view at the top.
+    function onNavigation(focusHeading: boolean) {
+      const view = readView(activeRef.current);
+      activeRef.current = view;
+      setActive(view);
       window.scrollTo(0, 0);
+      if (focusHeading) {
+        window.requestAnimationFrame(() => {
+          const heading = document.getElementById(viewTitles[view]);
+          if (heading) {
+            heading.setAttribute('tabindex', '-1');
+            heading.focus({ preventScroll: true });
+          }
+        });
+      }
     }
 
-    onNavigation();
-    window.addEventListener('hashchange', onNavigation);
-    return () => window.removeEventListener('hashchange', onNavigation);
+    onNavigation(false);
+    const onHashChange = () => onNavigation(true);
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
 
   const views: { id: View; content: ReactNode }[] = [
@@ -44,20 +64,25 @@ export default function PortfolioViews({ home, about, skills, projects, backgrou
     { id: 'skills', content: skills },
     { id: 'projects', content: projects },
     { id: 'background', content: background },
+    { id: 'contact', content: contact },
   ];
 
   return (
-    <>
-      <main id="main" className={active === 'contact' ? 'portfolio-stage portfolio-stage--contact' : 'portfolio-stage'} aria-label="Portfolio content">
-        {views.map(({ id, content }) => (
-          <div key={id} className="portfolio-view" hidden={active !== id}>
-            {content}
-          </div>
-        ))}
-      </main>
-      <div className="portfolio-view" hidden={active !== 'contact'}>
-        {contact}
-      </div>
-    </>
+    <main id="main" tabIndex={-1} className="portfolio-stage" aria-label="Portfolio content">
+      {views.map(({ id, content }) => (
+        <div key={id} className="portfolio-view" hidden={active !== id}>
+          {content}
+          {id !== 'top' ? (
+            <aside className="page-shell view-next" aria-label="Discover more of this portfolio">
+              <div className="view-next__heading">
+                <a href="#top" className="view-next__back">← Back to the cards</a>
+                <div><span>KEEP EXPLORING</span><h2>What would you like to see next?</h2></div>
+              </div>
+              <ExploreCards compact exclude={id} />
+            </aside>
+          ) : null}
+        </div>
+      ))}
+    </main>
   );
 }
