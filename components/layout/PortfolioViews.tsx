@@ -33,7 +33,6 @@ function readView(previous: View): View {
 
 export default function PortfolioViews({ home, about, skills, projects, background, contact }: PortfolioViewsProps) {
   const [active, setActive] = useState<View>('top');
-  const [compact, setCompact] = useState(false);
   const activeRef = useRef<View>('top');
 
   useEffect(() => {
@@ -58,8 +57,7 @@ export default function PortfolioViews({ home, about, skills, projects, backgrou
       const view = readView(activeRef.current);
       activeRef.current = view;
       setActive(view);
-      // Overview keeps its full-size cards; other sections use compact cards.
-      setCompact(view !== 'top');
+      // The six navigation cards remain compact on Overview and every section.
       resetScroll();
 
       if (focusHeading) {
@@ -93,24 +91,15 @@ export default function PortfolioViews({ home, about, skills, projects, backgrou
       onNavigation(true);
     }
 
-    function onScroll() {
-      // Card size depends on the selected section, never on scroll position.
-      // This prevents Overview's cards from growing or shrinking as you scroll.
-      setCompact(activeRef.current !== 'top');
-    }
-
     onNavigation(false);
-    onScroll();
     const onHistoryNavigation = () => onNavigation(true);
     document.addEventListener('click', onInternalLinkClick);
     window.addEventListener('hashchange', onHistoryNavigation);
     window.addEventListener('popstate', onHistoryNavigation);
-    window.addEventListener('scroll', onScroll, { passive: true });
     return () => {
       document.removeEventListener('click', onInternalLinkClick);
       window.removeEventListener('hashchange', onHistoryNavigation);
       window.removeEventListener('popstate', onHistoryNavigation);
-      window.removeEventListener('scroll', onScroll);
       window.history.scrollRestoration = previousRestoration;
     };
   }, []);
@@ -126,7 +115,7 @@ export default function PortfolioViews({ home, about, skills, projects, backgrou
 
   return (
     <main id="main" tabIndex={-1} className="portfolio-stage" aria-label="Portfolio content">
-      <div className={compact ? 'portfolio-deck portfolio-deck--compact' : 'portfolio-deck'}>
+      <div className="portfolio-deck portfolio-deck--compact">
         <nav className="page-shell" aria-label="Explore the portfolio">
           <div className="portfolio-deck__heading"><span>EXPLORE / 01—06</span></div>
           <ExploreCards active={active} />
