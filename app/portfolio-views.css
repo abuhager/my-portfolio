@@ -1,0 +1,33 @@
+/* A focused view replaces the long scrolling page, without changing section styles. */
+.portfolio-view[hidden] {
+  display: none !important;
+}
+
+.portfolio-stage {
+  min-height: min(78svh, 860px);
+}
+
+.portfolio-view > .section {
+  min-height: min(78svh, 860px);
+}
+
+.desktop-nav a[aria-current="page"],
+.mobile-nav a[aria-current="page"] {
+  color: #89e6c4;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.5rem;
+}
+
+.portfolio-view:not([hidden]) {
+  animation: portfolio-view-enter 180ms ease-out;
+}
+
+@keyframes portfolio-view-enter {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-view:not([hidden]) { animation: none; }
+}
