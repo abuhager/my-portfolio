@@ -42,7 +42,7 @@ export default function PortfolioViews({ home, about, skills, projects, backgrou
       const view = readView(activeRef.current);
       activeRef.current = view;
       setActive(view);
-      // Changing the section also resets its scroll position; all five cards remain visible.
+      // Changing a section starts its content at the top while keeping the deck visible.
       window.scrollTo(0, 0);
       setScrolled(false);
       if (focusHeading) {
@@ -57,8 +57,9 @@ export default function PortfolioViews({ home, about, skills, projects, backgrou
     }
 
     function onScroll() {
-      // Hysteresis keeps the deck from jumping near the size-change threshold.
-      setScrolled((wasScrolled) => wasScrolled ? window.scrollY > 70 : window.scrollY > 155);
+      // Expand again only on return to the very top: shrinking the deck changes
+      // document height, so nearby two-way thresholds would oscillate on phones.
+      setScrolled((wasScrolled) => wasScrolled ? window.scrollY > 2 : window.scrollY > 155);
     }
 
     onNavigation(false);
