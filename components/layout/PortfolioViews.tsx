@@ -15,8 +15,11 @@ type PortfolioViewsProps = {
 
 const viewNames: View[] = ['top', 'about', 'skills', 'projects', 'background', 'contact'];
 
-function readView(): View {
+function readView(previous: View): View {
   const hash = window.location.hash.slice(1).toLowerCase();
+  // The accessibility skip link targets #main; it should not switch views.
+  if (hash === 'main') return previous;
+  if (!hash) return 'top';
   return viewNames.includes(hash as View) ? (hash as View) : 'top';
 }
 
@@ -25,8 +28,8 @@ export default function PortfolioViews({ home, about, skills, projects, backgrou
 
   useEffect(() => {
     function onNavigation() {
-      setActive(readView());
-      // A hidden section can have a hash target; always start its view at the top.
+      setActive((previous) => readView(previous));
+      // A hidden section can have a hash target; start the newly selected view at the top.
       window.scrollTo(0, 0);
     }
 
