@@ -13,7 +13,18 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState('#top');
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const onHashChange = () => {
+      const hash = window.location.hash || '#top';
+      if (hash !== '#main') setActive(hash);
+    };
+    onHashChange();
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
 
   useEffect(() => {
     const closeOnEscape = (event: KeyboardEvent) => {
@@ -29,7 +40,7 @@ export default function Navbar() {
   return (
     <header className="site-header">
       <nav aria-label="Primary navigation" className="page-shell site-nav">
-        <a href="#top" className="brand" aria-label="Adham Abu Hager, home">
+        <a href="#top" className="brand" aria-label="Adham Abu Hager, home" aria-current={active === '#top' ? 'page' : undefined}>
           <span className="brand__mark" aria-hidden="true" />
           <span className="brand__copy">
             <strong>Adham Abu Hager</strong>
@@ -40,7 +51,7 @@ export default function Navbar() {
         <ul className="desktop-nav">
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href}>{link.label}</a>
+              <a href={link.href} aria-current={active === link.href ? 'page' : undefined}>{link.label}</a>
             </li>
           ))}
         </ul>
@@ -70,7 +81,7 @@ export default function Navbar() {
             <ul>
               {links.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} onClick={() => setOpen(false)}>
+                  <a href={link.href} aria-current={active === link.href ? 'page' : undefined} onClick={() => setOpen(false)}>
                     {link.label}
                     <Icon name="arrow-up-right" size={18} />
                   </a>
