@@ -26,7 +26,7 @@ const viewTitles: Record<View, string> = {
 
 function readView(previous: View): View {
   const hash = window.location.hash.slice(1).toLowerCase();
-  if (hash === 'main') return previous; // Preserve the keyboard skip link.
+  if (hash === 'main') return previous;
   if (!hash) return 'top';
   return viewNames.includes(hash as View) ? (hash as View) : 'top';
 }
@@ -69,20 +69,23 @@ export default function PortfolioViews({ home, about, skills, projects, backgrou
 
   return (
     <main id="main" tabIndex={-1} className="portfolio-stage" aria-label="Portfolio content">
-      {views.map(({ id, content }) => (
-        <div key={id} className="portfolio-view" hidden={active !== id}>
-          {content}
-          {id !== 'top' ? (
-            <aside className="page-shell view-next" aria-label="Discover more of this portfolio">
-              <div className="view-next__heading">
-                <a href="#top" className="view-next__back">← Back to the cards</a>
-                <div><span>KEEP EXPLORING</span><h2>What would you like to see next?</h2></div>
-              </div>
-              <ExploreCards compact exclude={id} />
-            </aside>
-          ) : null}
-        </div>
-      ))}
+      <div className="portfolio-deck">
+        <nav className="page-shell" aria-label="Explore the portfolio">
+          <div className="portfolio-deck__heading">
+            <span>EXPLORE THE PORTFOLIO</span>
+            <a href="#top" aria-current={active === 'top' ? 'page' : undefined}>Overview <span aria-hidden="true">↗</span></a>
+          </div>
+          <ExploreCards active={active} />
+        </nav>
+      </div>
+
+      <div className="portfolio-content" aria-live="off">
+        {views.map(({ id, content }) => (
+          <div key={id} className="portfolio-view" hidden={active !== id}>
+            {content}
+          </div>
+        ))}
+      </div>
     </main>
   );
 }
