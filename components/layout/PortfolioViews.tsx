@@ -48,7 +48,7 @@ export default function PortfolioViews({ home, about, skills, projects, backgrou
 
   return (
     <>
-      <main id="main" className="portfolio-stage" aria-label="Portfolio content">
+      <main id="main" className={active === 'contact' ? 'portfolio-stage portfolio-stage--contact' : 'portfolio-stage'} aria-label="Portfolio content">
         {views.map(({ id, content }) => (
           <div key={id} className="portfolio-view" hidden={active !== id}>
             {content}
