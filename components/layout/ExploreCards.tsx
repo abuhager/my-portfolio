@@ -2,15 +2,16 @@
 
 import type { CSSProperties } from 'react';
 
-type SectionId = 'top' | 'projects' | 'about' | 'skills' | 'background' | 'contact';
+type SectionId = 'top' | 'projects' | 'skills' | 'about' | 'background' | 'contact';
 
+// Recruiter scan order: who I am → what I shipped → what I use → the rest.
 const destinations: { id: SectionId; number: string; title: string; description: string }[] = [
   { id: 'top', number: '01', title: 'Overview', description: 'Start here' },
   { id: 'projects', number: '02', title: 'Projects', description: 'Aoun & UniEvents' },
-  { id: 'about', number: '03', title: 'About', description: 'The person behind the code' },
-  { id: 'skills', number: '04', title: 'Skills', description: 'Frontend to backend' },
+  { id: 'skills', number: '03', title: 'Skills', description: 'Frontend & backend' },
+  { id: 'about', number: '04', title: 'About', description: 'How I approach work' },
   { id: 'background', number: '05', title: 'Journey', description: 'Experience & education' },
-  { id: 'contact', number: '06', title: 'Contact', description: 'Start a conversation' },
+  { id: 'contact', number: '06', title: 'Contact', description: 'Get in touch' },
 ];
 
 function TileIcon({ id }: { id: SectionId }) {
@@ -18,8 +19,8 @@ function TileIcon({ id }: { id: SectionId }) {
   switch (id) {
     case 'top': return <svg {...common}><rect x="3" y="3" width="18" height="18" rx="3" /><path d="M3 9h18M9 9v12" /></svg>;
     case 'projects': return <svg {...common}><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18m-11 0v2h4v-2" /></svg>;
-    case 'about': return <svg {...common}><circle cx="12" cy="7.5" r="3.5" /><path d="M4.5 20c0-4 3-6.5 7.5-6.5s7.5 2.5 7.5 6.5" /></svg>;
     case 'skills': return <svg {...common}><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-2-14-4 18" /></svg>;
+    case 'about': return <svg {...common}><circle cx="12" cy="7.5" r="3.5" /><path d="M4.5 20c0-4 3-6.5 7.5-6.5s7.5 2.5 7.5 6.5" /></svg>;
     case 'background': return <svg {...common}><path d="M4 20h16M5 17V7l7-4 7 4v10M9 20v-7h6v7M9 9h.01M15 9h.01" /></svg>;
     case 'contact': return <svg {...common}><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></svg>;
   }
