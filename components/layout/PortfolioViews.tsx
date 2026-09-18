@@ -58,7 +58,7 @@ export default function PortfolioViews({ home, about, skills, projects, backgrou
       const view = readView(activeRef.current);
       activeRef.current = view;
       setActive(view);
-      // A selected section starts with a compact deck; Overview gets the full cards.
+      // Overview keeps its full-size cards; other sections use compact cards.
       setCompact(view !== 'top');
       resetScroll();
 
@@ -94,9 +94,9 @@ export default function PortfolioViews({ home, about, skills, projects, backgrou
     }
 
     function onScroll() {
-      // Keep all six destinations visible but short while reading any section.
-      // Only Overview expands its cards again at the very top.
-      setCompact(activeRef.current !== 'top' || window.scrollY > 155);
+      // Card size depends on the selected section, never on scroll position.
+      // This prevents Overview's cards from growing or shrinking as you scroll.
+      setCompact(activeRef.current !== 'top');
     }
 
     onNavigation(false);
