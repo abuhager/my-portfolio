@@ -33,15 +33,18 @@ function readView(previous: View): View {
 
 export default function PortfolioViews({ home, about, skills, projects, background, contact }: PortfolioViewsProps) {
   const [active, setActive] = useState<View>('top');
-  const [compact, setCompact] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const activeRef = useRef<View>('top');
+  const compact = active !== 'top' || scrolled;
 
   useEffect(() => {
     function onNavigation(focusHeading: boolean) {
       const view = readView(activeRef.current);
       activeRef.current = view;
       setActive(view);
+      // Changing the section also resets its scroll position; all five cards remain visible.
       window.scrollTo(0, 0);
+      setScrolled(false);
       if (focusHeading) {
         window.requestAnimationFrame(() => {
           const heading = document.getElementById(viewTitles[view]);
@@ -54,11 +57,11 @@ export default function PortfolioViews({ home, about, skills, projects, backgrou
     }
 
     function onScroll() {
-      // Separate thresholds avoid flickering when the deck itself changes height.
-      setCompact((previous) => previous ? window.scrollY > 65 : window.scrollY > 155);
+      // Hysteresis keeps the deck from jumping near the size-change threshold.
+      setScrolled((wasScrolled) => wasScrolled ? window.scrollY > 70 : window.scrollY > 155);
     }
+
     onNavigation(false);
-    onScroll();
     const onHashChange = () => onNavigation(true);
     window.addEventListener('hashchange', onHashChange);
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -82,13 +85,17 @@ export default function PortfolioViews({ home, about, skills, projects, backgrou
       <div className={compact ? 'portfolio-deck portfolio-deck--compact' : 'portfolio-deck'}>
         <nav className="page-shell" aria-label="Explore the portfolio">
           <div className="portfolio-deck__heading">
-            <span>EXPLORE / 01—05</span>
-            <a href="#top" aria-current={active === 'top' ? 'page' : undefined}>Overview <span aria-hidden="true">↗</span></a>
+            <div className="portfolio-deck__intro">
+              <span className="portfolio-deck__eyebrow">THE PORTFOLIO <span aria-hidden="true">/</span> EXPLORE</span>
+              <strong>Five ways into my work<span className="portfolio-deck__period">.</span></strong>
+            </div>
+            <a className="portfolio-deck__overview" href="#top" aria-current={active === 'top' ? 'page' : undefined}>
+              Overview <span aria-hidden="true">↗</span>
+            </a>
           </div>
           <ExploreCards active={active} />
         </nav>
       </div>
-
       <div className="portfolio-content" aria-live="off">
         {views.map(({ id, content }) => (
           <div key={id} className="portfolio-view" hidden={active !== id}>
