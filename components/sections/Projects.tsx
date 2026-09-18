@@ -139,17 +139,23 @@ function ProjectDisclosure({ project }: { project: Project }) {
 }
 
 function ProjectCard({ project, featured = false }: { project: Project; featured?: boolean }) {
+  const kicker = featured ? 'Featured full-stack product' : 'ASP.NET Core product';
+
   return (
     <article className={featured ? 'project-card project-card--featured' : 'project-card'}>
       <ProjectMeta project={project} />
 
       <div className="project-card__main">
+        {/* On phones the project name comes before its screenshot; the desktop title remains in the content column. */}
+        <div className="project-card__mobile-intro">
+          <p className="project-kicker">{kicker}</p>
+          <h3>{project.title}</h3>
+          <p className="project-subtitle">{project.subtitle}</p>
+        </div>
         <ProjectVisual project={project} />
 
         <div className="project-card__content">
-          <p className="project-kicker">
-            {featured ? 'Featured full-stack product' : 'ASP.NET Core product'}
-          </p>
+          <p className="project-kicker">{kicker}</p>
           <h3>{project.title}</h3>
           <p className="project-subtitle">{project.subtitle}</p>
           <p className="project-card__summary">{project.summary}</p>
@@ -184,8 +190,8 @@ export default function Projects({ projects }: { projects: Project[] }) {
       <div className="page-shell">
         <SectionHeading
           eyebrow="Selected work"
-          title="Products that show how I think and build."
-          description="Two complete workflows across different backend ecosystems. The overview stays quick to scan, with the technical depth available when useful."
+          title="Work you can explore."
+          description="Aoun is a deployed donation platform. UniEvents showcases event booking with ASP.NET Core. Explore the projects, source code and engineering details."
           titleId="projects-title"
         />
 

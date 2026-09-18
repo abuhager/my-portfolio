@@ -1,0 +1,76 @@
+/* Final pass: make the six-card layout easier to scan than the long-page baseline. */
+.portfolio-content .section { padding-top: clamp(2rem, 4vw, 3.3rem); }
+.portfolio-content .section-heading { margin-bottom: clamp(1.45rem, 3vw, 2.3rem); }
+.portfolio-content .section-heading__row > p { max-width: 35rem; }
+
+/* Prioritise real work without six competing accent colours. */
+.explore-tile--projects:not(.explore-tile--active) {
+  border-color: #537257;
+  background: linear-gradient(145deg, #203c2a, #14251b 82%);
+}
+.explore-tile--projects .explore-tile__top svg { color: #b7e7ae; }
+.explore-tile--skills .explore-tile__top svg { color: #c5dbca; }
+.explore-tile--active .explore-tile__bottom strong { color: #fbfff8; }
+
+/* Image leads on wide screens; on phones/tablets, name the project first. */
+.project-card__mobile-intro { display: none; }
+
+@media (max-width: 860px) {
+  .project-card__mobile-intro { display: block; min-width: 0; }
+  .project-card__mobile-intro h3 {
+    font-size: clamp(2.6rem, 7vw, 3.45rem);
+    font-weight: 570;
+    letter-spacing: -.065em;
+    line-height: 1;
+  }
+  .project-card__mobile-intro .project-subtitle {
+    margin-top: .5rem;
+    color: var(--blue);
+    font-size: .94rem;
+    font-weight: 620;
+    line-height: 1.45;
+  }
+  .project-card__content > .project-kicker,
+  .project-card__content > h3,
+  .project-card__content > .project-subtitle { display: none; }
+  .project-card__main { gap: 1.3rem; }
+  .project-card__summary { margin-top: .1rem; }
+}
+
+@media (max-width: 600px) {
+  /* All six cards remain readable; compact on section selection or scrolling. */
+  .portfolio-deck { padding-block: .44rem .5rem; }
+  .portfolio-deck__heading { margin-bottom: .32rem; }
+  .portfolio-deck:not(.portfolio-deck--compact) .explore-tile {
+    min-height: 63px;
+    padding-block: .36rem;
+  }
+  .portfolio-deck--compact { padding-block: .3rem .38rem; }
+  .portfolio-deck--compact .explore-tile { min-height: 44px; padding-block: .32rem; }
+  .portfolio-deck--compact .explore-tile__top { display: none; }
+  .portfolio-deck--compact .explore-tile__bottom strong { font-size: clamp(.72rem, 2.9vw, .83rem); }
+
+  /* Override the earlier mobile anchor padding without hiding the section title. */
+  .portfolio-content .portfolio-view:not([hidden]) > .section { padding-top: 1.65rem; }
+  .portfolio-content .portfolio-view:not([hidden]) > .projects-section .section-heading {
+    padding-top: .75rem;
+    margin-bottom: 1.45rem;
+  }
+  .portfolio-content .section-heading { gap: .65rem; padding-top: .75rem; }
+  .portfolio-content .section-heading__row { gap: .7rem; }
+  .portfolio-content .section-heading h2 { font-size: clamp(2rem, 8vw, 2.55rem); line-height: 1.05; }
+  .portfolio-content .section-heading__row > p { font-size: .88rem; line-height: 1.55; }
+  .hero { padding-top: 1.8rem; }
+  .hero__identity { margin-bottom: 1rem; }
+  .hero__intro { margin-top: 1.05rem; }
+  .project-card__main { padding-top: 1.15rem; gap: 1rem; }
+  .project-card__mobile-intro h3 { font-size: clamp(2.4rem, 11vw, 3.05rem); }
+  .project-card__image img { aspect-ratio: 1.7; object-position: top; }
+  .project-card__image--unievents img { aspect-ratio: 2.1; }
+  .project-card__visual figcaption { padding: .65rem .75rem; }
+  .project-card__content .project-card__summary { margin-top: .15rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .explore-tile { transition: none; }
+}

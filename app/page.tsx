@@ -1,5 +1,6 @@
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
+import PortfolioViews from '@/components/layout/PortfolioViews';
 import About from '@/components/sections/About';
 import Experience from '@/components/sections/Experience';
 import Hero from '@/components/sections/Hero';
@@ -30,14 +31,14 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
       <a href="#main" className="skip-link">Skip to content</a>
       <Navbar />
-      <main id="main">
-        <Hero name={siteData.name} role={siteData.role} location={siteData.location} headline={siteData.headline} introduction={siteData.introduction} featuredProject={featuredProject} />
-        <About about={siteData.about} principles={siteData.principles} />
-        <TechStack skillGroups={siteData.skillGroups} />
-        <Projects projects={siteData.projects} />
-        <Experience background={siteData.background} />
-      </main>
-      <Footer name={siteData.name} role={siteData.role} location={siteData.location} {...siteData.contact} />
+      <PortfolioViews
+        home={<Hero name={siteData.name} role={siteData.role} location={siteData.location} headline={siteData.headline} introduction={siteData.introduction} featuredProject={featuredProject} />}
+        about={<About about={siteData.about} principles={siteData.principles} />}
+        skills={<TechStack skillGroups={siteData.skillGroups} />}
+        projects={<Projects projects={siteData.projects} />}
+        background={<Experience background={siteData.background} />}
+        contact={<Footer name={siteData.name} role={siteData.role} location={siteData.location} {...siteData.contact} />}
+      />
     </>
   );
 }

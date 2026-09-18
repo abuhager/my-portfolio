@@ -1,0 +1,40 @@
+/* Targeted mobile and anchor fixes for the persistent portfolio card deck. */
+.portfolio-stage { overflow-anchor: none; }
+.portfolio-view > .section,
+.portfolio-view > .section .section-heading,
+.portfolio-view > .section .section-heading h2 { scroll-margin-top: 8rem; }
+
+@media (max-width: 600px) {
+  /* A selected section always uses a short, readable 3x2 deck. */
+  .portfolio-deck--compact { padding: .24rem 0 .32rem; }
+  .portfolio-deck--compact .portfolio-deck__heading { display: none; }
+  .portfolio-deck--compact .explore-cards { gap: .26rem .36rem; }
+  .portfolio-deck--compact .explore-tile {
+    min-height: 38px;
+    padding: .28rem .2rem;
+    border-radius: .47rem;
+  }
+  .portfolio-deck--compact .explore-tile__top { display: none; }
+  .portfolio-deck--compact .explore-tile__bottom {
+    width: 100%;
+    min-height: 100%;
+    justify-content: center;
+  }
+  .portfolio-deck--compact .explore-tile__bottom strong {
+    font-size: clamp(.74rem, 3.2vw, .88rem);
+    line-height: 1.15;
+  }
+
+  /* Leave space for the real content heading instead of hiding it under cards. */
+  .portfolio-view:not([hidden]) > .section { padding-top: 2.45rem; }
+  .portfolio-view:not([hidden]) > .projects-section .section-heading {
+    padding-top: .85rem;
+    margin-bottom: 1.7rem;
+  }
+  .portfolio-view:not([hidden]) > .projects-section .section-heading h2 {
+    line-height: 1.1;
+  }
+  .project-card__main { padding: 1.25rem 0; gap: 1.45rem; }
+  /* Make the real product visible sooner without stretching the screenshot. */
+  .project-card__image img { aspect-ratio: 1.8; object-fit: cover; object-position: center top; }
+}
