@@ -4,6 +4,7 @@ import './globals.css';
 import './portfolio-views.css';
 import './portfolio-mobile-fixes.css';
 import './portfolio-finish.css';
+import './brand.css';
 
 const geist = Geist({
   subsets: ['latin'],
