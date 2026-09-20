@@ -32,7 +32,7 @@ export default function Footer({ name, role, location, headline, description, li
         <div className="footer-bottom">
           <div className="footer-bottom__identity">
             <span className="brand__logo brand__logo--footer" aria-hidden="true">
-              <Image src="/brand/ah-mark.webp" alt="" width={264} height={240} sizes="48px" />
+              <Image src="/brand/ah-logo-light.svg" alt="" width={372} height={242} sizes="54px" />
             </span>
             <div><strong>{name}</strong><span>{role} · {location}</span></div>
           </div>
