@@ -1,74 +1,88 @@
-# Adham Abu Hager — Portfolio
+# Adham Abu Hager — Developer Portfolio
 
-Professional portfolio for **Adham Abu Hager**, a Full Stack Developer based in Amman, Jordan.
+A responsive portfolio for **Adham Abu Hager**, a full-stack developer based in Amman, Jordan. It presents selected projects, engineering decisions, experience, training, and contact details in a compact interface.
 
-**Live:** [adhamabuhagerdev.site](https://adhamabuhagerdev.site)
+[**Visit the portfolio**](https://www.adhamabuhagerdev.site/) · [GitHub](https://github.com/abuhager) · [LinkedIn](https://www.linkedin.com/in/adham-abuhager/)
 
-## What this site prioritizes
+**Next.js 16 · React 19 · TypeScript · CSS**
 
-- A recruiter-friendly introduction with direct access to selected work, contact details, CV, GitHub, and LinkedIn.
-- Case-study presentation of two verified projects rather than a long repository list.
-- Backend depth—including API design, authorization, consistency, realtime systems, testing, and operations—alongside modern frontend delivery.
-- Clear separation between experience, training, and education.
+## Preview
+
+![Desktop portfolio showing the introduction, navigation cards, and featured Aoun project](docs/screenshots/desktop.webp)
+
+<details>
+<summary>View the mobile layout</summary>
+
+<img src="docs/screenshots/mobile.webp" alt="Mobile portfolio with responsive introduction and section navigation" width="390" />
+
+</details>
+
+These screenshots were captured from this repository running locally. Project images and the downloadable CV are bundled in `public/`.
+
+## What visitors can explore
+
+- **Overview:** introduction, featured work, and a downloadable CV.
+- **About:** development approach and engineering priorities.
+- **Skills:** frontend, backend, data, testing, and delivery tools.
+- **Projects:** Aoun and UniEvents case studies with features, implementation decisions, screenshots, and source links.
+- **Background:** experience, training, and education shown separately.
+- **Contact:** email, LinkedIn, GitHub, and phone links.
+
+The section cards and hash-based navigation let visitors switch views without leaving the page. The mobile layout uses the same content.
 
 ## Selected projects
 
-### Aoun
+| Project | What it demonstrates | Links |
+| --- | --- | --- |
+| **Aoun** | Arabic in-kind donation workflows, booking and waitlists, real-time chat, handover, and moderation | [Live application](https://www.aoun.website/) · [Frontend](https://github.com/abuhager/Aoun-Project_FrontEnd) · [Backend](https://github.com/abuhager/Aoun-Project_BackEnd) |
+| **UniEvents** | Capacity-aware event booking, FIFO waitlist promotion, PDF tickets, attendance, and Excel exports | [Source and local demo](https://github.com/abuhager/privateevent) |
 
-A deployed Arabic in-kind donation coordination platform. The case study is based on the current frontend and backend repositories and covers the verified booking, waitlist, matching, handover, chat, notification, moderation, security, testing, and operational workflows.
+## Implementation
 
-- [Live product](https://www.aoun.website/)
-- [Frontend repository](https://github.com/abuhager/Aoun-Project_FrontEnd)
-- [Backend repository](https://github.com/abuhager/Aoun-Project_BackEnd)
+- Next.js App Router with server-rendered content and client components for section selection and navigation.
+- Typed portfolio content in [`lib/data.ts`](lib/data.ts); reusable UI components under [`components/`](components/).
+- Local project media through `next/image`, and Geist fonts through `next/font`.
+- Responsive CSS, visible focus states, a keyboard skip link, and reduced-motion support.
+- Metadata, Open Graph images, manifest, sitemap, robots, icons, canonical URL, and Person structured data.
 
-### UniEvents
+## Run locally
 
-An ASP.NET Core MVC university event system with capacity-aware booking, FIFO waitlist promotion, ticket generation and verification, attendance check-in, analytics, and Excel exports. The portfolio links to the latest `main` branch.
-
-- [Source on `main`](https://github.com/abuhager/privateevent/tree/main)
-
-## Technical approach
-
-- Next.js App Router and TypeScript.
-- Static rendering for the portfolio content.
-- One small Client Component for the accessible mobile navigation; the remaining UI renders as Server Components.
-- `next/image` with local, correctly sized project media.
-- `next/font` for self-hosted Geist fonts.
-- Native CSS with responsive layouts, visible focus states, reduced-motion support, and no runtime styling dependency.
-- Metadata API routes for Open Graph, manifest, sitemap, robots, favicon, canonical URL, and structured Person data.
-
-## Information sources
-
-Portfolio claims are kept in `lib/data.ts` and were checked in this order:
-
-1. Current CV.
-2. GitHub repositories.
-3. Project README files.
-4. Source code.
-5. Live deployments.
-
-The previous portfolio copy was not treated as a source of truth.
-
-## Local development
+Use Node.js **24** and npm. The lockfile fixes the dependency versions.
 
 ```bash
-npm install
+git clone https://github.com/abuhager/my-portfolio.git
+cd my-portfolio
+npm ci
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000). No database or application secrets are required. The first build may need internet access to download the Google fonts used by `next/font`.
 
-## Verification
+To run the production build:
 
 ```bash
-npm run lint
-npm run typecheck
 npm run build
-npm audit
+npm start
 ```
 
-Run all code checks with:
+## Checks
 
 ```bash
 npm run verify
 ```
+
+`verify` runs ESLint, TypeScript checking, and the production build. The repository does not define a unit-test or end-to-end test script.
+
+## Update the content
+
+| Location | Purpose |
+| --- | --- |
+| [`lib/data.ts`](lib/data.ts) | Introduction, skills, projects, background, and contact links |
+| [`components/sections/`](components/sections/) | Portfolio sections and case-study presentation |
+| [`components/layout/`](components/layout/) | Navigation, view selection, and footer |
+| [`app/`](app/) | Entry page, styling, routing, and metadata |
+| [`public/projects/`](public/projects/) | Project screenshots |
+| [`public/brand/`](public/brand/) | AH brand assets |
+| [`public/resume.pdf`](public/resume.pdf) | Downloadable CV |
+
+Keep project and experience claims aligned with the current CV and source repositories when editing `lib/data.ts`. Deployments are managed separately from this README.
