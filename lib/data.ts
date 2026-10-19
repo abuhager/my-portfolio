@@ -17,8 +17,8 @@ export const siteData: SiteData = {
     { title: 'Verify what ships', detail: 'Type checks, automated tests, end-to-end coverage, CI, and production diagnostics are part of the build.' },
   ],
   skillGroups: [
-    { title: 'Frontend', description: 'Responsive interfaces and modern rendering', items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Tailwind CSS', 'HTML & CSS', 'Bootstrap'] },
-    { title: 'Backend', description: 'APIs, business workflows, and real-time systems', items: ['Node.js', 'Express.js', 'C#', 'ASP.NET Core MVC', 'REST APIs', 'Socket.IO', 'Native ESM'] },
+    { title: 'Frontend', description: 'Responsive interfaces and modern rendering', items: ['TypeScript', 'JavaScript', 'Next.js', 'Angular', 'Tailwind CSS', 'HTML & CSS', 'Bootstrap'] },
+    { title: 'Backend', description: 'APIs, business workflows, and real-time systems', items: ['Node.js', 'Express.js', 'C#', '.NET Framework', 'OOP', 'ASP.NET Core MVC', 'REST APIs', 'Socket.IO', 'Native ESM'] },
     { title: 'Data', description: 'Document, relational, and caching layers', items: ['MongoDB', 'Mongoose', 'SQL Server', 'Entity Framework Core', 'Redis'] },
     { title: 'Quality & Delivery', description: 'Testing, source control, CI, and deployment', items: ['Playwright', 'Node.js Test Runner', 'API Testing', 'Postman', 'Git', 'GitHub Actions', 'Vercel', 'Render'] },
   ],
@@ -61,6 +61,174 @@ export const siteData: SiteData = {
       media: [
         { src: '/projects/unievents-events.png', alt: 'UniEvents Arabic student event browser showing event dates, locations, capacities, booking states, and detail actions', width: 1440, height: 1080, caption: 'Student event browser' },
       ],
+    },
+    {
+      "id": "helpdesk",
+      "number": "03",
+      "title": "HelpDesk SaaS",
+      "subtitle": "Multi-tenant support ticket management",
+      "status": "Portfolio demo · Private source",
+      "problem": "Support teams need a shared ticket workflow while keeping each company’s data and permissions separate.",
+      "summary": "A bilingual Arabic/English support platform with company workspaces, ticket assignment, team administration, reporting, attachments, and configurable SLA policies.",
+      "contribution": "Built the Angular interface and layered ASP.NET Core API, modelling tenant memberships, ticket workflows, authorization, and persistence with Entity Framework Core.",
+      "features": [
+        "Company-scoped memberships and role-based access",
+        "Ticket priorities, assignment, comments, and audit history",
+        "Search, filters, reporting, and configurable SLA policies",
+        "Attachments, email verification, and optional authenticator MFA",
+        "Responsive Arabic/English interfaces with RTL/LTR support"
+      ],
+      "highlights": [
+        {
+          "title": "Tenant isolation",
+          "detail": "API permissions follow the active company membership; a user can have different roles in different companies."
+        },
+        {
+          "title": "Clean Architecture",
+          "detail": "Domain, Application, Infrastructure, and API layers separate business rules from HTTP and persistence."
+        },
+        {
+          "title": "Concurrent updates",
+          "detail": "Version checks detect conflicting ticket edits and preserve user input when saving fails."
+        }
+      ],
+      "technologies": [
+        "Angular 21",
+        "TypeScript",
+        "ASP.NET Core 10",
+        "C#",
+        "Entity Framework Core",
+        "SQL Server",
+        "Playwright"
+      ],
+      "links": [
+        {
+          "label": "Open demo",
+          "href": "https://helpdesk-abuhager.onrender.com",
+          "primary": true
+        }
+      ],
+      "media": [
+        {
+          "src": "/projects/helpdesk-dashboard.webp",
+          "alt": "HelpDesk Arabic dashboard showing ticket priorities, status indicators, and the support queue",
+          "width": 1440,
+          "height": 1000,
+          "caption": "Dashboard · sample API data"
+        }
+      ]
+    },
+    {
+      "id": "khutwa",
+      "number": "04",
+      "title": "Khutwa Quran",
+      "subtitle": "Arabic learning journeys and spaced review",
+      "status": "Learning prototype · Private source",
+      "problem": "Learners need short, structured lessons that connect understanding, practice, and review while retaining progress across sessions.",
+      "summary": "An Arabic learning prototype with daily lesson journeys, comprehension checks, progress tracking, scheduled review, and downloadable lessons for offline practice. The curriculum remains under preparation and review.",
+      "contribution": "Built the Next.js learning interface and layered ASP.NET Core backend, including account flows, server-side assessment, progressive unlocking, content administration, and offline synchronization.",
+      "features": [
+        "Account-free browser demo and guided lesson journeys",
+        "Server-graded assessments and progressive level unlocking",
+        "Review scheduling, progress history, and completion certificates",
+        "Downloadable lessons and offline practice",
+        "Content editing, version-aware review, and publishing controls"
+      ],
+      "highlights": [
+        {
+          "title": "Learning progression",
+          "detail": "The server evaluates attempts and applies progression rules, with concurrency checks and duplicate-request protection."
+        },
+        {
+          "title": "Offline practice",
+          "detail": "IndexedDB and a service worker retain downloaded lessons; account attempts are validated by the server when reconnected."
+        },
+        {
+          "title": "Content workflow",
+          "detail": "Publishing uses version-aware review. Educational content is still being prepared and reviewed."
+        }
+      ],
+      "technologies": [
+        "Next.js 16",
+        "TypeScript",
+        "ASP.NET Core 10",
+        "C#",
+        "MongoDB",
+        "IndexedDB",
+        "Service Worker",
+        "Playwright"
+      ],
+      "links": [
+        {
+          "label": "Try the learning demo",
+          "href": "https://khutwa-nine.vercel.app/demo",
+          "primary": true
+        }
+      ],
+      "media": [
+        {
+          "src": "/projects/khutwa-desktop.webp",
+          "alt": "Khutwa Arabic learning interface showing the daily lesson journey and learner progress",
+          "width": 1440,
+          "height": 1000,
+          "caption": "Learning journey · prototype"
+        }
+      ]
+    },
+    {
+      "id": "dont-control-yourself",
+      "number": "05",
+      "title": "Don’t Control Yourself",
+      "subtitle": "Cooperative platforming and puzzles for 2–4 players",
+      "status": "Playable browser prototype · Private source",
+      "problem": "Cooperative play should require players to communicate and help one another through shared movement and puzzle challenges.",
+      "summary": "An Arabic browser game where each player moves their own character and controls a teammate’s jump. Shared ropes, rescue challenges, platforming, and puzzles turn coordination into the core mechanic.",
+      "contribution": "Built the browser game, simulation and collision rules, Canvas presentation, adaptive team challenges, local controls, progress saving, and the online room and networking architecture.",
+      "features": [
+        "Cooperative movement and linked jumping for 2–4 players",
+        "Rope anchoring, rescue, platforming, and puzzle challenges",
+        "Challenges adapted to team size",
+        "Shared checkpoints and locally saved campaign progress",
+        "Keyboard, touch, gamepad, and online room support"
+      ],
+      "highlights": [
+        {
+          "title": "Cooperative mechanics",
+          "detail": "Movement, teammate jumping, and rope anchoring make communication part of crossing each challenge."
+        },
+        {
+          "title": "Game simulation",
+          "detail": "A fixed-step simulation handles movement, collision, checkpoints, and shared game rules."
+        },
+        {
+          "title": "Online architecture",
+          "detail": "Room signaling and WebRTC support online play; connection behavior depends on network and TURN configuration."
+        }
+      ],
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Canvas 2D",
+        "WebRTC",
+        "Node.js"
+      ],
+      "links": [
+        {
+          "label": "Play in the browser",
+          "href": "https://dont-control-yourself-v80.freshglade128.chatgpt.site",
+          "primary": true
+        }
+      ],
+      "media": [
+        {
+          "src": "/projects/dont-control-yourself.webp",
+          "alt": "Don’t Control Yourself Arabic cooperative gameplay with rope companions and a shared puzzle challenge",
+          "width": 1440,
+          "height": 1000,
+          "caption": "Cooperative browser game · current local build"
+        }
+      ]
     },
   ],
   background: [

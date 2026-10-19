@@ -8,7 +8,7 @@ export default function TechStack({ skillGroups }: { skillGroups: SkillGroup[] }
         <SectionHeading
           eyebrow="Technical capabilities"
           title="A practical stack across product layers."
-          description="Every item below is supported by the CV, repositories, or the implementation inside Aoun and UniEvents."
+          description="Technologies used across my projects, alongside foundations from my .NET and full-stack training."
           titleId="skills-title"
           inverse
         />

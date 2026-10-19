@@ -7,7 +7,7 @@ type SectionId = 'top' | 'projects' | 'skills' | 'about' | 'background' | 'conta
 // Recruiter scan order: who I am → what I shipped → what I use → the rest.
 const destinations: { id: SectionId; number: string; title: string; description: string }[] = [
   { id: 'top', number: '01', title: 'Overview', description: 'Start here' },
-  { id: 'projects', number: '02', title: 'Projects', description: 'Aoun & UniEvents' },
+  { id: 'projects', number: '02', title: 'Projects', description: '5 project case studies' },
   { id: 'skills', number: '03', title: 'Skills', description: 'Frontend & backend' },
   { id: 'about', number: '04', title: 'About', description: 'How I approach work' },
   { id: 'background', number: '05', title: 'Journey', description: 'Experience & education' },

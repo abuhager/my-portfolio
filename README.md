@@ -24,7 +24,7 @@ These screenshots were captured from this repository running locally. Project im
 - **Overview:** introduction, featured work, and a downloadable CV.
 - **About:** development approach and engineering priorities.
 - **Skills:** frontend, backend, data, testing, and delivery tools.
-- **Projects:** Aoun and UniEvents case studies with features, implementation decisions, screenshots, and source links.
+- **Projects:** Five case studies — Aoun, UniEvents, HelpDesk SaaS, Khutwa Quran, and Don’t Control Yourself — with features, engineering decisions, screenshots, and demos or public source links.
 - **Background:** experience, training, and education shown separately.
 - **Contact:** email, LinkedIn, GitHub, and phone links.
 
@@ -36,6 +36,12 @@ The section cards and hash-based navigation let visitors switch views without le
 | --- | --- | --- |
 | **Aoun** | Arabic in-kind donation workflows, booking and waitlists, real-time chat, handover, and moderation | [Live application](https://www.aoun.website/) · [Frontend](https://github.com/abuhager/Aoun-Project_FrontEnd) · [Backend](https://github.com/abuhager/Aoun-Project_BackEnd) |
 | **UniEvents** | Capacity-aware event booking, FIFO waitlist promotion, PDF tickets, attendance, and Excel exports | [Source and local demo](https://github.com/abuhager/privateevent) |
+
+| **HelpDesk SaaS** | Company-scoped support tickets, Angular, ASP.NET Core, EF Core, and SQL Server | [Demo](https://helpdesk-abuhager.onrender.com) · Private source |
+| **Khutwa Quran** | Guided learning, server-side assessment, content review, and offline practice | [Learning demo](https://khutwa-nine.vercel.app/demo) · Private source |
+| **Don’t Control Yourself** | Cooperative platforming and puzzles for 2–4 players, Canvas simulation, and WebRTC rooms | [Play](https://dont-control-yourself-v80.freshglade128.chatgpt.site) · Private source |
+
+HelpDesk screenshots use sample API responses. Khutwa is a learning prototype whose curriculum remains under preparation and review. The game is a playable prototype; online connectivity depends on network configuration.
 
 ## Implementation
 
