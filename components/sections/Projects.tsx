@@ -139,7 +139,7 @@ function ProjectDisclosure({ project }: { project: Project }) {
 }
 
 function ProjectCard({ project, featured = false }: { project: Project; featured?: boolean }) {
-  const kicker = featured ? 'Featured full-stack product' : project.id === 'dont-control-yourself' ? 'Cooperative browser game' : 'Full-stack web application';
+  const kicker = featured ? 'Featured full-stack product' : 'Full-stack web application';
 
   return (
     <article className={featured ? 'project-card project-card--featured' : 'project-card'}>
@@ -191,7 +191,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
         <SectionHeading
           eyebrow="Selected work"
           title="Work you can explore."
-          description="Five projects spanning donations, university events, support workflows, learning, and cooperative games. Explore the demos and engineering decisions; source links are included where public."
+          description="Four projects spanning donations, university events, support workflows, and learning. Explore the demos and engineering decisions; source links are included where public."
           titleId="projects-title"
         />
 

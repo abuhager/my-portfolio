@@ -175,61 +175,6 @@ export const siteData: SiteData = {
         }
       ]
     },
-    {
-      "id": "dont-control-yourself",
-      "number": "05",
-      "title": "Don’t Control Yourself",
-      "subtitle": "Cooperative platforming and puzzles for 2–4 players",
-      "status": "Playable browser prototype · Private source",
-      "problem": "Cooperative play should require players to communicate and help one another through shared movement and puzzle challenges.",
-      "summary": "An Arabic browser game where each player moves their own character and controls a teammate’s jump. Shared ropes, rescue challenges, platforming, and puzzles turn coordination into the core mechanic.",
-      "contribution": "Built the browser game, simulation and collision rules, Canvas presentation, adaptive team challenges, local controls, progress saving, and the online room and networking architecture.",
-      "features": [
-        "Cooperative movement and linked jumping for 2–4 players",
-        "Rope anchoring, rescue, platforming, and puzzle challenges",
-        "Challenges adapted to team size",
-        "Shared checkpoints and locally saved campaign progress",
-        "Keyboard, touch, gamepad, and online room support"
-      ],
-      "highlights": [
-        {
-          "title": "Cooperative mechanics",
-          "detail": "Movement, teammate jumping, and rope anchoring make communication part of crossing each challenge."
-        },
-        {
-          "title": "Game simulation",
-          "detail": "A fixed-step simulation handles movement, collision, checkpoints, and shared game rules."
-        },
-        {
-          "title": "Online architecture",
-          "detail": "Room signaling and WebRTC support online play; connection behavior depends on network and TURN configuration."
-        }
-      ],
-      "technologies": [
-        "Next.js",
-        "TypeScript",
-        "JavaScript",
-        "Canvas 2D",
-        "WebRTC",
-        "Node.js"
-      ],
-      "links": [
-        {
-          "label": "Play in the browser",
-          "href": "https://dont-control-yourself-v80.freshglade128.chatgpt.site",
-          "primary": true
-        }
-      ],
-      "media": [
-        {
-          "src": "/projects/dont-control-yourself.webp",
-          "alt": "Don’t Control Yourself Arabic cooperative gameplay with rope companions and a shared puzzle challenge",
-          "width": 1440,
-          "height": 1000,
-          "caption": "Cooperative browser game · current local build"
-        }
-      ]
-    },
   ],
   background: [
     { id: 'quark', category: 'Experience', period: 'Oct 2025 — Jan 2026', title: 'Software Development Trainee (.NET)', organization: 'Quark Software', detail: 'Reviewed core .NET fundamentals, foundational C# syntax, and object-oriented programming through console exercises and problem-solving tasks.' },
