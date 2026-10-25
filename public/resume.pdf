@@ -1,5 +1,5 @@
 %PDF-1.4
-%Simple ASCII PDF
+%Monochrome CV with linked URLs
 1 0 obj
 << /Type /Catalog /Pages 2 0 R >>
 endobj
@@ -7,7 +7,7 @@ endobj
 << /Type /Pages /Kids [3 0 R] /Count 1 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Annots [7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 16 0 R] /Contents 6 0 R >>
 endobj
 4 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
@@ -16,84 +16,135 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
 endobj
 6 0 obj
-<< /Length 7576 >>
+<< /Length 7936 >>
 stream
-0.08 0.13 0.23 rg BT /F2 19.00 Tf 1 0 0 1 192.00 805.00 Tm (Adham Abu Hager) Tj ET
+0.09 0.09 0.09 rg BT /F2 19.00 Tf 1 0 0 1 192.00 805.00 Tm (Adham Abu Hager) Tj ET
 0.00 0.00 0.00 rg BT /F2 10.40 Tf 1 0 0 1 167.00 786.00 Tm (Junior Full-Stack Developer | Software Development) Tj ET
-0.25 0.32 0.42 rg BT /F1 8.10 Tf 1 0 0 1 145.00 769.00 Tm (Amman, Jordan  |  abuhager360@gmail.com  |  +962 7 9728 3384) Tj ET
-0.25 0.32 0.42 rg BT /F1 8.10 Tf 1 0 0 1 101.00 757.00 Tm (adhamabuhagerdev.site  |  github.com/abuhager  |  linkedin.com/in/adham-abuhager) Tj ET
-0.08 0.13 0.23 rg BT /F2 9.30 Tf 1 0 0 1 36.00 737.00 Tm (PROFESSIONAL SUMMARY) Tj ET
-0.77 0.83 0.91 RG 0.70 w 36 733.00 m 559 733.00 l S
-0.13 0.19 0.29 rg BT /F1 8.20 Tf 1 0 0 1 36.00 720.00 Tm (Computer Science graduate seeking junior full-stack roles, with hands-on experience taking AI-assisted web projects from requirements to) Tj ET
-0.13 0.19 0.29 rg BT /F1 8.20 Tf 1 0 0 1 36.00 709.30 Tm (deployment. Created Aoun, a live Arabic donation platform, by shaping workflows and technical structure, validating user journeys, and managing) Tj ET
-0.13 0.19 0.29 rg BT /F1 8.20 Tf 1 0 0 1 36.00 698.60 Tm (releases. Project experience with Next.js, Node.js/Express, ASP.NET Core, C#, SQL, and OOP.) Tj ET
-0.08 0.13 0.23 rg BT /F2 9.30 Tf 1 0 0 1 36.00 679.50 Tm (TECHNICAL SKILLS) Tj ET
-0.77 0.83 0.91 RG 0.70 w 36 675.50 m 559 675.50 l S
-0.13 0.19 0.29 rg BT /F1 8.20 Tf 1 0 0 1 36.00 662.50 Tm (Languages & foundations: C#, JavaScript, SQL, OOP, HTML, CSS; TypeScript used in projects.) Tj ET
-0.13 0.19 0.29 rg BT /F1 8.20 Tf 1 0 0 1 36.00 650.80 Tm (Technologies: Next.js, Node.js/Express, REST APIs, MongoDB, ASP.NET Core MVC, EF Core, SQL Server; Angular used in HelpDesk.) Tj ET
-0.13 0.19 0.29 rg BT /F1 8.20 Tf 1 0 0 1 36.00 639.10 Tm (Workflow & quality: Requirements analysis, API testing, manual testing, Git/GitHub, Postman, Playwright, GitHub Actions CI, Vercel, Render.) Tj ET
-0.13 0.19 0.29 rg BT /F1 8.20 Tf 1 0 0 1 36.00 627.40 Tm (AI-assisted development: AI-supported implementation, code review, debugging, and test creation; iterative verification of generated changes.) Tj ET
-0.08 0.13 0.23 rg BT /F2 9.30 Tf 1 0 0 1 36.00 609.70 Tm (PROJECTS) Tj ET
-0.77 0.83 0.91 RG 0.70 w 36 605.70 m 559 605.70 l S
-0.08 0.13 0.23 rg BT /F2 9.20 Tf 1 0 0 1 36.00 590.70 Tm (Aoun | Arabic In-Kind Donation Platform) Tj ET
-0.00 0.00 0.00 rg BT /F2 8.10 Tf 1 0 0 1 36.00 578.70 Tm (Project Creator | Full-Stack Application | Next.js, TypeScript, Node.js, Express.js, MongoDB, Socket.IO) Tj ET
+0.37 0.37 0.37 rg BT /F1 8.10 Tf 1 0 0 1 145.00 769.00 Tm (Amman, Jordan  |  abuhager360@gmail.com  |  +962 7 9728 3384) Tj ET
+0.37 0.37 0.37 rg BT /F1 8.10 Tf 1 0 0 1 101.00 757.00 Tm (adhamabuhagerdev.site  |  github.com/abuhager  |  linkedin.com/in/adham-abuhager) Tj ET
+0.09 0.09 0.09 rg BT /F2 9.30 Tf 1 0 0 1 36.00 737.00 Tm (PROFESSIONAL SUMMARY) Tj ET
+0.82 0.82 0.82 RG 0.70 w 36 733.00 m 559 733.00 l S
+0.16 0.16 0.16 rg BT /F1 8.20 Tf 1 0 0 1 36.00 720.00 Tm (Computer Science graduate seeking junior full-stack roles, with hands-on experience taking AI-assisted web projects from requirements to) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.20 Tf 1 0 0 1 36.00 709.30 Tm (deployment. Created Aoun, a live Arabic donation platform, by shaping workflows and technical structure, validating user journeys, and managing) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.20 Tf 1 0 0 1 36.00 698.60 Tm (releases. Project experience with Next.js, Node.js/Express, ASP.NET Core, C#, SQL, and OOP.) Tj ET
+0.09 0.09 0.09 rg BT /F2 9.30 Tf 1 0 0 1 36.00 679.50 Tm (TECHNICAL SKILLS) Tj ET
+0.82 0.82 0.82 RG 0.70 w 36 675.50 m 559 675.50 l S
+0.16 0.16 0.16 rg BT /F1 8.20 Tf 1 0 0 1 36.00 662.50 Tm (Languages & foundations: C#, JavaScript, SQL, OOP, HTML, CSS; TypeScript used in projects.) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.20 Tf 1 0 0 1 36.00 650.80 Tm (Technologies: Next.js, Node.js/Express, REST APIs, MongoDB, ASP.NET Core MVC, EF Core, SQL Server; Angular used in HelpDesk.) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.20 Tf 1 0 0 1 36.00 639.10 Tm (Workflow & quality: Requirements analysis, API testing, manual testing, Git/GitHub, Postman, Playwright, GitHub Actions CI, Vercel, Render.) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.20 Tf 1 0 0 1 36.00 627.40 Tm (AI-assisted development: AI-supported implementation, code review, debugging, and test creation; iterative verification of generated changes.) Tj ET
+0.09 0.09 0.09 rg BT /F2 9.30 Tf 1 0 0 1 36.00 609.70 Tm (PROJECTS) Tj ET
+0.82 0.82 0.82 RG 0.70 w 36 605.70 m 559 605.70 l S
+0.09 0.09 0.09 rg BT /F2 9.20 Tf 1 0 0 1 36.00 590.70 Tm (Aoun | Arabic In-Kind Donation Platform) Tj ET
+0.40 0.40 0.40 rg BT /F1 8.10 Tf 1 0 0 1 36.00 578.70 Tm (Project Creator | Full-Stack Application | Next.js, TypeScript, Node.js, Express.js, MongoDB, Socket.IO) Tj ET
 0.00 0.00 0.00 rg 41 569.00 1.8 1.8 re f
-0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 566.50 Tm (Created and launched an Arabic donation platform for listings, needs requests, bookings, FIFO waitlists, and handover confirmation.) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.00 Tf 1 0 0 1 49.00 566.50 Tm (Created and launched an Arabic donation platform for listings, needs requests, bookings, FIFO waitlists, and handover confirmation.) Tj ET
 0.00 0.00 0.00 rg 41 557.55 1.8 1.8 re f
-0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 555.05 Tm (Designed donor, recipient, and admin workflows for roles, trust levels, ratings, reports, appeals, and support.) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.00 Tf 1 0 0 1 49.00 555.05 Tm (Designed donor, recipient, and admin workflows for roles, trust levels, ratings, reports, appeals, and support.) Tj ET
 0.00 0.00 0.00 rg 41 546.10 1.8 1.8 re f
-0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 543.60 Tm (Built features through AI-assisted iterations, including real-time chat, JWT/OTP authentication, booking safeguards, and scheduled jobs.) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.00 Tf 1 0 0 1 49.00 543.60 Tm (Built features through AI-assisted iterations, including real-time chat, JWT/OTP authentication, booking safeguards, and scheduled jobs.) Tj ET
 0.00 0.00 0.00 rg 41 534.65 1.8 1.8 re f
-0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 532.15 Tm (Tested user journeys, resolved defects, and deployed the frontend to Vercel and API to Render; repositories include Playwright E2E and CI.) Tj ET
-0.25 0.32 0.42 rg BT /F1 7.90 Tf 1 0 0 1 36.00 520.70 Tm (Live: aoun.website | GitHub: github.com/abuhager/Aoun-Project_FrontEnd | github.com/abuhager/Aoun-Project_BackEnd) Tj ET
-0.08 0.13 0.23 rg BT /F2 9.20 Tf 1 0 0 1 36.00 505.70 Tm (UniEvents | University Event Management & Booking) Tj ET
-0.00 0.00 0.00 rg BT /F2 8.10 Tf 1 0 0 1 36.00 493.70 Tm (Graduation Project | ASP.NET Core MVC, C#, EF Core, SQL Server) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.00 Tf 1 0 0 1 49.00 532.15 Tm (Tested user journeys, resolved defects, and deployed the frontend to Vercel and API to Render; repositories include Playwright E2E and CI.) Tj ET
+0.37 0.37 0.37 rg BT /F1 7.90 Tf 1 0 0 1 36.00 520.70 Tm (Live: aoun.website | GitHub: github.com/abuhager/Aoun-Project_FrontEnd | github.com/abuhager/Aoun-Project_BackEnd) Tj ET
+0.09 0.09 0.09 rg BT /F2 9.20 Tf 1 0 0 1 36.00 505.70 Tm (UniEvents | University Event Management & Booking) Tj ET
+0.40 0.40 0.40 rg BT /F1 8.10 Tf 1 0 0 1 36.00 493.70 Tm (Graduation Project | ASP.NET Core MVC, C#, EF Core, SQL Server) Tj ET
 0.00 0.00 0.00 rg 41 484.00 1.8 1.8 re f
-0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 481.50 Tm (Developed university event booking with student/admin workflows, capacity rules, FIFO waitlist promotion, and attendance tracking.) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.00 Tf 1 0 0 1 49.00 481.50 Tm (Developed university event booking with student/admin workflows, capacity rules, FIFO waitlist promotion, and attendance tracking.) Tj ET
 0.00 0.00 0.00 rg 41 472.55 1.8 1.8 re f
-0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 470.05 Tm (Included PDF tickets, admin reports, and Excel booking exports.) Tj ET
-0.25 0.32 0.42 rg BT /F1 7.90 Tf 1 0 0 1 36.00 458.60 Tm (GitHub: github.com/abuhager/privateevent) Tj ET
-0.08 0.13 0.23 rg BT /F2 9.20 Tf 1 0 0 1 36.00 443.60 Tm (HelpDesk SaaS | IT Service Management System) Tj ET
-0.00 0.00 0.00 rg BT /F2 8.10 Tf 1 0 0 1 36.00 431.60 Tm (Portfolio Project | ASP.NET Core, C#, EF Core, SQL Server, Angular) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.00 Tf 1 0 0 1 49.00 470.05 Tm (Included PDF tickets, admin reports, and Excel booking exports.) Tj ET
+0.37 0.37 0.37 rg BT /F1 7.90 Tf 1 0 0 1 36.00 458.60 Tm (GitHub: github.com/abuhager/privateevent) Tj ET
+0.09 0.09 0.09 rg BT /F2 9.20 Tf 1 0 0 1 36.00 443.60 Tm (HelpDesk SaaS | IT Service Management System) Tj ET
+0.40 0.40 0.40 rg BT /F1 8.10 Tf 1 0 0 1 36.00 431.60 Tm (Portfolio Project | ASP.NET Core, C#, EF Core, SQL Server, Angular) Tj ET
 0.00 0.00 0.00 rg 41 421.90 1.8 1.8 re f
-0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 419.40 Tm (Created a multi-company HelpDesk demo with ticket assignment, user roles, audit logs, SLA tracking, and a bilingual Angular interface.) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.00 Tf 1 0 0 1 49.00 419.40 Tm (Created a multi-company HelpDesk demo with ticket assignment, user roles, audit logs, SLA tracking, and a bilingual Angular interface.) Tj ET
 0.00 0.00 0.00 rg 41 410.45 1.8 1.8 re f
-0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 407.95 Tm (Defined workflows and architectural direction, manually tested features, and refined the product; repository includes automated tests.) Tj ET
-0.25 0.32 0.42 rg BT /F1 7.90 Tf 1 0 0 1 36.00 396.50 Tm (Demo: helpdesk-abuhager.onrender.com) Tj ET
-0.08 0.13 0.23 rg BT /F2 9.20 Tf 1 0 0 1 36.00 381.50 Tm (Khutwa | Arabic Learning & Progression Platform) Tj ET
-0.00 0.00 0.00 rg BT /F2 8.10 Tf 1 0 0 1 36.00 369.50 Tm (Portfolio Project | Next.js, ASP.NET Core, MongoDB) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.00 Tf 1 0 0 1 49.00 407.95 Tm (Defined workflows and architectural direction, manually tested features, and refined the product; repository includes automated tests.) Tj ET
+0.37 0.37 0.37 rg BT /F1 7.90 Tf 1 0 0 1 36.00 396.50 Tm (Demo: helpdesk-abuhager.onrender.com) Tj ET
+0.09 0.09 0.09 rg BT /F2 9.20 Tf 1 0 0 1 36.00 381.50 Tm (Khutwa | Arabic Learning & Progression Platform) Tj ET
+0.40 0.40 0.40 rg BT /F1 8.10 Tf 1 0 0 1 36.00 369.50 Tm (Portfolio Project | Next.js, ASP.NET Core, MongoDB) Tj ET
 0.00 0.00 0.00 rg 41 359.80 1.8 1.8 re f
-0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 357.30 Tm (Created an Arabic learning prototype with staged lessons, quizzes, progress tracking, admin tools, and offline practice.) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.00 Tf 1 0 0 1 49.00 357.30 Tm (Created an Arabic learning prototype with staged lessons, quizzes, progress tracking, admin tools, and offline practice.) Tj ET
 0.00 0.00 0.00 rg 41 348.35 1.8 1.8 re f
-0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 345.85 Tm (Designed technical structure and iteratively tested learner flows; repository includes automated tests.) Tj ET
-0.25 0.32 0.42 rg BT /F1 7.90 Tf 1 0 0 1 36.00 334.40 Tm (Demo: khutwa-nine.vercel.app/demo) Tj ET
-0.08 0.13 0.23 rg BT /F2 9.30 Tf 1 0 0 1 36.00 315.40 Tm (EXPERIENCE) Tj ET
-0.77 0.83 0.91 RG 0.70 w 36 311.40 m 559 311.40 l S
-0.13 0.19 0.29 rg BT /F2 8.20 Tf 1 0 0 1 36.00 298.40 Tm (.NET Development Trainee | Quark Software | Oct 2025 - Jan 2026) Tj ET
-0.13 0.19 0.29 rg BT /F1 8.20 Tf 1 0 0 1 36.00 285.70 Tm (Practiced C# syntax, .NET fundamentals, classes, OOP, and structured problem solving through console applications.) Tj ET
-0.08 0.13 0.23 rg BT /F2 9.30 Tf 1 0 0 1 36.00 269.00 Tm (TRAINING & CERTIFICATIONS) Tj ET
-0.77 0.83 0.91 RG 0.70 w 36 265.00 m 559 265.00 l S
-0.13 0.19 0.29 rg BT /F2 8.20 Tf 1 0 0 1 36.00 252.00 Tm (Full-Stack Development \(MERN\) | DOT Jordan / Youth Grow Activity \(YGA\) | 2026) Tj ET
-0.13 0.19 0.29 rg BT /F1 8.20 Tf 1 0 0 1 36.00 239.30 Tm (Completed 130 hours of MERN technical training \(Node.js, Express.js, MongoDB, REST APIs, Git, responsive web development\). Earned the YGA) Tj ET
-0.13 0.19 0.29 rg BT /F1 8.20 Tf 1 0 0 1 36.00 228.60 Tm (Certificate of Completion for its six-month Digital Employability Program, covering technical training, mentoring, coaching, and employment-linkage) Tj ET
-0.13 0.19 0.29 rg BT /F1 8.20 Tf 1 0 0 1 36.00 217.90 Tm (activities.) Tj ET
-0.13 0.19 0.29 rg BT /F2 8.20 Tf 1 0 0 1 36.00 204.20 Tm (Programming & Database Foundations | Programming Advices | 12 structured courses) Tj ET
-0.08 0.13 0.23 rg BT /F2 9.30 Tf 1 0 0 1 36.00 187.50 Tm (EDUCATION) Tj ET
-0.77 0.83 0.91 RG 0.70 w 36 183.50 m 559 183.50 l S
-0.13 0.19 0.29 rg BT /F2 8.20 Tf 1 0 0 1 36.00 170.50 Tm (B.Sc. Computer Science | Al-Zaytoonah University of Jordan | 2022 - 2026) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.00 Tf 1 0 0 1 49.00 345.85 Tm (Designed technical structure and iteratively tested learner flows; repository includes automated tests.) Tj ET
+0.37 0.37 0.37 rg BT /F1 7.90 Tf 1 0 0 1 36.00 334.40 Tm (Demo: khutwa-nine.vercel.app/demo) Tj ET
+0.09 0.09 0.09 rg BT /F2 9.30 Tf 1 0 0 1 36.00 315.40 Tm (EXPERIENCE) Tj ET
+0.82 0.82 0.82 RG 0.70 w 36 311.40 m 559 311.40 l S
+0.16 0.16 0.16 rg BT /F2 8.20 Tf 1 0 0 1 36.00 298.40 Tm (.NET Development Trainee | Quark Software | Oct 2025 - Jan 2026) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.20 Tf 1 0 0 1 36.00 285.70 Tm (Practiced C# syntax, .NET fundamentals, classes, OOP, and structured problem solving through console applications.) Tj ET
+0.09 0.09 0.09 rg BT /F2 9.30 Tf 1 0 0 1 36.00 269.00 Tm (TRAINING & CERTIFICATIONS) Tj ET
+0.82 0.82 0.82 RG 0.70 w 36 265.00 m 559 265.00 l S
+0.16 0.16 0.16 rg BT /F2 8.20 Tf 1 0 0 1 36.00 252.00 Tm (Full-Stack Development \(MERN\) | DOT Jordan / Youth Grow Activity \(YGA\) | 2026) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.20 Tf 1 0 0 1 36.00 239.30 Tm (Completed 130 hours of MERN technical training \(Node.js, Express.js, MongoDB, REST APIs, Git, responsive web development\). Earned the YGA) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.20 Tf 1 0 0 1 36.00 228.60 Tm (Certificate of Completion for its six-month Digital Employability Program, covering technical training, mentoring, coaching, and employment-linkage) Tj ET
+0.16 0.16 0.16 rg BT /F1 8.20 Tf 1 0 0 1 36.00 217.90 Tm (activities.) Tj ET
+0.16 0.16 0.16 rg BT /F2 8.20 Tf 1 0 0 1 36.00 204.20 Tm (Programming & Database Foundations | Programming Advices | 12 structured courses) Tj ET
+0.09 0.09 0.09 rg BT /F2 9.30 Tf 1 0 0 1 36.00 187.50 Tm (EDUCATION) Tj ET
+0.82 0.82 0.82 RG 0.70 w 36 183.50 m 559 183.50 l S
+0.16 0.16 0.16 rg BT /F2 8.20 Tf 1 0 0 1 36.00 170.50 Tm (B.Sc. Computer Science | Al-Zaytoonah University of Jordan | 2022 - 2026) Tj ET
+0.24 0.24 0.24 RG 0.52 w
+208.18 766.75 m 294.04 766.75 l S
+101.00 754.75 m 182.41 754.75 l S
+194.15 754.75 m 267.29 754.75 l S
+279.04 754.75 m 394.06 754.75 l S
+55.59 518.45 m 98.73 518.45 l S
+132.14 518.45 m 289.43 518.45 l S
+296.30 518.45 m 451.30 518.45 l S
+62.54 456.35 m 181.04 456.35 l S
+57.33 394.25 m 172.99 394.25 l S
+57.33 332.15 m 157.42 332.15 l S
 endstream
 endobj
+7 0 obj
+<< /Type /Annot /Subtype /Link /Rect [208.18 766.60 294.04 777.00] /Border [0 0 0] /A << /S /URI /URI (mailto:abuhager360@gmail.com) >> >>
+endobj
+8 0 obj
+<< /Type /Annot /Subtype /Link /Rect [101.00 754.60 182.41 765.00] /Border [0 0 0] /A << /S /URI /URI (https://www.adhamabuhagerdev.site) >> >>
+endobj
+9 0 obj
+<< /Type /Annot /Subtype /Link /Rect [194.15 754.60 267.29 765.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/abuhager) >> >>
+endobj
+10 0 obj
+<< /Type /Annot /Subtype /Link /Rect [279.04 754.60 394.06 765.00] /Border [0 0 0] /A << /S /URI /URI (https://www.linkedin.com/in/adham-abuhager/) >> >>
+endobj
+11 0 obj
+<< /Type /Annot /Subtype /Link /Rect [55.59 518.30 98.73 528.70] /Border [0 0 0] /A << /S /URI /URI (https://www.aoun.website/) >> >>
+endobj
+12 0 obj
+<< /Type /Annot /Subtype /Link /Rect [132.14 518.30 289.43 528.70] /Border [0 0 0] /A << /S /URI /URI (https://github.com/abuhager/Aoun-Project_FrontEnd) >> >>
+endobj
+13 0 obj
+<< /Type /Annot /Subtype /Link /Rect [296.30 518.30 451.30 528.70] /Border [0 0 0] /A << /S /URI /URI (https://github.com/abuhager/Aoun-Project_BackEnd) >> >>
+endobj
+14 0 obj
+<< /Type /Annot /Subtype /Link /Rect [62.54 456.20 181.04 466.60] /Border [0 0 0] /A << /S /URI /URI (https://github.com/abuhager/privateevent) >> >>
+endobj
+15 0 obj
+<< /Type /Annot /Subtype /Link /Rect [57.33 394.10 172.99 404.50] /Border [0 0 0] /A << /S /URI /URI (https://helpdesk-abuhager.onrender.com) >> >>
+endobj
+16 0 obj
+<< /Type /Annot /Subtype /Link /Rect [57.33 332.00 157.42 342.40] /Border [0 0 0] /A << /S /URI /URI (https://khutwa-nine.vercel.app/demo) >> >>
+endobj
 xref
-0 7
+0 17
 0000000000 65535 f 
-0000000027 00000 n 
-0000000076 00000 n 
-0000000133 00000 n 
-0000000275 00000 n 
-0000000372 00000 n 
-0000000474 00000 n 
+0000000041 00000 n 
+0000000090 00000 n 
+0000000147 00000 n 
+0000000366 00000 n 
+0000000463 00000 n 
+0000000565 00000 n 
+0000008552 00000 n 
+0000008706 00000 n 
+0000008865 00000 n 
+0000009018 00000 n 
+0000009188 00000 n 
+0000009338 00000 n 
+0000009514 00000 n 
+0000009689 00000 n 
+0000009855 00000 n 
+0000010019 00000 n 
 trailer
-<< /Size 7 /Root 1 0 R >>
+<< /Size 17 /Root 1 0 R >>
 startxref
-8101
+10180
 %%EOF
