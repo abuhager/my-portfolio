@@ -16,7 +16,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
 endobj
 6 0 obj
-<< /Length 7606 >>
+<< /Length 7576 >>
 stream
 0.08 0.13 0.23 rg BT /F2 19.00 Tf 1 0 0 1 192.00 805.00 Tm (Adham Abu Hager) Tj ET
 0.09 0.30 0.73 rg BT /F2 10.40 Tf 1 0 0 1 167.00 786.00 Tm (Junior Full-Stack Developer | Software Development) Tj ET
@@ -37,34 +37,34 @@ stream
 0.77 0.83 0.91 RG 0.70 w 36 605.70 m 559 605.70 l S
 0.08 0.13 0.23 rg BT /F2 9.20 Tf 1 0 0 1 36.00 590.70 Tm (Aoun | Arabic In-Kind Donation Platform) Tj ET
 0.09 0.30 0.73 rg BT /F2 8.10 Tf 1 0 0 1 36.00 578.70 Tm (Project Creator | Full-Stack Application | Next.js, TypeScript, Node.js, Express.js, MongoDB, Socket.IO) Tj ET
-0.09 0.30 0.73 rg 41 569.00 1.6 0 360 arc f
+0.09 0.30 0.73 rg 41 569.00 1.8 1.8 re f
 0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 566.50 Tm (Created and launched an Arabic donation platform for listings, needs requests, bookings, FIFO waitlists, and handover confirmation.) Tj ET
-0.09 0.30 0.73 rg 41 557.55 1.6 0 360 arc f
+0.09 0.30 0.73 rg 41 557.55 1.8 1.8 re f
 0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 555.05 Tm (Designed donor, recipient, and admin workflows for roles, trust levels, ratings, reports, appeals, and support.) Tj ET
-0.09 0.30 0.73 rg 41 546.10 1.6 0 360 arc f
+0.09 0.30 0.73 rg 41 546.10 1.8 1.8 re f
 0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 543.60 Tm (Built features through AI-assisted iterations, including real-time chat, JWT/OTP authentication, booking safeguards, and scheduled jobs.) Tj ET
-0.09 0.30 0.73 rg 41 534.65 1.6 0 360 arc f
+0.09 0.30 0.73 rg 41 534.65 1.8 1.8 re f
 0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 532.15 Tm (Tested user journeys, resolved defects, and deployed the frontend to Vercel and API to Render; repositories include Playwright E2E and CI.) Tj ET
 0.25 0.32 0.42 rg BT /F1 7.90 Tf 1 0 0 1 36.00 520.70 Tm (Live: aoun.website | GitHub: github.com/abuhager/Aoun-Project_FrontEnd | github.com/abuhager/Aoun-Project_BackEnd) Tj ET
 0.08 0.13 0.23 rg BT /F2 9.20 Tf 1 0 0 1 36.00 505.70 Tm (UniEvents | University Event Management & Booking) Tj ET
 0.09 0.30 0.73 rg BT /F2 8.10 Tf 1 0 0 1 36.00 493.70 Tm (Graduation Project | ASP.NET Core MVC, C#, EF Core, SQL Server) Tj ET
-0.09 0.30 0.73 rg 41 484.00 1.6 0 360 arc f
+0.09 0.30 0.73 rg 41 484.00 1.8 1.8 re f
 0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 481.50 Tm (Developed university event booking with student/admin workflows, capacity rules, FIFO waitlist promotion, and attendance tracking.) Tj ET
-0.09 0.30 0.73 rg 41 472.55 1.6 0 360 arc f
+0.09 0.30 0.73 rg 41 472.55 1.8 1.8 re f
 0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 470.05 Tm (Included PDF tickets, admin reports, and Excel booking exports.) Tj ET
 0.25 0.32 0.42 rg BT /F1 7.90 Tf 1 0 0 1 36.00 458.60 Tm (GitHub: github.com/abuhager/privateevent) Tj ET
 0.08 0.13 0.23 rg BT /F2 9.20 Tf 1 0 0 1 36.00 443.60 Tm (HelpDesk SaaS | IT Service Management System) Tj ET
 0.09 0.30 0.73 rg BT /F2 8.10 Tf 1 0 0 1 36.00 431.60 Tm (Portfolio Project | ASP.NET Core, C#, EF Core, SQL Server, Angular) Tj ET
-0.09 0.30 0.73 rg 41 421.90 1.6 0 360 arc f
+0.09 0.30 0.73 rg 41 421.90 1.8 1.8 re f
 0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 419.40 Tm (Created a multi-company HelpDesk demo with ticket assignment, user roles, audit logs, SLA tracking, and a bilingual Angular interface.) Tj ET
-0.09 0.30 0.73 rg 41 410.45 1.6 0 360 arc f
+0.09 0.30 0.73 rg 41 410.45 1.8 1.8 re f
 0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 407.95 Tm (Defined workflows and architectural direction, manually tested features, and refined the product; repository includes automated tests.) Tj ET
 0.25 0.32 0.42 rg BT /F1 7.90 Tf 1 0 0 1 36.00 396.50 Tm (Demo: helpdesk-abuhager.onrender.com) Tj ET
 0.08 0.13 0.23 rg BT /F2 9.20 Tf 1 0 0 1 36.00 381.50 Tm (Khutwa | Arabic Learning & Progression Platform) Tj ET
 0.09 0.30 0.73 rg BT /F2 8.10 Tf 1 0 0 1 36.00 369.50 Tm (Portfolio Project | Next.js, ASP.NET Core, MongoDB) Tj ET
-0.09 0.30 0.73 rg 41 359.80 1.6 0 360 arc f
+0.09 0.30 0.73 rg 41 359.80 1.8 1.8 re f
 0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 357.30 Tm (Created an Arabic learning prototype with staged lessons, quizzes, progress tracking, admin tools, and offline practice.) Tj ET
-0.09 0.30 0.73 rg 41 348.35 1.6 0 360 arc f
+0.09 0.30 0.73 rg 41 348.35 1.8 1.8 re f
 0.13 0.19 0.29 rg BT /F1 8.00 Tf 1 0 0 1 49.00 345.85 Tm (Designed technical structure and iteratively tested learner flows; repository includes automated tests.) Tj ET
 0.25 0.32 0.42 rg BT /F1 7.90 Tf 1 0 0 1 36.00 334.40 Tm (Demo: khutwa-nine.vercel.app/demo) Tj ET
 0.08 0.13 0.23 rg BT /F2 9.30 Tf 1 0 0 1 36.00 315.40 Tm (EXPERIENCE) Tj ET
@@ -95,5 +95,5 @@ xref
 trailer
 << /Size 7 /Root 1 0 R >>
 startxref
-8131
+8101
 %%EOF
