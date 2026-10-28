@@ -22,7 +22,7 @@ function ProjectLinks({ project }: { project: Project }) {
           key={link.href}
           label={link.label}
           href={link.href}
-          external
+          external={/^https?:\/\//.test(link.href)}
           variant={link.primary ? 'primary' : 'text'}
         />
       ))}
@@ -159,6 +159,7 @@ function ProjectCard({ project, featured = false }: { project: Project; featured
           <h3>{project.title}</h3>
           <p className="project-subtitle">{project.subtitle}</p>
           <p className="project-card__summary">{project.summary}</p>
+          <p className="project-card__contribution"><strong>My contribution</strong>{project.contributionSummary}</p>
 
           <ul className="project-card__signals" aria-label={project.title + ' engineering highlights'}>
             {project.highlights.slice(0, 3).map((highlight) => (
@@ -176,6 +177,7 @@ function ProjectCard({ project, featured = false }: { project: Project; featured
           </div>
 
           <ProjectLinks project={project} />
+          {project.accessNote ? <p className="project-card__access-note">{project.accessNote}</p> : null}
         </div>
       </div>
 

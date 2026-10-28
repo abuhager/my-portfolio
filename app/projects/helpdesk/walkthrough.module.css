@@ -1,0 +1,32 @@
+.page { width: min(1100px, calc(100% - 40px)); margin-inline: auto; padding-block: 32px 72px; color: #eaf2ec; }
+.back { display: inline-block; color: #b1ed80; padding-block: 12px; }
+.header { max-width: 760px; margin-block: 44px 32px; }
+.eyebrow { font-size: .72rem; letter-spacing: .12em; color: #b1ed80; }
+.header h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.05; letter-spacing: -.05em; margin-block: 16px 20px; }
+.header > p:not(.eyebrow), .caption p, .contribution p, .hosted p { color: #bdcbbf; line-height: 1.75; }
+.header .notice { padding: 16px 20px; border-left: 3px solid #a4e46f; background: #17241c; font-size: .88rem; margin-top: 24px; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+.controls button { min-height: 48px; padding: 12px 20px; border: 1px solid #3e5545; border-radius: 10px; color: #eaf2ec; background: #152019; cursor: pointer; font: inherit; }
+.controls button[aria-pressed='true'] { color: #0b160b; background: #a8e970; border-color: #a8e970; }
+.controls button:focus-visible, .back:focus-visible, .screen a:focus-visible { outline: 3px solid #d5ffa8; outline-offset: 4px; }
+.screen { border: 1px solid #324438; border-radius: 18px; overflow: hidden; background: #111b15; }
+.caption { padding: 24px; }
+.caption h2, .contribution h2, .hosted h2 { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 12px; line-height: 1.2; }
+.screen a { display: block; margin: 0 20px; }
+.image { display: block; width: 100%; height: auto; border-radius: 10px; }
+.imageHint { padding: 16px 24px; font-size: .8rem; color: #bdcbbf; }
+.contribution, .hosted { margin-top: 44px; }
+.points { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 24px; }
+.points h3 { color: #b1ed80; font-size: 1rem; margin-bottom: 10px; }
+.points p { font-size: .9rem; }
+.hosted { padding: 28px; border: 1px solid #324438; border-radius: 18px; }
+.hosted p { margin-bottom: 20px; max-width: 720px; }
+@media (max-width: 600px) {
+  .page { width: calc(100% - 28px); padding-block: 16px 40px; }
+  .header { margin-top: 24px; }
+  .controls { gap: 7px; }
+  .controls button { flex: 1 1 90px; padding: 12px 8px; font-size: .8rem; }
+  .caption, .hosted { padding: 20px; }
+  .screen a { margin-inline: 10px; }
+  .points { grid-template-columns: 1fr; gap: 20px; }
+}
