@@ -6,7 +6,7 @@ export const siteData: SiteData = {
   role: 'Full-Stack Developer',
   location: 'Amman, Jordan',
   headline:
-    'I build complete web products—from clear interfaces to reliable backend systems.',
+    'Full-stack products. Backend depth.',
   introduction:
     'Computer Science graduate with a backend-leaning full-stack focus. I build with TypeScript, Next.js, Node.js, and ASP.NET Core—turning business rules into usable, production-minded web products.',
   about:
@@ -17,8 +17,8 @@ export const siteData: SiteData = {
     { title: 'Verify what ships', detail: 'Type checks, automated tests, end-to-end coverage, CI, and production diagnostics are part of the build.' },
   ],
   skillGroups: [
-    { title: 'Frontend', description: 'Responsive interfaces and modern rendering', items: ['TypeScript', 'JavaScript', 'Next.js', 'Angular', 'Tailwind CSS', 'HTML & CSS', 'Bootstrap'] },
-    { title: 'Backend', description: 'APIs, business workflows, and real-time systems', items: ['Node.js', 'Express.js', 'C#', '.NET Framework', 'OOP', 'ASP.NET Core MVC', 'REST APIs', 'Socket.IO', 'Native ESM'] },
+    { title: 'Frontend', description: 'Responsive interfaces and modern rendering', items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Angular', 'Tailwind CSS', 'HTML & CSS', 'Bootstrap'] },
+    { title: 'Backend', description: 'APIs, business workflows, and real-time systems', items: ['Node.js', 'Express.js', 'C#', '.NET Framework', 'OOP', 'ASP.NET Core MVC', 'ASP.NET Core Web API', 'REST APIs', 'Socket.IO', 'Native ESM'] },
     { title: 'Data', description: 'Document, relational, and caching layers', items: ['MongoDB', 'Mongoose', 'SQL Server', 'Entity Framework Core', 'Redis'] },
     { title: 'Quality & Delivery', description: 'Testing, source control, CI, and deployment', items: ['Playwright', 'Node.js Test Runner', 'API Testing', 'Postman', 'Git', 'GitHub Actions', 'Vercel', 'Render'] },
   ],
@@ -28,6 +28,7 @@ export const siteData: SiteData = {
       problem: 'In-kind donations are often scattered across separate posts, messages, and handover arrangements. Aoun brings that journey into one role-based system.',
       summary: 'A full-stack platform for listing donated items, publishing needs, matching offers, managing bookings and waitlists, coordinating safe handovers, and handling communication and moderation.',
       contribution: 'Built the product end to end across a Next.js frontend and a TypeScript Native ESM backend. I designed the workflows, API boundaries, authorization, real-time communication, transaction-sensitive booking logic, and operational safeguards.',
+      contributionSummary: 'Built the frontend and backend, including booking rules, authorization, real-time chat, testing, and deployment.',
       features: ['Item listings, search, filters, bookings, and waitlists','Need requests and donor offer workflows','Safe-hub and direct handover confirmation','Real-time chat, notifications, ratings, reports, and appeals','Role-based admin controls and configurable platform policies'],
       highlights: [
         { title: 'Authentication & access', detail: 'JWT access and refresh tokens with rotation and reuse detection, HMAC-hashed OTP verification, RBAC, secure cookies, and Redis-backed rate limiting.' },
@@ -50,6 +51,7 @@ export const siteData: SiteData = {
       problem: 'Manual university event registration makes capacity, cancellations, attendance, and waiting lists difficult to coordinate consistently.',
       summary: 'A server-rendered event platform that manages booking and waitlist states for students, with admin dashboards, attendance verification, reporting, and exports.',
       contribution: 'Implemented the student and admin workflows in ASP.NET Core MVC using C# controllers, Razor views, Entity Framework Core, and SQL Server—from capacity-aware booking through ticket verification and check-in.',
+      contributionSummary: 'Implemented student and admin workflows, capacity-aware booking, FIFO waitlists, PDF tickets, and attendance check-in.',
       features: ['Session-based authentication and Student/Admin role separation','Capacity-aware booking with duplicate booking prevention','FIFO waitlist promotion after cancellation or capacity expansion','PDF ticket generation, verification, and attendance check-in','Admin analytics and Excel booking exports'],
       highlights: [
         { title: 'Booking lifecycle', detail: 'Bookings use active, waiting, cancelled, and checked-in states based on capacity and user actions.' },
@@ -67,10 +69,12 @@ export const siteData: SiteData = {
       "number": "03",
       "title": "HelpDesk SaaS",
       "subtitle": "Multi-tenant support ticket management",
-      "status": "Portfolio demo · Private source",
+      "status": "Live demo · Private source",
       "problem": "Support teams need a shared ticket workflow while keeping each company’s data and permissions separate.",
       "summary": "A bilingual Arabic/English support platform with company workspaces, ticket assignment, team administration, reporting, attachments, and configurable SLA policies.",
       "contribution": "Built the Angular interface and layered ASP.NET Core API, modelling tenant memberships, ticket workflows, authorization, and persistence with Entity Framework Core.",
+      "contributionSummary": "Built the Angular interface and ASP.NET Core API, including company-scoped permissions, ticket workflows, and data persistence.",
+      "accessNote": "Use the demo credentials above, or explore the screenshot walkthrough without signing in.",
       "features": [
         "Company-scoped memberships and role-based access",
         "Ticket priorities, assignment, comments, and audit history",
@@ -103,9 +107,14 @@ export const siteData: SiteData = {
       ],
       "links": [
         {
-          "label": "Open demo",
-          "href": "https://helpdesk-abuhager.onrender.com",
+          "label": "Try live demo",
+          "href": "https://helpdesk-abuhager.onrender.com/login",
           "primary": true
+        },
+        {
+          "label": "View walkthrough",
+          "href": "/projects/helpdesk",
+          "primary": false
         }
       ],
       "media": [
@@ -127,6 +136,7 @@ export const siteData: SiteData = {
       "problem": "Learners need short, structured lessons that connect understanding, practice, and review while retaining progress across sessions.",
       "summary": "An Arabic learning prototype with daily lesson journeys, comprehension checks, progress tracking, scheduled review, and downloadable lessons for offline practice. The curriculum remains under preparation and review.",
       "contribution": "Built the Next.js learning interface and layered ASP.NET Core backend, including account flows, server-side assessment, progressive unlocking, content administration, and offline synchronization.",
+      "contributionSummary": "Built the learning interface and ASP.NET Core backend, including assessment, progression, content administration, and offline synchronization.",
       "features": [
         "Account-free browser demo and guided lesson journeys",
         "Server-graded assessments and progressive level unlocking",

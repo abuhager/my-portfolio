@@ -37,10 +37,10 @@ The section cards and hash-based navigation let visitors switch views without le
 | **Aoun** | Arabic in-kind donation workflows, booking and waitlists, real-time chat, handover, and moderation | [Live application](https://www.aoun.website/) · [Frontend](https://github.com/abuhager/Aoun-Project_FrontEnd) · [Backend](https://github.com/abuhager/Aoun-Project_BackEnd) |
 | **UniEvents** | Capacity-aware event booking, FIFO waitlist promotion, PDF tickets, attendance, and Excel exports | [Source and local demo](https://github.com/abuhager/privateevent) |
 
-| **HelpDesk SaaS** | Company-scoped support tickets, Angular, ASP.NET Core, EF Core, and SQL Server | [Demo](https://helpdesk-abuhager.onrender.com) · Private source |
+| **HelpDesk SaaS** | Company-scoped support tickets, Angular, ASP.NET Core, EF Core, and SQL Server | [Demo credentials and walkthrough](https://adhamabuhagerdev.site/projects/helpdesk) · [Live demo sign-in](https://helpdesk-abuhager.onrender.com/login) · Private source |
 | **Khutwa Quran** | Guided learning, server-side assessment, content review, and offline practice | [Learning demo](https://khutwa-nine.vercel.app/demo) · Private source |
 
-HelpDesk screenshots use sample API responses. Khutwa is a learning prototype whose curriculum remains under preparation and review.
+HelpDesk has a shared TeamLead demo account in a separate sample workspace; its deliberately public credentials are displayed on the project card and demo page. Changes in this workspace are shared between visitors. The private workspace owner's credentials are never included in this repository. The hosted app can take about a minute to wake up on Render. The optional screenshot walkthrough switches between captured dashboard, ticket, and report screens using sample API responses; it does not execute backend operations. Khutwa is a learning prototype whose curriculum remains under preparation and review.
 
 ## Implementation
 
@@ -89,5 +89,7 @@ npm run verify
 | [`public/projects/`](public/projects/) | Project screenshots |
 | [`public/brand/`](public/brand/) | AH brand assets |
 | [`public/resume.pdf`](public/resume.pdf) | Downloadable CV |
+| [`scripts/build-resume.py`](scripts/build-resume.py) | Regenerate the one-page CV with selectable text and embedded fonts (requires Python and ReportLab) |
+| [`app/projects/helpdesk/`](app/projects/helpdesk/) | Account-free screenshot walkthrough with sample data |
 
 Keep project and experience claims aligned with the current CV and source repositories when editing `lib/data.ts`. Deployments are managed separately from this README.

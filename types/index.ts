@@ -32,6 +32,8 @@ export interface Project {
   problem: string;
   summary: string;
   contribution: string;
+  contributionSummary: string;
+  accessNote?: string;
   features: string[];
   highlights: ProjectHighlight[];
   technologies: string[];
