@@ -69,12 +69,12 @@ export const siteData: SiteData = {
       "number": "03",
       "title": "HelpDesk SaaS",
       "subtitle": "Multi-tenant support ticket management",
-      "status": "Screenshot walkthrough · Private source",
+      "status": "Live demo · Private source",
       "problem": "Support teams need a shared ticket workflow while keeping each company’s data and permissions separate.",
       "summary": "A bilingual Arabic/English support platform with company workspaces, ticket assignment, team administration, reporting, attachments, and configurable SLA policies.",
       "contribution": "Built the Angular interface and layered ASP.NET Core API, modelling tenant memberships, ticket workflows, authorization, and persistence with Entity Framework Core.",
       "contributionSummary": "Built the Angular interface and ASP.NET Core API, including company-scoped permissions, ticket workflows, and data persistence.",
-      "accessNote": "Explore the screenshot walkthrough without an account. The hosted app requires sign-in and may take a minute to wake up.",
+      "accessNote": "Use the demo credentials above, or explore the screenshot walkthrough without signing in.",
       "features": [
         "Company-scoped memberships and role-based access",
         "Ticket priorities, assignment, comments, and audit history",
@@ -107,13 +107,13 @@ export const siteData: SiteData = {
       ],
       "links": [
         {
-          "label": "View walkthrough",
-          "href": "/projects/helpdesk",
+          "label": "Try live demo",
+          "href": "https://helpdesk-abuhager.onrender.com/login",
           "primary": true
         },
         {
-          "label": "Open app · sign-in required",
-          "href": "https://helpdesk-abuhager.onrender.com",
+          "label": "View walkthrough",
+          "href": "/projects/helpdesk",
           "primary": false
         }
       ],
