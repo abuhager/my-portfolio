@@ -3,7 +3,6 @@ import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
 import Icon from '@/components/ui/Icon';
 import SectionHeading from '@/components/ui/SectionHeading';
-import HelpDeskDemoAccess from '@/components/sections/HelpDeskDemoAccess';
 import type { Project } from '@/types';
 
 function ProjectMeta({ project }: { project: Project }) {
@@ -177,7 +176,6 @@ function ProjectCard({ project, featured = false }: { project: Project; featured
             ))}
           </div>
 
-          {project.id === 'helpdesk' ? <HelpDeskDemoAccess compact /> : null}
           <ProjectLinks project={project} />
           {project.accessNote ? <p className="project-card__access-note">{project.accessNote}</p> : null}
         </div>

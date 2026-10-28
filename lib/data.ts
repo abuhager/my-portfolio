@@ -74,7 +74,7 @@ export const siteData: SiteData = {
       "summary": "A bilingual Arabic/English support platform with company workspaces, ticket assignment, team administration, reporting, attachments, and configurable SLA policies.",
       "contribution": "Built the Angular interface and layered ASP.NET Core API, modelling tenant memberships, ticket workflows, authorization, and persistence with Entity Framework Core.",
       "contributionSummary": "Built the Angular interface and ASP.NET Core API, including company-scoped permissions, ticket workflows, and data persistence.",
-      "accessNote": "Use the demo credentials above, or explore the screenshot walkthrough without signing in.",
+      "accessNote": "Choose the demo account on the HelpDesk sign-in page, or explore the screenshot walkthrough without signing in.",
       "features": [
         "Company-scoped memberships and role-based access",
         "Ticket priorities, assignment, comments, and audit history",
