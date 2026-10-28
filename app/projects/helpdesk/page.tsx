@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import HelpDeskDemoAccess from '@/components/sections/HelpDeskDemoAccess';
+import Button from '@/components/ui/Button';
 import HelpDeskWalkthrough from './walkthrough';
 import styles from './walkthrough.module.css';
 
@@ -25,7 +25,11 @@ export default function HelpDeskPreviewPage() {
         <p>A bilingual support workspace built with Angular and ASP.NET Core. Explore the dashboard, ticket queue, and reporting screens.</p>
         <p className={styles.notice}>Screenshot walkthrough with synthetic sample data. These screens illustrate the interface; they do not connect to a company workspace or run backend operations.</p>
       </header>
-      <HelpDeskDemoAccess />
+      <section className={styles.hosted} aria-labelledby="live-demo-title">
+        <h2 id="live-demo-title">Try the live application</h2>
+        <p>Choose the demo account on the HelpDesk sign-in page to explore the sample workspace. The app may take about a minute to wake up.</p>
+        <Button label="Open HelpDesk demo" href="https://helpdesk-abuhager.onrender.com/login" external />
+      </section>
       <HelpDeskWalkthrough />
       <section className={styles.contribution} aria-labelledby="contribution-title">
         <h2 id="contribution-title">What I built</h2>
