@@ -2,10 +2,10 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Adham Abu Hager — Full Stack Developer',
+    name: 'Adham Abu Hager — Junior Software Developer',
     short_name: 'Adham Abu Hager',
     description:
-      'Portfolio of Adham Abu Hager, a Full Stack Developer based in Amman, Jordan.',
+      'Portfolio of Adham Abu Hager, a Junior Software Developer based in Amman, Jordan.',
     start_url: '/',
     display: 'standalone',
     background_color: '#0b100e',

@@ -23,7 +23,7 @@ export default function Button({
       className={`button button--${variant}`}
       {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
       {...(download
-        ? { download: 'Adham_Abu_Hager_Full_Stack_Developer_CV.pdf' }
+        ? { download: 'Adham_Abu_Hager_CV_Junior_Software.pdf' }
         : {})}
     >
       <span>{label}</span>

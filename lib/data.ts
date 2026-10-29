@@ -3,32 +3,33 @@ import type { SiteData } from '@/types';
 export const siteData: SiteData = {
   name: 'Adham Abu Hager',
   initials: 'AH',
-  role: 'Full-Stack Developer',
+  role: 'Junior Software Developer',
   location: 'Amman, Jordan',
   headline:
-    'Full-stack products. Backend depth.',
+    'Web applications. Practical workflows.',
   introduction:
-    'Computer Science graduate with a backend-leaning full-stack focus. I build with TypeScript, Next.js, Node.js, and ASP.NET Core—turning business rules into usable, production-minded web products.',
+    'Computer Science graduate working across React / Next.js, Node.js and ASP.NET Core. My projects include a live donation MVP and a .NET event-booking application, with experience in requirements, workflow testing and deployment.',
   about:
-    'I work across the full product path: understanding the workflow, shaping the data model, building the API, connecting the interface, and validating the result. My strongest area is backend engineering, while my full-stack range helps me make practical decisions across the whole system.',
+    'My background combines C# / .NET training with MERN training at DOT Jordan. I took Aoun from an idea to a deployed donation MVP and developed UniEvents as my graduation project. In HelpDesk and Khutwa, my contributions focus on requirements, testing user journeys, reproducing issues and guiding improvements. I use web-based AI tools for coding assistance, explanations, debugging and code review.',
   principles: [
     { title: 'Model the workflow', detail: 'I turn real multi-step journeys—booking, handover, reporting, and moderation—into explicit states and rules.' },
     { title: 'Protect the boundaries', detail: 'I pay attention to authentication, authorization, validation, data exposure, and consistency between operations.' },
-    { title: 'Verify what ships', detail: 'Type checks, automated tests, end-to-end coverage, CI, and production diagnostics are part of the build.' },
+    { title: 'Verify the workflow', detail: 'I test user journeys, reproduce issues and check releases. Automated tests and CI in the project repositories provide additional checks.' },
   ],
   skillGroups: [
-    { title: 'Frontend', description: 'Responsive interfaces and modern rendering', items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Angular', 'Tailwind CSS', 'HTML & CSS', 'Bootstrap'] },
-    { title: 'Backend', description: 'APIs, business workflows, and real-time systems', items: ['Node.js', 'Express.js', 'C#', '.NET Framework', 'OOP', 'ASP.NET Core MVC', 'ASP.NET Core Web API', 'REST APIs', 'Socket.IO', 'Native ESM'] },
-    { title: 'Data', description: 'Document, relational, and caching layers', items: ['MongoDB', 'Mongoose', 'SQL Server', 'Entity Framework Core', 'Redis'] },
-    { title: 'Quality & Delivery', description: 'Testing, source control, CI, and deployment', items: ['Playwright', 'Node.js Test Runner', 'API Testing', 'Postman', 'Git', 'GitHub Actions', 'Vercel', 'Render'] },
+    { title: 'Frontend', description: 'Responsive interfaces and modern rendering', items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Angular (project exposure)', 'Tailwind CSS', 'HTML & CSS', 'Bootstrap'] },
+    { title: 'Backend', description: 'APIs, business workflows, and real-time systems', items: ['Node.js', 'Express.js', 'C#', 'OOP', 'ASP.NET Core MVC', 'ASP.NET Core Web API', 'REST APIs', 'Socket.IO', 'Native ESM'] },
+    { title: 'Data', description: 'Relational and document databases used in my projects', items: ['MongoDB', 'Mongoose', 'SQL Server', 'Entity Framework Core'] },
+    { title: 'Quality & Delivery', description: 'Functional testing and delivery; automated checks in project workflows', items: ['Functional Testing', 'Debugging', 'Postman', 'Git', 'Vercel', 'Render', 'Playwright (project workflows)', 'GitHub Actions (project workflows)'] },
+    { title: 'AI-assisted Workflow', description: 'Web applications used for coding assistance, explanations, debugging and code review', items: ['ChatGPT Plus (web)', 'Perplexity (web)', 'Gemini Pro (web)'] },
   ],
   projects: [
     {
       id: 'aoun', number: '01', title: 'Aoun', subtitle: 'Arabic in-kind donation coordination platform', status: 'Deployed MVP',
       problem: 'In-kind donations are often scattered across separate posts, messages, and handover arrangements. Aoun brings that journey into one role-based system.',
       summary: 'A full-stack platform for listing donated items, publishing needs, matching offers, managing bookings and waitlists, coordinating safe handovers, and handling communication and moderation.',
-      contribution: 'Built the product end to end across a Next.js frontend and a TypeScript Native ESM backend. I designed the workflows, API boundaries, authorization, real-time communication, transaction-sensitive booking logic, and operational safeguards.',
-      contributionSummary: 'Built the frontend and backend, including booking rules, authorization, real-time chat, testing, and deployment.',
+      contribution: 'Created and launched Aoun with a Next.js frontend and Node.js / Express backend. Defined donor, recipient and admin workflows, reviewed implementation, tested authentication, reservations, chat and support, investigated issues and guided fixes. Managed deployment and release checks on Vercel and Render, using AI assistance during development.',
+      contributionSummary: 'Created and launched the platform, defined workflows, tested booking and chat journeys, guided fixes and managed deployment.',
       features: ['Item listings, search, filters, bookings, and waitlists','Need requests and donor offer workflows','Safe-hub and direct handover confirmation','Real-time chat, notifications, ratings, reports, and appeals','Role-based admin controls and configurable platform policies'],
       highlights: [
         { title: 'Authentication & access', detail: 'JWT access and refresh tokens with rotation and reuse detection, HMAC-hashed OTP verification, RBAC, secure cookies, and Redis-backed rate limiting.' },
@@ -72,8 +73,8 @@ export const siteData: SiteData = {
       "status": "Live demo · Private source",
       "problem": "Support teams need a shared ticket workflow while keeping each company’s data and permissions separate.",
       "summary": "A bilingual Arabic/English support platform with company workspaces, ticket assignment, team administration, reporting, attachments, and configurable SLA policies.",
-      "contribution": "Built the Angular interface and layered ASP.NET Core API, modelling tenant memberships, ticket workflows, authorization, and persistence with Entity Framework Core.",
-      "contributionSummary": "Built the Angular interface and ASP.NET Core API, including company-scoped permissions, ticket workflows, and data persistence.",
+      "contribution": "Defined requirements and tested company-scoped permissions, ticket assignment, audit history and SLA workflows. Reproduced defects, guided fixes and reviewed Arabic/English user journeys in this AI-assisted learning project.",
+      "contributionSummary": "Defined requirements, tested ticket and permission workflows, reproduced issues and guided fixes in an AI-assisted project.",
       "accessNote": "Choose the demo account on the HelpDesk sign-in page, or explore the screenshot walkthrough without signing in.",
       "features": [
         "Company-scoped memberships and role-based access",
@@ -135,8 +136,8 @@ export const siteData: SiteData = {
       "status": "Learning prototype · Private source",
       "problem": "Learners need short, structured lessons that connect understanding, practice, and review while retaining progress across sessions.",
       "summary": "An Arabic learning prototype with daily lesson journeys, comprehension checks, progress tracking, scheduled review, and downloadable lessons for offline practice. The curriculum remains under preparation and review.",
-      "contribution": "Built the Next.js learning interface and layered ASP.NET Core backend, including account flows, server-side assessment, progressive unlocking, content administration, and offline synchronization.",
-      "contributionSummary": "Built the learning interface and ASP.NET Core backend, including assessment, progression, content administration, and offline synchronization.",
+      "contribution": "Defined learning requirements and tested quizzes, progression, content administration and downloaded lessons for offline practice. Reviewed user journeys and guided improvements in this AI-assisted learning prototype.",
+      "contributionSummary": "Defined learning requirements, tested progression and offline practice, and guided improvements in an AI-assisted prototype.",
       "features": [
         "Account-free browser demo and guided lesson journeys",
         "Server-graded assessments and progressive level unlocking",
@@ -187,9 +188,9 @@ export const siteData: SiteData = {
     },
   ],
   background: [
-    { id: 'quark', category: 'Experience', period: 'Oct 2025 — Jan 2026', title: 'Software Development Trainee (.NET)', organization: 'Quark Software', detail: 'Reviewed core .NET fundamentals, foundational C# syntax, and object-oriented programming through console exercises and problem-solving tasks.' },
+    { id: 'quark', category: 'Experience', period: 'Practical C# / .NET training', title: 'Software Development Trainee (.NET)', organization: 'Quark Software', detail: 'Reviewed core .NET fundamentals, foundational C# syntax, and object-oriented programming through console exercises and problem-solving tasks.' },
     { id: 'dot-jordan', category: 'Training', period: '2026 · Six-month YGA program · 130 hours of MERN training', title: 'Full-Stack Development — MERN & Digital Employability', organization: 'DOT Jordan / Youth Grow Activity (YGA)', detail: 'Completed 130 hours of MERN technical training in React, Node.js, Express.js, MongoDB, REST APIs, Git, and responsive web development. Earned the YGA Certificate of Completion for the six-month Digital Employability Program covering technical training, mentoring, coaching, and employment-linkage activities.' },
-    { id: 'programming-advices', category: 'Training', period: '12 completed courses', title: 'Software Engineering & Database Foundations', organization: 'Programming Advices Platform', detail: 'Structured courses covering programming foundations, problem solving, OOP, algorithms, databases, and software development practices.' },
+    { id: 'programming-advices', category: 'Training', period: '12 structured courses', title: 'Software Engineering & Database Foundations', organization: 'Programming Advices Platform', detail: 'Structured courses covering programming foundations, problem solving, OOP, algorithms, databases, and software development practices.' },
     { id: 'university', category: 'Education', period: '2022 — 2026', title: 'Bachelor of Science in Computer Science', organization: 'Al-Zaytoonah University of Jordan · Amman, Jordan', detail: 'Bachelor’s degree in Computer Science.' },
   ],
   contact: {

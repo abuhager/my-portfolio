@@ -11,10 +11,10 @@ export default function Navbar() {
           </span>
           <span className="brand__copy">
             <strong>Adham Abu Hager</strong>
-            <span>Full-Stack Developer</span>
+            <span>Junior Software Developer</span>
           </span>
         </a>
-        <a className="nav-cv" href="/resume.pdf" download="Adham_Abu_Hager_Full_Stack_Developer_CV.pdf">
+        <a className="nav-cv" href="/resume.pdf" download="Adham_Abu_Hager_CV_Junior_Software.pdf">
           CV <Icon name="arrow-down" size={15} />
         </a>
       </nav>

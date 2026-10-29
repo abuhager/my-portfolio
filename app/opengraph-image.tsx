@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'Adham Abu Hager — Full Stack Developer portfolio';
+export const alt = 'Adham Abu Hager — Junior Software Developer portfolio';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -48,7 +48,7 @@ export default function OpenGraphImage() {
               >
                 AH
               </div>
-              <span style={{ fontSize: 24, fontWeight: 700 }}>Full Stack Developer</span>
+              <span style={{ fontSize: 24, fontWeight: 700 }}>Junior Software Developer</span>
             </div>
             <span style={{ fontSize: 20, color: '#aab5ae' }}>Amman, Jordan</span>
           </div>

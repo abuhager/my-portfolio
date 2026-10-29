@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
 });
 
 const siteUrl = 'https://adhamabuhagerdev.site';
-const title = 'Adham Abu Hager | Full-Stack Developer';
+const title = 'Adham Abu Hager | Junior Software Developer';
 const description =
-  'Full-Stack Developer in Amman building web applications with TypeScript, Next.js, Node.js, MongoDB, and ASP.NET Core.';
+  'Junior Software Developer in Amman with React / Next.js, Node.js and ASP.NET Core project experience. Explore Aoun, UniEvents, HelpDesk and Khutwa.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   category: 'technology',
   keywords: [
     'Adham Abu Hager',
-    'Full Stack Developer',
+    'Junior Software Developer',
     'Backend Developer',
     'Frontend Developer',
     'Software Developer',

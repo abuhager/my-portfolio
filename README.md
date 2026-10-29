@@ -1,6 +1,6 @@
 # Adham Abu Hager — Developer Portfolio
 
-A responsive portfolio for **Adham Abu Hager**, a full-stack developer based in Amman, Jordan. It presents selected projects, engineering decisions, experience, training, and contact details in a compact interface.
+A responsive portfolio for **Adham Abu Hager**, a junior software developer based in Amman, Jordan. It presents selected projects, engineering decisions, experience, training, and contact details in a compact interface.
 
 [**Visit the portfolio**](https://www.adhamabuhagerdev.site/) · [GitHub](https://github.com/abuhager) · [LinkedIn](https://www.linkedin.com/in/adham-abuhager/)
 
@@ -89,7 +89,9 @@ npm run verify
 | [`public/projects/`](public/projects/) | Project screenshots |
 | [`public/brand/`](public/brand/) | AH brand assets |
 | [`public/resume.pdf`](public/resume.pdf) | Downloadable CV |
-| [`scripts/build-resume.py`](scripts/build-resume.py) | Regenerate the one-page CV with selectable text and embedded fonts (requires Python and ReportLab) |
+| CV maintenance | Replace `public/resume.pdf` with the reviewed Junior Software Developer PDF; keep its visible role and download filename aligned with the site. |
 | [`app/projects/helpdesk/`](app/projects/helpdesk/) | Account-free screenshot walkthrough with sample data |
 
 Keep project and experience claims aligned with the current CV and source repositories when editing `lib/data.ts`. Deployments are managed separately from this README.
+
+The default CV is the general Junior Software Developer version. Project contribution descriptions distinguish development from requirements, testing, and guided improvements. AI tools listed are the web versions of ChatGPT Plus, Perplexity and Gemini Pro.

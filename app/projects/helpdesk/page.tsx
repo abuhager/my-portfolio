@@ -32,8 +32,8 @@ export default function HelpDeskPreviewPage() {
       </section>
       <HelpDeskWalkthrough />
       <section className={styles.contribution} aria-labelledby="contribution-title">
-        <h2 id="contribution-title">What I built</h2>
-        <p>The Angular interface and layered ASP.NET Core API, including company memberships, role-based access, ticket workflows, and persistence with Entity Framework Core and SQL Server.</p>
+        <h2 id="contribution-title">My contribution</h2>
+        <p>I defined requirements and tested company-scoped permissions, ticket assignment, audit history and SLA workflows. I reproduced defects, guided fixes and reviewed Arabic/English user journeys in this AI-assisted learning project. The application uses Angular, ASP.NET Core, Entity Framework Core and SQL Server.</p>
         <div className={styles.points}>
           <div><h3>Company boundaries</h3><p>Permissions follow the active company membership, keeping each workspace’s tickets and team operations separate.</p></div>
           <div><h3>Ticket lifecycle</h3><p>Priorities, assignment, comments, attachments, and audit history support the journey from reporting an issue to resolution.</p></div>
