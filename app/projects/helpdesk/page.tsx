@@ -28,7 +28,7 @@ export default function HelpDeskPreviewPage() {
       <section className={styles.hosted} aria-labelledby="live-demo-title">
         <h2 id="live-demo-title">Try the live application</h2>
         <p>Choose the demo account on the HelpDesk sign-in page to explore the sample workspace. The app may take about a minute to wake up.</p>
-        <Button label="Open HelpDesk demo" href="https://helpdesk-abuhager.onrender.com/login" external />
+        <Button label="Open HelpDesk demo" href="https://helpdesk-saas-v2he.onrender.com/login" external />
       </section>
       <HelpDeskWalkthrough />
       <section className={styles.contribution} aria-labelledby="contribution-title">
