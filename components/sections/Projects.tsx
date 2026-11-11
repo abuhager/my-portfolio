@@ -88,7 +88,7 @@ function ProjectDisclosure({ project }: { project: Project }) {
     <details className="project-disclosure">
       <summary>
         <span>
-          <small>View technical details</small>
+          <small>Explore the full technical case study</small>
           <strong>Problem, contribution, and engineering decisions</strong>
         </span>
         <span className="project-disclosure__toggle" aria-hidden="true">
@@ -160,6 +160,19 @@ function ProjectCard({ project, featured = false }: { project: Project; featured
           <p className="project-subtitle">{project.subtitle}</p>
           <p className="project-card__summary">{project.summary}</p>
           <p className="project-card__contribution"><strong>My contribution</strong>{project.contributionSummary}</p>
+
+          {project.caseStudy ? (
+            <section className="project-case-study" aria-labelledby={project.id + '-study-title'}>
+              <p className="project-case-study__eyebrow">ENGINEERING CASE STUDY · AOUN</p>
+              <h4 id={project.id + '-study-title'}>{project.caseStudy.title}</h4>
+              <div className="project-case-study__grid">
+                <div><strong>Challenge</strong><p>{project.caseStudy.challenge}</p></div>
+                <div><strong>Design</strong><p>{project.caseStudy.approach}</p></div>
+                <div><strong>My role & verification</strong><p>{project.caseStudy.verification}</p></div>
+              </div>
+              <a className="project-case-study__link" href={project.caseStudy.source} target="_blank" rel="noopener noreferrer">Inspect the booking service <span aria-hidden="true">↗</span></a>
+            </section>
+          ) : null}
 
           <ul className="project-card__signals" aria-label={project.title + ' engineering highlights'}>
             {project.highlights.slice(0, 3).map((highlight) => (
