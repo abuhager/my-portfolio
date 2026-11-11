@@ -10,18 +10,21 @@ export const siteData: SiteData = {
   introduction:
     'Computer Science graduate working across React / Next.js, Node.js and ASP.NET Core. My projects include a live donation MVP and a .NET event-booking application, with experience in requirements, workflow testing and deployment.',
   about:
-    'My background combines C# / .NET training with MERN training at DOT Jordan. I took Aoun from an idea to a deployed donation MVP and developed UniEvents as my graduation project. In HelpDesk and Khutwa, my contributions focus on requirements, testing user journeys, reproducing issues and guiding improvements. I use web-based AI tools for coding assistance, explanations, debugging and code review.',
+    'My background combines C# / .NET training with MERN training at DOT Jordan. I took Aoun from an idea to a deployed donation MVP and developed UniEvents as my graduation project. In HelpDesk and Khutwa, my contributions focus on requirements, testing user journeys, reproducing issues and guiding improvements. I guide AI-assisted implementation, study and review the generated code, investigate defects, and validate workflows through hands-on testing.',
   principles: [
     { title: 'Model the workflow', detail: 'I turn real multi-step journeys—booking, handover, reporting, and moderation—into explicit states and rules.' },
     { title: 'Protect the boundaries', detail: 'I pay attention to authentication, authorization, validation, data exposure, and consistency between operations.' },
     { title: 'Verify the workflow', detail: 'I test user journeys, reproduce issues and check releases. Automated tests and CI in the project repositories provide additional checks.' },
   ],
   skillGroups: [
-    { title: 'Frontend', description: 'Responsive interfaces and modern rendering', items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Angular (project exposure)', 'Tailwind CSS', 'HTML & CSS', 'Bootstrap'] },
-    { title: 'Backend', description: 'APIs, business workflows, and real-time systems', items: ['Node.js', 'Express.js', 'C#', 'OOP', 'ASP.NET Core MVC', 'ASP.NET Core Web API', 'REST APIs', 'Socket.IO', 'Native ESM'] },
-    { title: 'Data', description: 'Relational and document databases used in my projects', items: ['MongoDB', 'Mongoose', 'SQL Server', 'Entity Framework Core'] },
-    { title: 'Quality & Delivery', description: 'Functional testing and delivery; automated checks in project workflows', items: ['Functional Testing', 'Debugging', 'Postman', 'Git', 'Vercel', 'Render', 'Playwright (project workflows)', 'GitHub Actions (project workflows)'] },
-    { title: 'AI-assisted Workflow', description: 'Web applications used for coding assistance, explanations, debugging and code review', items: ['ChatGPT Plus (web)', 'Perplexity (web)', 'Gemini Pro (web)'] },
+    { title: 'Programming Languages', description: 'Languages used in project work and formal training', items: ['C#', 'JavaScript', 'TypeScript', 'SQL'] },
+    { title: 'Frontend', description: 'Web interfaces and component-based development', items: ['React', 'Next.js', 'Angular', 'HTML', 'CSS'] },
+    { title: 'Backend & APIs', description: 'HTTP services, business workflows and real-time messaging', items: ['ASP.NET Core MVC / Web API', 'Node.js', 'Express.js', 'REST APIs', 'Socket.IO'] },
+    { title: 'Databases & ORM', description: 'Relational and document persistence', items: ['SQL Server', 'MongoDB', 'Entity Framework Core', 'Redis'] },
+    { title: 'Core Concepts', description: 'Programming and application fundamentals', items: ['OOP', 'LINQ', 'async/await', 'Promises', 'Dependency Injection'] },
+    { title: 'Architecture, Security & Reliability', description: 'Application boundaries and consistency under failure', items: ['Layered Architecture', 'Middleware', 'JWT / OTP', 'RBAC', 'Rate Limiting', 'Transactions', 'Concurrency Safeguards', 'Background Workers', 'Durable Outbox'] },
+    { title: 'Tools & DevOps', description: 'Version control, API testing and deployments', items: ['Git', 'GitHub', 'Postman', 'Playwright', 'GitHub Actions', 'Vercel', 'Render'] },
+    { title: 'AI-Assisted Development & Testing', description: 'Guided implementation with hands-on review and verification', items: ['Requirements & Implementation Guidance', 'Code Review', 'Debugging', 'Test Generation', 'Functional Validation'] },
   ],
   projects: [
     {
@@ -30,6 +33,13 @@ export const siteData: SiteData = {
       summary: 'A full-stack platform for listing donated items, publishing needs, matching offers, managing bookings and waitlists, coordinating safe handovers, and handling communication and moderation.',
       contribution: 'Created and launched Aoun with a Next.js frontend and Node.js / Express backend. Defined donor, recipient and admin workflows, reviewed implementation, tested authentication, reservations, chat and support, investigated issues and guided fixes. Managed deployment and release checks on Vercel and Render, using AI assistance during development.',
       contributionSummary: 'Created and launched the platform, defined workflows, tested booking and chat journeys, guided fixes and managed deployment.',
+      caseStudy: {
+        title: 'Booking consistency: two people, one item',
+        challenge: 'Two people can attempt to reserve the same donated item at almost the same time, while cancellations and expiry can create a new opening for the waitlist.',
+        approach: 'The backend uses atomic booking checks and MongoDB transactions for related updates, with per-user operation locks for quota-sensitive flows. A cancellation or expired booking can release the item to the earliest eligible person in its FIFO waitlist.',
+        verification: 'I explored the implementation, tested competing reservations and cancellation scenarios, investigated defects, and reviewed AI-assisted fixes. Background workers and a durable outbox handle follow-up work without treating a sent notification as part of the booking transaction.',
+        source: 'https://github.com/abuhager/Aoun-Project_BackEnd/blob/main/services/itemService.ts',
+      },
       features: ['Item listings, search, filters, bookings, and waitlists','Need requests and donor offer workflows','Safe-hub and direct handover confirmation','Real-time chat, notifications, ratings, reports, and appeals','Role-based admin controls and configurable platform policies'],
       highlights: [
         { title: 'Authentication & access', detail: 'JWT access and refresh tokens with rotation and reuse detection, HMAC-hashed OTP verification, RBAC, secure cookies, and Redis-backed rate limiting.' },
