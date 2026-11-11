@@ -24,7 +24,7 @@ These screenshots were captured from this repository running locally. Project im
 - **Overview:** introduction, featured work, and a downloadable CV.
 - **About:** development approach and engineering priorities.
 - **Skills:** programming languages, frontend, backend, databases, core concepts, architecture/security/reliability, tools, and AI-assisted development/testing.
-- **Projects:** Four case studies — Aoun, UniEvents, HelpDesk SaaS, and Khutwa Quran — with features, engineering decisions, screenshots, and demos or public source links. Aoun features an immediately visible booking-concurrency walkthrough plus expanded technical details.
+- **Projects:** Four case studies — Aoun, UniEvents, HelpDesk SaaS, and Khutwa Quran — with features, engineering decisions, screenshots, and demos or public source links. Aoun keeps its main card concise, with a booking-concurrency deep dive inside the full-width expandable technical details.
 - **Background:** experience, training, and education shown separately.
 - **Contact:** email, LinkedIn, GitHub, and phone links.
 
