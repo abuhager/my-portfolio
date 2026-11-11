@@ -15,6 +15,14 @@ export interface ProjectHighlight {
   detail: string;
 }
 
+export interface ProjectCaseStudy {
+  title: string;
+  challenge: string;
+  approach: string;
+  verification: string;
+  source: string;
+}
+
 export interface ProjectMedia {
   src: string;
   alt: string;
@@ -36,6 +44,7 @@ export interface Project {
   accessNote?: string;
   features: string[];
   highlights: ProjectHighlight[];
+  caseStudy?: ProjectCaseStudy;
   technologies: string[];
   links: ProjectLink[];
   media?: ProjectMedia[];
