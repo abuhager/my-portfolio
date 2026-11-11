@@ -88,7 +88,7 @@ function ProjectDisclosure({ project }: { project: Project }) {
     <details className="project-disclosure">
       <summary>
         <span>
-          <small>Explore the full technical case study</small>
+          <small>{project.caseStudy ? 'Technical details & booking case study' : 'Explore technical details'}</small>
           <strong>Problem, contribution, and engineering decisions</strong>
         </span>
         <span className="project-disclosure__toggle" aria-hidden="true">
@@ -107,6 +107,23 @@ function ProjectDisclosure({ project }: { project: Project }) {
             <p>{project.contribution}</p>
           </div>
         </div>
+
+        {project.caseStudy ? (
+          <section className="project-deep-dive" aria-labelledby={project.id + '-deep-dive-title'}>
+            <div className="project-deep-dive__heading">
+              <span className="detail-label">Engineering deep dive</span>
+              <h4 id={project.id + '-deep-dive-title'}>{project.caseStudy.title}</h4>
+            </div>
+            <div className="project-deep-dive__steps">
+              <div><span>01 / Challenge</span><p>{project.caseStudy.challenge}</p></div>
+              <div><span>02 / Approach</span><p>{project.caseStudy.approach}</p></div>
+              <div><span>03 / My review</span><p>{project.caseStudy.verification}</p></div>
+            </div>
+            <a className="project-deep-dive__source" href={project.caseStudy.source} target="_blank" rel="noopener noreferrer">
+              View the booking service source <span aria-hidden="true">↗</span>
+            </a>
+          </section>
+        ) : null}
 
         <div className="project-disclosure__details">
           <div className="feature-list">
@@ -160,19 +177,6 @@ function ProjectCard({ project, featured = false }: { project: Project; featured
           <p className="project-subtitle">{project.subtitle}</p>
           <p className="project-card__summary">{project.summary}</p>
           <p className="project-card__contribution"><strong>My contribution</strong>{project.contributionSummary}</p>
-
-          {project.caseStudy ? (
-            <section className="project-case-study" aria-labelledby={project.id + '-study-title'}>
-              <p className="project-case-study__eyebrow">ENGINEERING CASE STUDY · AOUN</p>
-              <h4 id={project.id + '-study-title'}>{project.caseStudy.title}</h4>
-              <div className="project-case-study__grid">
-                <div><strong>Challenge</strong><p>{project.caseStudy.challenge}</p></div>
-                <div><strong>Design</strong><p>{project.caseStudy.approach}</p></div>
-                <div><strong>My role & verification</strong><p>{project.caseStudy.verification}</p></div>
-              </div>
-              <a className="project-case-study__link" href={project.caseStudy.source} target="_blank" rel="noopener noreferrer">Inspect the booking service <span aria-hidden="true">↗</span></a>
-            </section>
-          ) : null}
 
           <ul className="project-card__signals" aria-label={project.title + ' engineering highlights'}>
             {project.highlights.slice(0, 3).map((highlight) => (
