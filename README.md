@@ -23,8 +23,8 @@ These screenshots were captured from this repository running locally. Project im
 
 - **Overview:** introduction, featured work, and a downloadable CV.
 - **About:** development approach and engineering priorities.
-- **Skills:** frontend, backend, data, testing, and delivery tools.
-- **Projects:** Four case studies — Aoun, UniEvents, HelpDesk SaaS, and Khutwa Quran — with features, engineering decisions, screenshots, and demos or public source links.
+- **Skills:** programming languages, frontend, backend, databases, core concepts, architecture/security/reliability, tools, and AI-assisted development/testing.
+- **Projects:** Four case studies — Aoun, UniEvents, HelpDesk SaaS, and Khutwa Quran — with features, engineering decisions, screenshots, and demos or public source links. Aoun features an immediately visible booking-concurrency walkthrough plus expanded technical details.
 - **Background:** experience, training, and education shown separately.
 - **Contact:** email, LinkedIn, GitHub, and phone links.
 
@@ -94,4 +94,4 @@ npm run verify
 
 Keep project and experience claims aligned with the current CV and source repositories when editing `lib/data.ts`. Deployments are managed separately from this README.
 
-The default CV is the general Junior Software Developer version. Project contribution descriptions distinguish development from requirements, testing, and guided improvements. AI tools listed are the web versions of ChatGPT Plus, Perplexity and Gemini Pro.
+The default CV is the general Junior Software Developer version, linked from the top of the portfolio. Project contribution descriptions distinguish development from requirements, testing, and guided improvements. The AI-assisted workflow section describes guidance, code review, debugging, testing, and validation rather than specific paid tool plans.
